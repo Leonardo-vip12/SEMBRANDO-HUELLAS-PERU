@@ -1,7 +1,15 @@
-import { useState, forwardRef } from 'react'
+import { useState, forwardRef, useRef, useEffect } from 'react'
 import { cn } from '@/lib/cn'
 
 type ObjectFit = 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'
+
+const objectFitClasses: Record<ObjectFit, string> = {
+  cover: 'object-cover',
+  contain: 'object-contain',
+  fill: 'object-fill',
+  none: 'object-none',
+  'scale-down': 'object-scale-down',
+}
 
 interface ImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'loading'> {
   src: string
@@ -34,6 +42,25 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
   ) => {
     const [isLoading, setIsLoading] = useState(true)
     const [hasError, setHasError] = useState(false)
+    const imgRef = useRef<HTMLImageElement | null>(null)
+    const loaded = useRef(false)
+
+    useEffect(() => {
+      const img = imgRef.current
+      if (img && img.complete && !loaded.current) {
+        loaded.current = true
+        if (img.naturalWidth === 0) {
+          setHasError(true)
+        }
+        setIsLoading(false)
+      }
+    }, [src])
+
+    const setRef = (el: HTMLImageElement | null) => {
+      imgRef.current = el
+      if (typeof ref === 'function') ref(el)
+      else if (ref) ref.current = el
+    }
 
     return (
       <div
@@ -55,21 +82,25 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
         ) : (
           !hasError && (
             <img
-              ref={ref}
+              ref={setRef}
               src={src}
               alt={alt}
               width={width}
               height={height}
               loading={lazy ? 'lazy' : 'eager'}
-              onLoad={() => setIsLoading(false)}
+              onLoad={() => {
+                loaded.current = true
+                setIsLoading(false)
+              }}
               onError={() => {
+                loaded.current = true
                 setIsLoading(false)
                 setHasError(true)
               }}
               className={cn(
                 'h-full w-full transition-opacity duration-300',
                 isLoading ? 'opacity-0' : 'opacity-100',
-                `object-${objectFit}`
+                objectFitClasses[objectFit]
               )}
               {...props}
             />
