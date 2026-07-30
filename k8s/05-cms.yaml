@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sh-cms
+  namespace: sembrando-huellas-prod
+  labels:
+    app: sh-cms
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sh-cms
+  template:
+    metadata:
+      labels:
+        app: sh-cms
+    spec:
+      containers:
+        - name: cms
+          image: ghcr.io/sembrando-huellas/cms:1.0.0
+          ports:
+            - containerPort: 80
+              name: http
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sh-cms-service
+  namespace: sembrando-huellas-prod
+spec:
+  type: ClusterIP
+  selector:
+    app: sh-cms
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http

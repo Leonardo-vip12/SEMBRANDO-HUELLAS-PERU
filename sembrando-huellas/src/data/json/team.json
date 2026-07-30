@@ -1,0 +1,62 @@
+[
+  {
+    "id": "team-1",
+    "firstName": "María José",
+    "lastName": "Alvarado",
+    "role": "Directora Ejecutiva",
+    "bio": "Bióloga especializada en conservación de ecosistemas amazónicos con más de 15 años de experiencia liderando proyectos de protección ambiental en Perú y Latinoamérica.",
+    "photo": "/images/team/maria.jpg",
+    "email": "maria@sembrandohuellas.org",
+    "socialLinks": { "linkedin": "https://linkedin.com/in/maria-alvarado" },
+    "order": 1,
+    "department": "Dirección"
+  },
+  {
+    "id": "team-2",
+    "firstName": "Carlos Enrique",
+    "lastName": "Rivas",
+    "role": "Director de Proyectos",
+    "bio": "Ingeniero forestal con más de 12 años de experiencia en reforestación participativa y restauración de ecosistemas en comunidades nativas de la Amazonía.",
+    "photo": "/images/team/carlos.jpg",
+    "email": "carlos@sembrandohuellas.org",
+    "socialLinks": { "linkedin": "https://linkedin.com/in/carlos-rivas" },
+    "order": 2,
+    "department": "Proyectos"
+  },
+  {
+    "id": "team-3",
+    "firstName": "Lucía",
+    "lastName": "Fernández",
+    "role": "Coordinadora de Educación Ambiental",
+    "bio": "Educadora ambiental apasionada por formar nuevas generaciones comprometidas con el planeta. Especialista en diseño de materiales pedagógicos para la Amazonía.",
+    "photo": "/images/team/lucia.jpg",
+    "email": "lucia@sembrandohuellas.org",
+    "socialLinks": { "linkedin": "https://linkedin.com/in/lucia-fernandez" },
+    "order": 3,
+    "department": "Educación"
+  },
+  {
+    "id": "team-4",
+    "firstName": "Roberto",
+    "lastName": "Huamán",
+    "role": "Coordinador de Conservación",
+    "bio": "Biólogo de campo especializado en monitoreo de fauna silvestre y gestión de áreas protegidas. Guía experto en la selva de Madre de Dios.",
+    "photo": "/images/team/roberto.jpg",
+    "email": "roberto@sembrandohuellas.org",
+    "socialLinks": {},
+    "order": 4,
+    "department": "Conservación"
+  },
+  {
+    "id": "team-5",
+    "firstName": "Andrea",
+    "lastName": "Mendoza",
+    "role": "Coordinadora de Comunicaciones",
+    "bio": "Comunicadora social especializada en campañas ambientales y gestión de redes sociales. Crea contenido que conecta a la ciudadanía con la naturaleza.",
+    "photo": "/images/team/andrea.jpg",
+    "email": "andrea@sembrandohuellas.org",
+    "socialLinks": { "linkedin": "https://linkedin.com/in/andrea-mendoza" },
+    "order": 5,
+    "department": "Comunicaciones"
+  }
+]

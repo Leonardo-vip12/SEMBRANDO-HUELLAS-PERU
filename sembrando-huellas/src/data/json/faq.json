@@ -1,0 +1,50 @@
+[
+  {
+    "id": "faq-1",
+    "question": "¿Cómo puedo ser voluntario en Sembrando Huellas Perú?",
+    "answer": "Puedes registrarte en nuestra sección de voluntariado. Recibimos voluntarios locales e internacionales. Los requisitos incluyen tener 18 años o más (o 16 con autorización parental), disponibilidad de tiempo y compromiso con la causa ambiental. Ofrecemos programas de corta y larga duración.",
+    "category": "Voluntariado",
+    "order": 1,
+    "featured": true
+  },
+  {
+    "id": "faq-2",
+    "question": "¿Cómo puedo donar a la organización?",
+    "answer": "Puedes realizar donaciones a través de nuestra página web mediante tarjeta de crédito, débito o transferencia bancaria. También aceptamos donaciones corporativas y patrocinios. Todas las donaciones son 100% deducibles de impuestos y recibirás un certificado de donación.",
+    "category": "Donaciones",
+    "order": 2,
+    "featured": true
+  },
+  {
+    "id": "faq-3",
+    "question": "¿En qué regiones del Perú trabajan?",
+    "answer": "Actualmente operamos en cuatro regiones de la Amazonía peruana: Madre de Dios, Loreto, Ucayali y San Martín. Cada año buscamos expandir nuestras operaciones a nuevas regiones según la disponibilidad de fondos y aliados estratégicos.",
+    "category": "Operaciones",
+    "order": 3,
+    "featured": false
+  },
+  {
+    "id": "faq-4",
+    "question": "¿Cómo se utilizan los fondos donados?",
+    "answer": "Somos totalmente transparentes en el uso de fondos. El 85% de cada donación se destina directamente a programas de conservación y educación. El 15% restante cubre costos administrativos y operativos. Publicamos informes anuales auditados disponibles para el público.",
+    "category": "Transparencia",
+    "order": 4,
+    "featured": true
+  },
+  {
+    "id": "faq-5",
+    "question": "¿Pueden visitar mi escuela o institución?",
+    "answer": "Sí, tenemos un programa de charlas y talleres educativos para instituciones educativas, empresas y organizaciones. Contáctanos a través del formulario de nuestra web o escríbenos a educacion@sembrandohuellas.org para coordinar una visita.",
+    "category": "Educación",
+    "order": 5,
+    "featured": false
+  },
+  {
+    "id": "faq-6",
+    "question": "¿Qué especies de árboles plantan en sus proyectos de reforestación?",
+    "answer": "Plantamos exclusivamente especies nativas de la Amazonía peruana, incluyendo cedro (Cedrela odorata), caoba (Swietenia macrophylla), shihuahuaco (Dipteryx micrantha), tornillo (Cedrelinga cateniformis) y muchas otras especies seleccionadas según la zona de restauración.",
+    "category": "Reforestación",
+    "order": 6,
+    "featured": false
+  }
+]

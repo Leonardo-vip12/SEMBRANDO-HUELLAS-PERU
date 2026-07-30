@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "treesPlanted": 52000,
+    "hectaresRestored": 380,
+    "speciesProtected": 240,
+    "volunteers": 1800,
+    "communitiesServed": 45
+  },
+  "metrics": [
+    {
+      "label": "Instituciones Educativas",
+      "value": "150+",
+      "icon": "School",
+      "description": "Colegios y universidades participan en nuestros programas"
+    },
+    {
+      "label": "Estudiantes",
+      "value": "30000+",
+      "icon": "GraduationCap",
+      "description": "Jóvenes formados en conciencia ambiental"
+    },
+    {
+      "label": "Actividades Realizadas",
+      "value": "250+",
+      "icon": "CalendarCheck",
+      "description": "Talleres, jornadas y expediciones"
+    },
+    {
+      "label": "Árboles Plantados",
+      "value": "50000+",
+      "icon": "TreePine",
+      "description": "Especies nativas reforestadas en la Amazonía"
+    }
+  ],
+  "timeline": [
+    {
+      "year": 2018,
+      "title": "Fundación",
+      "description": "Nace Sembrando Huellas Perú con la primera campaña de reforestación en Madre de Dios.",
+      "image": "/images/timeline/2018.jpg"
+    },
+    {
+      "year": 2020,
+      "title": "Programa Educativo",
+      "description": "Lanzamos nuestro programa de educación ambiental en 20 instituciones educativas.",
+      "image": "/images/timeline/2020.jpg"
+    },
+    {
+      "year": 2022,
+      "title": "Expansión Regional",
+      "description": "Extendemos nuestras operaciones a 4 regiones de la Amazonía peruana.",
+      "image": "/images/timeline/2022.jpg"
+    },
+    {
+      "year": 2024,
+      "title": "Reconocimiento Internacional",
+      "description": "Somos reconocidos por Naciones Unidas como proyecto modelo de conservación.",
+      "image": "/images/timeline/2024.jpg"
+    }
+  ],
+  "stories": [
+    {
+      "id": "story-1",
+      "title": "La transformación de una comunidad",
+      "quote": "Antes no sabíamos que podíamos vivir en armonía con el bosque. Hoy, nuestros hijos crecen aprendiendo a protegerlo.",
+      "author": "Isabel Huamán",
+      "role": "Líder comunitaria, Madre de Dios",
+      "image": "/images/testimonials/isabel.jpg"
+    }
+  ],
+  "annualReports": []
+}

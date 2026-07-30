@@ -1,0 +1,77 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-all
+  namespace: sembrando-huellas-prod
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+    - Egress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend-to-ingress
+  namespace: sembrando-huellas-prod
+spec:
+  podSelector:
+    matchLabels:
+      app: sh-frontend
+  ingress:
+    - from:
+        - namespaceSelector: {}
+          podSelector:
+            matchLabels:
+              app.kubernetes.io/component: controller
+  policyTypes:
+    - Ingress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-backend-connections
+  namespace: sembrando-huellas-prod
+spec:
+  podSelector:
+    matchLabels:
+      app: sh-backend
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: sh-frontend
+        - podSelector:
+            matchLabels:
+              app: sh-cms
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app: sh-postgres
+        - podSelector:
+            matchLabels:
+              app: sh-redis
+        - podSelector:
+            matchLabels:
+              app: sh-minio
+  policyTypes:
+    - Ingress
+    - Egress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-db-only-from-backend
+  namespace: sembrando-huellas-prod
+spec:
+  podSelector:
+    matchLabels:
+      app: sh-postgres
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: sh-backend
+  policyTypes:
+    - Ingress

@@ -1,0 +1,6 @@
+# Default Docker Compose points to Production Stack configuration
+# For Development run: docker-compose -f docker-compose.dev.yml up -d
+# For Staging run:     docker-compose -f docker-compose.staging.yml up -d
+
+include:
+  - docker-compose.prod.yml

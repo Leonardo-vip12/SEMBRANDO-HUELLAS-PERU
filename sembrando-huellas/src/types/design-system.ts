@@ -1,0 +1,11 @@
+export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'glass' | 'icon' | 'floating' | 'link' | 'danger' | 'success'
+export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type CardVariant = 'default' | 'glass' | 'elevated' | 'outlined' | 'flat'
+export type InputSize = 'sm' | 'md' | 'lg'
+export type AnimationType = 'fade' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale' | 'zoom' | 'rotate' | 'none'
+export type ComponentSize = 'sm' | 'md' | 'lg'
+export type BadgeVariant = 'default' | 'success' | 'warning' | 'error' | 'info'
+export type BadgeSize = 'sm' | 'md' | 'lg'
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6
+export type Align = 'left' | 'center' | 'right'
+export type ParagraphSize = 'sm' | 'md' | 'lg'

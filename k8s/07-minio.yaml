@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sh-minio
+  namespace: sembrando-huellas-prod
+  labels:
+    app: sh-minio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sh-minio
+  template:
+    metadata:
+      labels:
+        app: sh-minio
+    spec:
+      containers:
+        - name: minio
+          image: minio/minio:RELEASE.2023-09-20T22-40-07Z
+          args:
+            - server
+            - /data
+            - --console-address
+            - ":9001"
+          ports:
+            - containerPort: 9000
+              name: api
+            - containerPort: 9001
+              name: console
+          envFrom:
+            - secretRef:
+                name: sh-global-secrets
+          volumeMounts:
+            - name: minio-data
+              mountPath: /data
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "2048Mi"
+      volumes:
+        - name: minio-data
+          persistentVolumeClaim:
+            claimName: minio-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sh-minio-service
+  namespace: sembrando-huellas-prod
+spec:
+  type: ClusterIP
+  selector:
+    app: sh-minio
+  ports:
+    - port: 9000
+      targetPort: 9000
+      name: api
+    - port: 9001
+      targetPort: 9001
+      name: console

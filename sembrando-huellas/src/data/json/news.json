@@ -1,0 +1,44 @@
+[
+  {
+    "id": "news-1",
+    "title": "Más de 50 mil árboles plantados en la Amazonía peruana durante 2024",
+    "slug": "50-mil-arboles-plantados-2024",
+    "excerpt": "Sembrando Huellas Perú alcanzó la meta de 50,000 árboles nativos plantados en Madre de Dios, Loreto y San Martín, gracias a la participación de más de 2,000 voluntarios.",
+    "content": "Contenido completo de la noticia. Este es un ejemplo de contenido editable que será reemplazado con la noticia real.",
+    "coverImage": "/images/news/arboles-2024.jpg",
+    "author": "María José Alvarado",
+    "publishedAt": "2024-12-15T10:00:00.000Z",
+    "category": "Reforestación",
+    "tags": ["árboles", "voluntarios", "meta"],
+    "featured": true,
+    "relatedPosts": []
+  },
+  {
+    "id": "news-2",
+    "title": "Nuevo programa de educación ambiental llegará a 50 escuelas de Loreto",
+    "slug": "nuevo-programa-educacion-ambiental-loreto",
+    "excerpt": "En alianza con el Ministerio de Educación, lanzamos 'Escuelas Amazónicas Sostenibles' para formar a la próxima generación de líderes ambientales.",
+    "content": "Contenido completo de la noticia. Este es un ejemplo de contenido editable que será reemplazado con la noticia real.",
+    "coverImage": "/images/news/escuelas-loreto.jpg",
+    "author": "Lucía Fernández",
+    "publishedAt": "2024-11-20T08:30:00.000Z",
+    "category": "Educación",
+    "tags": ["escuelas", "educación", "Loreto"],
+    "featured": true,
+    "relatedPosts": []
+  },
+  {
+    "id": "news-3",
+    "title": "Reconocimiento internacional: ONU destaca labor de conservación en Madre de Dios",
+    "slug": "reconocimiento-onu-conservacion",
+    "excerpt": "Nuestro proyecto de corredor biológico en Madre de Dios fue seleccionado por Naciones Unidas como caso de éxito en conservación comunitaria.",
+    "content": "Contenido completo de la noticia. Este es un ejemplo de contenido editable que será reemplazado con la noticia real.",
+    "coverImage": "/images/news/reconocimiento-onu.jpg",
+    "author": "Carlos Enrique Rivas",
+    "publishedAt": "2024-10-05T14:00:00.000Z",
+    "category": "Logros",
+    "tags": ["ONU", "reconocimiento", "conservación"],
+    "featured": true,
+    "relatedPosts": []
+  }
+]

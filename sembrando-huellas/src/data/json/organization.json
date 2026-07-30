@@ -1,0 +1,70 @@
+{
+  "name": "Sembrando Huellas Perú",
+  "legalName": "Sembrando Huellas Perú — Organización Ambiental",
+  "description": "Somos una organización peruana dedicada a la conservación ambiental, reforestación y educación ecológica. Trabajamos en la Amazonía peruana protegiendo la biodiversidad y promoviendo el desarrollo sostenible de las comunidades locales.",
+  "mission": "Proteger y restaurar los ecosistemas amazónicos del Perú mediante la educación ambiental, la reforestación participativa y la conservación de la biodiversidad, promoviendo una relación armónica entre el ser humano y la naturaleza.",
+  "vision": "Ser la organización referente en conservación ambiental del Perú, reconocida internacionalmente por nuestro impacto en la protección de la Amazonía y la formación de una ciudadanía ambientalmente responsable.",
+  "values": [
+    {
+      "title": "Compromiso",
+      "description": "Dedicación absoluta a la protección de la naturaleza y al bienestar de las comunidades amazónicas.",
+      "icon": "Heart"
+    },
+    {
+      "title": "Transparencia",
+      "description": "Gestión abierta y rendición de cuentas permanentes ante nuestros aliados y la sociedad.",
+      "icon": "Eye"
+    },
+    {
+      "title": "Innovación",
+      "description": "Aplicamos ciencia y tecnología de vanguardia en cada proyecto de conservación.",
+      "icon": "Lightbulb"
+    },
+    {
+      "title": "Inclusión",
+      "description": "Trabajamos respetando y valorando la diversidad cultural de las comunidades indígenas.",
+      "icon": "Users"
+    },
+    {
+      "title": "Sostenibilidad",
+      "description": "Cada acción que emprendemos busca un equilibrio duradero entre ecología y sociedad.",
+      "icon": "Leaf"
+    }
+  ],
+  "foundingYear": 2018,
+  "address": "Av. La Biodiversidad 450, San Isidro, Lima, Perú",
+  "phone": "+51 1 555 0123",
+  "email": "contacto@sembrandohuellas.org",
+  "website": "https://sembrandohuellas.org",
+  "socialMedia": {
+    "facebook": "https://facebook.com/sembrandohuellas",
+    "instagram": "https://instagram.com/sembrandohuellas",
+    "youtube": "https://youtube.com/@sembrandohuellas",
+    "twitter": "https://twitter.com/sembrandohuellas",
+    "tiktok": "https://tiktok.com/@sembrandohuellas"
+  },
+  "logo": "/images/logo.svg",
+  "logoAlt": "/images/logo-alt.svg",
+  "foundingStory": "Sembrando Huellas Perú nació en 2018 de la visión compartida de un grupo de biólogos, educadores y líderes comunitarios preocupados por la acelerada deforestación en la Amazonía peruana. Lo que comenzó como una campaña de reforestación en una comunidad de Madre de Dios, hoy es una organización que impacta a más de 30 mil personas en todo el país.",
+  "team": [
+    {
+      "name": "María José Alvarado",
+      "role": "Directora Ejecutiva",
+      "bio": "Bióloga especializada en conservación de ecosistemas amazónicos con más de 15 años de experiencia."
+    },
+    {
+      "name": "Carlos Enrique Rivas",
+      "role": "Director de Proyectos",
+      "bio": "Ingeniero forestal con experiencia en reforestación participativa en comunidades nativas."
+    },
+    {
+      "name": "Lucía Fernández",
+      "role": "Coordinadora de Educación Ambiental",
+      "bio": "Educadora ambiental apasionada por formar nuevas generaciones comprometidas con el planeta."
+    }
+  ],
+  "contactInfo": {
+    "horario": "Lun - Vie: 9:00 AM - 6:00 PM",
+    "whatsapp": "+51 999 555 0123"
+  }
+}

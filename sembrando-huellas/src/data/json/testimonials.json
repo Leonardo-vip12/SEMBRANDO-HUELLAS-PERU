@@ -1,0 +1,46 @@
+[
+  {
+    "id": "test-1",
+    "name": "Isabel Huamán",
+    "role": "Líder comunitaria",
+    "location": "Madre de Dios, Perú",
+    "quote": "Antes veíamos el bosque solo como recursos para usar. Hoy entendemos que es nuestra casa y debemos protegerla. Sembrando Huellas nos enseñó a vivir en armonía con la naturaleza.",
+    "avatar": "/images/avatars/isabel.jpg",
+    "rating": 5,
+    "featured": true,
+    "date": "2024-06-15"
+  },
+  {
+    "id": "test-2",
+    "name": "Pedro Quispe",
+    "role": "Docente rural",
+    "location": "Loreto, Perú",
+    "quote": "Los talleres de educación ambiental transformaron mi forma de enseñar. Ahora mis alumnos lideran la brigada ecológica de la escuela y han involucrado a toda la comunidad.",
+    "avatar": "/images/avatars/pedro.jpg",
+    "rating": 5,
+    "featured": true,
+    "date": "2024-07-20"
+  },
+  {
+    "id": "test-3",
+    "name": "Ana Lucía Torres",
+    "role": "Voluntaria internacional",
+    "location": "Lima, Perú",
+    "quote": "Ser parte de las jornadas de reforestación fue una experiencia que cambió mi vida. Ver cómo cada árbol plantado es un paso hacia la esperanza me llena de propósito.",
+    "avatar": "/images/avatars/ana.jpg",
+    "rating": 5,
+    "featured": false,
+    "date": "2024-08-10"
+  },
+  {
+    "id": "test-4",
+    "name": "Juan Carlos Ríos",
+    "role": "Empresario aliado",
+    "location": "San Isidro, Lima",
+    "quote": "Aliarnos con Sembrando Huellas ha sido una de las mejores decisiones. Su profesionalismo, transparencia y compromiso con la conservación son ejemplares.",
+    "avatar": "/images/avatars/juan.jpg",
+    "rating": 5,
+    "featured": true,
+    "date": "2024-09-05"
+  }
+]

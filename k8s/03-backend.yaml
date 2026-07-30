@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sh-backend
+  namespace: sembrando-huellas-prod
+  labels:
+    app: sh-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sh-backend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: sh-backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/sembrando-huellas/backend:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: sh-global-config
+            - secretRef:
+                name: sh-global-secrets
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1000m"
+              memory: "1024Mi"
+          livenessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sh-backend-service
+  namespace: sembrando-huellas-prod
+spec:
+  type: ClusterIP
+  selector:
+    app: sh-backend
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: http

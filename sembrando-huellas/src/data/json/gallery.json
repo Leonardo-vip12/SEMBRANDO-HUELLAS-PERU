@@ -1,0 +1,59 @@
+[
+  {
+    "id": "gal-1",
+    "title": "Reforestación en Madre de Dios",
+    "slug": "reforestacion-madre-de-dios",
+    "description": "Voluntarios plantando árboles nativos en zonas degradadas de la Amazonía",
+    "coverImage": "/images/gallery/reforestacion-1.jpg",
+    "images": [
+      { "id": "img-1", "src": "/images/gallery/reforestacion-1.jpg", "alt": "Voluntarios plantando árboles", "caption": "Jornada de reforestación comunitaria" },
+      { "id": "img-2", "src": "/images/gallery/reforestacion-2.jpg", "alt": "Vivero comunitario", "caption": "Vivero de especies nativas" },
+      { "id": "img-3", "src": "/images/gallery/reforestacion-3.jpg", "alt": "Bosque restaurado", "caption": "Área restaurada después de 2 años" }
+    ],
+    "date": "2024-03-15",
+    "tags": ["reforestación", "voluntarios", "Madre de Dios"],
+    "featured": true
+  },
+  {
+    "id": "gal-2",
+    "title": "Educación Ambiental en Escuelas",
+    "slug": "educacion-ambiental-escuelas",
+    "description": "Talleres de conciencia ecológica en instituciones educativas de Loreto",
+    "coverImage": "/images/gallery/educacion-1.jpg",
+    "images": [
+      { "id": "img-4", "src": "/images/gallery/educacion-1.jpg", "alt": "Taller en aula", "caption": "Estudiantes aprendiendo sobre ecosistemas" },
+      { "id": "img-5", "src": "/images/gallery/educacion-2.jpg", "alt": "Brigada ecológica", "caption": "Brigada ecológica escolar" }
+    ],
+    "date": "2024-05-20",
+    "tags": ["educación", "escuelas", "talleres"],
+    "featured": true
+  },
+  {
+    "id": "gal-3",
+    "title": "Biodiversidad Amazónica",
+    "slug": "biodiversidad-amazonica",
+    "description": "Registros de fauna silvestre capturados por nuestras cámaras trampa",
+    "coverImage": "/images/gallery/biodiversidad-1.jpg",
+    "images": [
+      { "id": "img-6", "src": "/images/gallery/biodiversidad-1.jpg", "alt": "Jaguar en cámara trampa", "caption": "Jaguar captado por cámara trampa" },
+      { "id": "img-7", "src": "/images/gallery/biodiversidad-2.jpg", "alt": "Monos en el bosque", "caption": "Grupo de monos en corredor biológico" }
+    ],
+    "date": "2024-07-10",
+    "tags": ["fauna", "cámaras trampa", "monitoreo"],
+    "featured": false
+  },
+  {
+    "id": "gal-4",
+    "title": "Comunidades y Cultura",
+    "slug": "comunidades-cultura",
+    "description": "Trabajo conjunto con comunidades indígenas de la Amazonía",
+    "coverImage": "/images/gallery/comunidad-1.jpg",
+    "images": [
+      { "id": "img-8", "src": "/images/gallery/comunidad-1.jpg", "alt": "Comunidad nativa", "caption": "Taller participativo en comunidad nativa" },
+      { "id": "img-9", "src": "/images/gallery/comunidad-2.jpg", "alt": "Artesanía local", "caption": "Artesanía sostenible de la comunidad" }
+    ],
+    "date": "2024-08-05",
+    "tags": ["comunidades", "cultura", "indígenas"],
+    "featured": true
+  }
+]

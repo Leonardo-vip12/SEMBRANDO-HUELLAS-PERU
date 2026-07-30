@@ -1,0 +1,70 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "API Availability & Service Health",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "up{job='nest-backend'}",
+          "legendFormat": "Backend Uptime"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Request Latency (p95 & p99)",
+      "gridPos": { "h": 8, "w": 12, "x": 6, "y": 0 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p95 Latency"
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p99 Latency"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "AI & Environmental Suite API Usage",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_requests_total{path=~\"/api/v1/ai/.*\"}[5m])",
+          "legendFormat": "AI Endpoints Throughput"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "Database Active Connections & Query Performance",
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 8 },
+      "targets": [
+        {
+          "expr": "pg_stat_database_numbackends{datname='sembrando_huellas_prod'}",
+          "legendFormat": "Postgres Active Connections"
+        }
+      ]
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["enterprise", "production", "sembrando-huellas"],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "title": "Sembrando Huellas Perú — Enterprise Operational Dashboard"
+}

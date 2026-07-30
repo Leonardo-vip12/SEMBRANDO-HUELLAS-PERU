@@ -1,0 +1,68 @@
+[
+  {
+    "id": "part-1",
+    "name": "Conservation International",
+    "slug": "conservation-international",
+    "description": "Organización global de conservación aliada en nuestros proyectos de restauración ecológica.",
+    "website": "https://www.conservation.org",
+    "logo": "/images/partners/ci.png",
+    "type": "ONG Internacional",
+    "since": 2020,
+    "active": true
+  },
+  {
+    "id": "part-2",
+    "name": "SERNANP",
+    "slug": "sernanp",
+    "description": "Servicio Nacional de Áreas Naturales Protegidas del Perú.",
+    "website": "https://www.sernanp.gob.pe",
+    "logo": "/images/partners/sernanp.png",
+    "type": "Gubernamental",
+    "since": 2019,
+    "active": true
+  },
+  {
+    "id": "part-3",
+    "name": "UNICEF Perú",
+    "slug": "unicef-peru",
+    "description": "Aliado en nuestros programas de educación ambiental para la niñez amazónica.",
+    "website": "https://www.unicef.org/peru",
+    "logo": "/images/partners/unicef.png",
+    "type": "ONU",
+    "since": 2022,
+    "active": true
+  },
+  {
+    "id": "part-4",
+    "name": "Gobierno Regional de Madre de Dios",
+    "slug": "gore-madre-de-dios",
+    "description": "Aliado institucional en proyectos de conservación y desarrollo sostenible.",
+    "website": "https://www.gob.pe/goremadrededios",
+    "logo": "/images/partners/gore-mdd.png",
+    "type": "Gubernamental",
+    "since": 2019,
+    "active": true
+  },
+  {
+    "id": "part-5",
+    "name": "Universidad Nacional Agraria La Molina",
+    "slug": "unalm",
+    "description": "Aliado académico en investigaciones sobre biodiversidad y reforestación.",
+    "website": "https://www.lamolina.edu.pe",
+    "logo": "/images/partners/lamolina.png",
+    "type": "Académico",
+    "since": 2021,
+    "active": true
+  },
+  {
+    "id": "part-6",
+    "name": "Rainforest Alliance",
+    "slug": "rainforest-alliance",
+    "description": "Organización internacional aliada en prácticas de agricultura sostenible.",
+    "website": "https://www.rainforest-alliance.org",
+    "logo": "/images/partners/rainforest.png",
+    "type": "ONG Internacional",
+    "since": 2023,
+    "active": true
+  }
+]

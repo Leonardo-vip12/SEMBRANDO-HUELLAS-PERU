@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prog-1",
+    "title": "Educación Ambiental",
+    "slug": "educacion-ambiental",
+    "description": "Formamos a estudiantes y docentes en conciencia ecológica, cambio climático y conservación de la biodiversidad amazónica.",
+    "longDescription": "Programa integral que lleva talleres, materiales educativos y capacitación docente a escuelas y universidades de la Amazonía peruana.",
+    "icon": "BookOpen",
+    "coverImage": "/images/programs/educacion.jpg",
+    "objectives": [
+      "Capacitar a docentes en educación ambiental",
+      "Desarrollar materiales pedagógicos sobre la Amazonía",
+      "Formar brigadas ecológicas estudiantiles"
+    ],
+    "activities": [
+      "Talleres presenciales y virtuales",
+      "Ferias de ciencia ambiental",
+      "Salidas de campo interpretativas"
+    ],
+    "schedule": "Enero - Diciembre",
+    "duration": "Anual",
+    "requirements": ["Ser institución educativa registrada", "Compromiso de participación"],
+    "targetAudience": "Estudiantes y docentes de nivel primario, secundario y universitario",
+    "status": "active"
+  },
+  {
+    "id": "prog-2",
+    "title": "Conservación de Bosques",
+    "slug": "conservacion-bosques",
+    "description": "Protegemos áreas clave de la Amazonía mediante monitoreo comunitario, restauración ecológica y corredores biológicos.",
+    "longDescription": "Trabajamos con comunidades locales para proteger y restaurar bosques amazónicos, creando corredores biológicos que conectan hábitats fragmentados.",
+    "icon": "TreePine",
+    "coverImage": "/images/programs/conservacion.jpg",
+    "objectives": [
+      "Restaurar ecosistemas degradados",
+      "Crear corredores biológicos",
+      "Monitorear biodiversidad"
+    ],
+    "activities": [
+      "Reforestación con especies nativas",
+      "Patrullaje comunitario",
+      "Instalación de cámaras trampa"
+    ],
+    "schedule": "Todo el año",
+    "duration": "Permanente",
+    "requirements": [],
+    "targetAudience": "Comunidades nativas y campesinas",
+    "status": "active"
+  },
+  {
+    "id": "prog-3",
+    "title": "Sensibilización Ciudadana",
+    "slug": "sensibilizacion-ciudadana",
+    "description": "Campañas de comunicación y eventos públicos para sensibilizar a la población sobre la importancia de la Amazonía.",
+    "longDescription": "A través de campañas digitales, eventos públicos y alianzas con medios, llevamos el mensaje de conservación a toda la sociedad peruana.",
+    "icon": "Megaphone",
+    "coverImage": "/images/programs/sensibilizacion.jpg",
+    "objectives": [
+      "Visibilizar la crisis climática en la Amazonía",
+      "Movilizar a la ciudadanía",
+      "Incidir en políticas públicas ambientales"
+    ],
+    "activities": [
+      "Campañas en redes sociales",
+      "Ferias ambientales",
+      "Charlas públicas"
+    ],
+    "schedule": "Marzo - Noviembre",
+    "duration": "Anual",
+    "requirements": [],
+    "targetAudience": "Público general",
+    "status": "active"
+  },
+  {
+    "id": "prog-4",
+    "title": "Reforestación Participativa",
+    "slug": "reforestacion-participativa",
+    "description": "Jornadas de plantación de árboles nativos con voluntarios, comunidades y empresas comprometidas con el ambiente.",
+    "longDescription": "Organizamos grandes jornadas de reforestación donde voluntarios de todo el país plantan árboles nativos en zonas degradadas de la Amazonía.",
+    "icon": "Sprout",
+    "coverImage": "/images/programs/reforestacion.jpg",
+    "objectives": [
+      "Recuperar cobertura forestal",
+      "Involucrar a la ciudadanía",
+      "Restaurar cuencas hidrográficas"
+    ],
+    "activities": [
+      "Jornadas masivas de plantación",
+      "Viveros comunitarios",
+      "Mantenimiento de plantaciones"
+    ],
+    "schedule": "Octubre - Mayo",
+    "duration": "Temporada de lluvias",
+    "requirements": ["Registro como voluntario", "Ropa adecuada para campo"],
+    "targetAudience": "Voluntarios, empresas, comunidades",
+    "status": "active"
+  },
+  {
+    "id": "prog-5",
+    "title": "Participación Ciudadana",
+    "slug": "participacion-ciudadana",
+    "description": "Empoderamos a la sociedad civil para participar activamente en la toma de decisiones ambientales en sus comunidades.",
+    "longDescription": "Fortalecimiento de capacidades en liderazgo ambiental, incidencia política y gestión de proyectos comunitarios sostenibles.",
+    "icon": "Users",
+    "coverImage": "/images/programs/participacion.jpg",
+    "objectives": [
+      "Formar líderes ambientales comunitarios",
+      "Fortalecer organizaciones locales",
+      "Promover la incidencia en políticas ambientales"
+    ],
+    "activities": [
+      "Escuelas de liderazgo ambiental",
+      "Talleres de incidencia política",
+      "Red de jóvenes ambientalistas"
+    ],
+    "schedule": "Febrero - Diciembre",
+    "duration": "Anual",
+    "requirements": ["Ser mayor de 16 años", "Compromiso de participación"],
+    "targetAudience": "Jóvenes y líderes comunitarios",
+    "status": "active"
+  }
+]

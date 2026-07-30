@@ -1,0 +1,98 @@
+[
+  {
+    "id": "dl-1",
+    "title": "Guía de Educación Ambiental para Docentes",
+    "description": "Material pedagógico completo para incorporar la educación ambiental en el aula. Incluye actividades, evaluaciones y recursos didácticos.",
+    "fileUrl": "/downloads/guia-educacion-ambiental.pdf",
+    "fileSize": "4.2 MB",
+    "format": "PDF",
+    "category": "Educación",
+    "icon": "FileText",
+    "downloads": 1250,
+    "featured": true
+  },
+  {
+    "id": "dl-2",
+    "title": "Infografía: Especies Emblemáticas de la Amazonía",
+    "description": "Infografía ilustrada con las 10 especies más emblemáticas de la Amazonía peruana y su estado de conservación.",
+    "fileUrl": "/downloads/infografia-especies-amazonia.pdf",
+    "fileSize": "2.1 MB",
+    "format": "PDF",
+    "category": "Educación",
+    "icon": "Image",
+    "downloads": 890,
+    "featured": true
+  },
+  {
+    "id": "dl-3",
+    "title": "Reporte Anual de Impacto 2024",
+    "description": "Informe completo con los resultados, métricas y logros de Sembrando Huellas Perú durante el año 2024.",
+    "fileUrl": "/downloads/reporte-anual-2024.pdf",
+    "fileSize": "8.5 MB",
+    "format": "PDF",
+    "category": "Institucional",
+    "icon": "BarChart3",
+    "downloads": 340,
+    "featured": true
+  },
+  {
+    "id": "dl-4",
+    "title": "Kit de Prensa Sembrando Huellas Perú",
+    "description": "Material informativo para medios de comunicación: logotipos, fotografías, fact sheets y contactos de prensa.",
+    "fileUrl": "/downloads/kit-prensa.zip",
+    "fileSize": "15 MB",
+    "format": "ZIP",
+    "category": "Prensa",
+    "icon": "Newspaper",
+    "downloads": 120,
+    "featured": false
+  },
+  {
+    "id": "dl-5",
+    "title": "Guía de Voluntariado Ambiental",
+    "description": "Todo lo que necesitas saber para ser voluntario en Sembrando Huellas Perú: requisitos, procesos y recomendaciones.",
+    "fileUrl": "/downloads/guia-voluntariado.pdf",
+    "fileSize": "3.0 MB",
+    "format": "PDF",
+    "category": "Voluntariado",
+    "icon": "Heart",
+    "downloads": 560,
+    "featured": true
+  },
+  {
+    "id": "dl-6",
+    "title": "Mapa Interactivo de Proyectos",
+    "description": "Mapa digital con la ubicación de todos nuestros proyectos de conservación y reforestación en la Amazonía peruana.",
+    "fileUrl": "/downloads/mapa-proyectos.pdf",
+    "fileSize": "5.8 MB",
+    "format": "PDF",
+    "category": "Proyectos",
+    "icon": "Map",
+    "downloads": 230,
+    "featured": false
+  },
+  {
+    "id": "dl-7",
+    "title": "Video: La Amazonía y su Importancia Global",
+    "description": "Video educativo sobre la importancia de la Amazonía peruana para el equilibrio climático del planeta.",
+    "fileUrl": "/downloads/video-amazonia-global.mp4",
+    "fileSize": "45 MB",
+    "format": "MP4",
+    "category": "Multimedia",
+    "icon": "Video",
+    "downloads": 1800,
+    "featured": true
+  },
+  {
+    "id": "dl-8",
+    "title": "Presentación Corporativa",
+    "description": "Presentación institucional de Sembrando Huellas Perú para potenciales aliados y donantes.",
+    "fileUrl": "/downloads/presentacion-corporativa.pdf",
+    "fileSize": "6.3 MB",
+    "format": "PDF",
+    "category": "Institucional",
+    "icon": "Presentation",
+    "downloads": 180,
+    "featured": false
+  }
+]
