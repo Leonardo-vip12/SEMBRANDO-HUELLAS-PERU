@@ -42,10 +42,10 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
             <Link
               to={item.href}
               className={cn(
-                'flex flex-1 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
+                'flex flex-1 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                 isActive
-                  ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
-                  : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800',
+                  ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
+                  : 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800',
                 isCollapsed && 'justify-center px-2'
               )}
               title={isCollapsed ? item.label : undefined}
@@ -58,7 +58,7 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
             {hasChildren && !isCollapsed && (
               <button
                 onClick={() => toggleSection(item.label)}
-                className="rounded-lg p-2 text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="rounded-lg p-2 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 aria-label={sectionOpen ? `Collapse ${item.label}` : `Expand ${item.label}`}
                 aria-expanded={sectionOpen}
               >
@@ -73,7 +73,7 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
             )}
           </div>
           {hasChildren && sectionOpen && !isCollapsed && (
-            <ul className="ml-4 mt-1 space-y-1 border-l border-gray-200 dark:border-gray-700 pl-3">
+            <ul className="ml-4 mt-1 space-y-1 border-l border-neutral-200 dark:border-neutral-700 pl-3">
               {item.children!.map((child) => renderItem(child, depth + 1))}
             </ul>
           )}
@@ -84,16 +84,16 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
     return (
       <aside
         ref={ref}
-        className={cn(
-          'flex h-full flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transition-all duration-200',
-          isCollapsed ? 'w-16' : 'w-64'
-        )}
-      >
-        <div className="flex items-center justify-end border-b border-gray-200 dark:border-gray-700 p-3">
+          className={cn(
+            'flex h-full flex-col bg-white dark:bg-neutral-900 border-r border-neutral-200 dark:border-neutral-700 transition-all duration-200',
+            isCollapsed ? 'w-16' : 'w-64'
+          )}
+        >
+          <div className="flex items-center justify-end border-b border-neutral-200 dark:border-neutral-700 p-3">
           {onToggle && (
             <button
               onClick={onToggle}
-              className="rounded-lg p-1.5 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             >
               <ChevronLeft

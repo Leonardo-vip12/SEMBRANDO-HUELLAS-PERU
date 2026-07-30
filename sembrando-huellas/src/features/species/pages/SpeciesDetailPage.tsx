@@ -100,7 +100,7 @@ export default function SpeciesDetailPage() {
         <Container className="text-center">
           <Reveal>
             <h2 className="mb-4 text-3xl font-bold text-white">Ayúdanos a proteger {species.name}</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-white/60">Tu apoyo es fundamental para continuar con nuestras acciones de conservación de la biodiversidad amazónica.</p>
+            <p className="mx-auto mb-8 max-w-2xl text-white/80">Tu apoyo es fundamental para continuar con nuestras acciones de conservación de la biodiversidad amazónica.</p>
             <Link to="/donaciones"><Button variant="secondary" size="xl" rightIcon={<ArrowRight size={18} />}>Apoyar la conservación</Button></Link>
           </Reveal>
         </Container>

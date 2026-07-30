@@ -78,13 +78,13 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 8 }}
               transition={{ duration: 0.15 }}
-              className="absolute left-0 top-full z-40 mt-2 w-auto min-w-[600px] rounded-xl border border-gray-200 bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-gray-900"
+              className="absolute left-0 top-full z-40 mt-2 w-auto min-w-[600px] rounded-xl border border-neutral-200 bg-white p-6 shadow-lg dark:border-neutral-700 dark:bg-neutral-900"
               role="menu"
             >
               <div className="grid grid-cols-3 gap-6">
                 {columns.map((column) => (
                   <div key={column.title}>
-                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                       {column.title}
                     </h3>
                     <ul className="space-y-2">
@@ -93,20 +93,20 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                           <Link
                             to={item.href}
                             onClick={close}
-                            className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                             role="menuitem"
                           >
                             {item.icon && (
-                              <span className="mt-0.5 shrink-0 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300">
+                              <span className="mt-0.5 shrink-0 text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
                                 {item.icon}
                               </span>
                             )}
                             <div>
-                              <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                              <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                                 {item.label}
                               </p>
                               {item.description && (
-                                <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                                <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
                                   {item.description}
                                 </p>
                               )}

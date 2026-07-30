@@ -123,16 +123,16 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.15 }}
               className={cn(
-                'relative w-full rounded-xl bg-white shadow-xl dark:bg-gray-900',
+                'relative w-full rounded-xl bg-white shadow-xl dark:bg-neutral-900',
                 sizeClasses[size]
               )}
             >
               {(title || showCloseButton) && (
-                <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4 dark:border-gray-700">
+                <div className="flex items-center justify-between border-b border-neutral-200 px-6 py-4 dark:border-neutral-700">
                   {title && (
                     <h2
                       id="modal-title"
-                      className="text-lg font-semibold text-gray-900 dark:text-gray-100"
+                      className="text-lg font-semibold text-neutral-900 dark:text-neutral-100"
                     >
                       {title}
                     </h2>
@@ -140,7 +140,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
                   {showCloseButton && (
                     <button
                       onClick={onClose}
-                      className="rounded-lg p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                      className="rounded-lg p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                       aria-label="Close modal"
                     >
                       <X size={20} />

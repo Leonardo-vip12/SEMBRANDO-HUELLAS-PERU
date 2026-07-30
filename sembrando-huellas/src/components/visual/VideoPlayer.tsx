@@ -56,12 +56,12 @@ const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
             className={cn(
               'absolute inset-0 flex items-center justify-center',
               'bg-black/20 transition-colors hover:bg-black/30',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500'
             )}
             aria-label="Play video"
           >
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform hover:scale-105">
-              <Play size={28} className="ml-1 text-gray-900" />
+              <Play size={28} className="ml-1 text-neutral-900" />
             </div>
           </button>
         )}

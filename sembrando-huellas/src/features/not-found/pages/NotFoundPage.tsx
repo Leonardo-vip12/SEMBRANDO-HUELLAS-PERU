@@ -42,7 +42,7 @@ export default function NotFoundPage() {
           </motion.h1>
 
           <motion.p
-            className="mb-8 text-lg text-white/60"
+            className="mb-8 text-lg text-white/80"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}

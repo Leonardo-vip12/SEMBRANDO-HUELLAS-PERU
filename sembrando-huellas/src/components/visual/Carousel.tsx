@@ -87,14 +87,14 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
           <>
             <button
               onClick={goToPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow backdrop-blur transition-colors hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow backdrop-blur transition-colors hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               aria-label="Previous slide"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow backdrop-blur transition-colors hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow backdrop-blur transition-colors hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               aria-label="Next slide"
             >
               <ChevronRight size={20} />
@@ -109,7 +109,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
                 key={index}
                 onClick={() => goTo(index)}
                 className={cn(
-                  'h-2 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
+                  'h-2 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                   index === currentIndex
                     ? 'w-6 bg-white'
                     : 'w-2 bg-white/50 hover:bg-white/75'

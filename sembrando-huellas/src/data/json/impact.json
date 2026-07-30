@@ -37,25 +37,25 @@
       "year": 2018,
       "title": "Fundación",
       "description": "Nace Sembrando Huellas Perú con la primera campaña de reforestación en Madre de Dios.",
-      "image": "/images/timeline/2018.jpg"
+      "image": "/images/timeline/2018.svg"
     },
     {
       "year": 2020,
       "title": "Programa Educativo",
       "description": "Lanzamos nuestro programa de educación ambiental en 20 instituciones educativas.",
-      "image": "/images/timeline/2020.jpg"
+      "image": "/images/timeline/2020.svg"
     },
     {
       "year": 2022,
       "title": "Expansión Regional",
       "description": "Extendemos nuestras operaciones a 4 regiones de la Amazonía peruana.",
-      "image": "/images/timeline/2022.jpg"
+      "image": "/images/timeline/2022.svg"
     },
     {
       "year": 2024,
       "title": "Reconocimiento Internacional",
       "description": "Somos reconocidos por Naciones Unidas como proyecto modelo de conservación.",
-      "image": "/images/timeline/2024.jpg"
+      "image": "/images/timeline/2024.svg"
     }
   ],
   "stories": [
@@ -65,7 +65,7 @@
       "quote": "Antes no sabíamos que podíamos vivir en armonía con el bosque. Hoy, nuestros hijos crecen aprendiendo a protegerlo.",
       "author": "Isabel Huamán",
       "role": "Líder comunitaria, Madre de Dios",
-      "image": "/images/testimonials/isabel.jpg"
+      "image": "/images/testimonials/isabel.svg"
     }
   ],
   "annualReports": []

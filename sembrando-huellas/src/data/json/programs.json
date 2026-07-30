@@ -6,7 +6,7 @@
     "description": "Formamos a estudiantes y docentes en conciencia ecológica, cambio climático y conservación de la biodiversidad amazónica.",
     "longDescription": "Programa integral que lleva talleres, materiales educativos y capacitación docente a escuelas y universidades de la Amazonía peruana.",
     "icon": "BookOpen",
-    "coverImage": "/images/programs/educacion.jpg",
+    "coverImage": "/images/programs/educacion.svg",
     "objectives": [
       "Capacitar a docentes en educación ambiental",
       "Desarrollar materiales pedagógicos sobre la Amazonía",
@@ -30,7 +30,7 @@
     "description": "Protegemos áreas clave de la Amazonía mediante monitoreo comunitario, restauración ecológica y corredores biológicos.",
     "longDescription": "Trabajamos con comunidades locales para proteger y restaurar bosques amazónicos, creando corredores biológicos que conectan hábitats fragmentados.",
     "icon": "TreePine",
-    "coverImage": "/images/programs/conservacion.jpg",
+    "coverImage": "/images/programs/conservacion.svg",
     "objectives": [
       "Restaurar ecosistemas degradados",
       "Crear corredores biológicos",
@@ -54,7 +54,7 @@
     "description": "Campañas de comunicación y eventos públicos para sensibilizar a la población sobre la importancia de la Amazonía.",
     "longDescription": "A través de campañas digitales, eventos públicos y alianzas con medios, llevamos el mensaje de conservación a toda la sociedad peruana.",
     "icon": "Megaphone",
-    "coverImage": "/images/programs/sensibilizacion.jpg",
+    "coverImage": "/images/programs/sensibilizacion.svg",
     "objectives": [
       "Visibilizar la crisis climática en la Amazonía",
       "Movilizar a la ciudadanía",
@@ -78,7 +78,7 @@
     "description": "Jornadas de plantación de árboles nativos con voluntarios, comunidades y empresas comprometidas con el ambiente.",
     "longDescription": "Organizamos grandes jornadas de reforestación donde voluntarios de todo el país plantan árboles nativos en zonas degradadas de la Amazonía.",
     "icon": "Sprout",
-    "coverImage": "/images/programs/reforestacion.jpg",
+    "coverImage": "/images/programs/reforestacion.svg",
     "objectives": [
       "Recuperar cobertura forestal",
       "Involucrar a la ciudadanía",
@@ -102,7 +102,7 @@
     "description": "Empoderamos a la sociedad civil para participar activamente en la toma de decisiones ambientales en sus comunidades.",
     "longDescription": "Fortalecimiento de capacidades en liderazgo ambiental, incidencia política y gestión de proyectos comunitarios sostenibles.",
     "icon": "Users",
-    "coverImage": "/images/programs/participacion.jpg",
+    "coverImage": "/images/programs/participacion.svg",
     "objectives": [
       "Formar líderes ambientales comunitarios",
       "Fortalecer organizaciones locales",

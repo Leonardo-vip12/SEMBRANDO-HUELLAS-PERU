@@ -22,8 +22,8 @@ const ThemeToggle = forwardRef<HTMLButtonElement, ThemeToggleProps>(
         onClick={onToggle}
         className={cn(
           'relative flex items-center justify-center rounded-lg p-2 transition-colors',
-          'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
+          'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500'
         )}
         aria-label={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
       >

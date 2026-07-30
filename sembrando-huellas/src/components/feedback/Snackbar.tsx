@@ -39,14 +39,14 @@ const Snackbar = forwardRef<HTMLDivElement, SnackbarProps>(
               {action && (
                 <button
                   onClick={action.onClick}
-                  className="shrink-0 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                  className="shrink-0 text-sm font-semibold text-primary-400 transition-colors hover:text-primary-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 >
                   {action.label}
                 </button>
               )}
               <button
                 onClick={onClose}
-                className="shrink-0 rounded p-0.5 text-gray-400 transition-colors hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="shrink-0 rounded p-0.5 text-neutral-400 transition-colors hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 aria-label="Dismiss"
               >
                 <X size={16} />

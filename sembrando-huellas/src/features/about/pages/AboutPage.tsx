@@ -105,7 +105,7 @@ function ValuesSection() {
         <Reveal>
           <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-400 uppercase">Valores</p>
           <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">Nuestros <span className="text-secondary-400">principios</span></h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/60">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
             Cinco valores fundamentales que guían cada decisión y acción de nuestra organización.
           </p>
         </Reveal>
@@ -120,7 +120,7 @@ function ValuesSection() {
                     <Icon size={28} />
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-white">{v.title}</h3>
-                  <p className="text-sm text-white/60">{v.description}</p>
+                  <p className="text-sm text-white/80">{v.description}</p>
                 </CardBase>
               </Reveal>
             )
@@ -243,7 +243,7 @@ export default function AboutPage() {
         <Container className="text-center">
           <Reveal>
             <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">¿Quieres ser parte del <span className="text-secondary-400">cambio</span>?</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/60">Hay muchas formas de contribuir a la protección de la Amazonía peruana. Únete a nuestra misión.</p>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">Hay muchas formas de contribuir a la protección de la Amazonía peruana. Únete a nuestra misión.</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/voluntariado"><Button variant="secondary" size="xl" rightIcon={<ArrowRight size={18} />}>Quiero ser voluntario</Button></Link>
               <Link to="/donaciones"><Button variant="primary" size="xl">Hacer una donación</Button></Link>

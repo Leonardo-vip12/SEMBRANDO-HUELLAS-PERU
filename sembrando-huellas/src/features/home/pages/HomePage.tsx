@@ -82,14 +82,14 @@ function ScrollIndicator() {
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         className="flex flex-col items-center gap-2"
       >
-        <span className="text-xs font-medium tracking-widest text-white/60 uppercase">Descubre</span>
-        <ChevronDown className="h-5 w-5 text-white/40" />
+        <span className="text-xs font-medium tracking-widest text-white/80 uppercase">Descubre</span>
+        <ChevronDown className="h-5 w-5 text-white/60" />
       </motion.div>
     </motion.div>
   )
 }
 
-const HERO_BG = '/images/hero-bg.jpg'
+const HERO_BG = '/images/hero-bg.svg'
 
 function HeroSection() {
   return (
@@ -174,7 +174,7 @@ function AboutSection() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/about.jpg"
+                  src="/images/about.svg"
                   alt="Equipo de Sembrando Huellas Perú"
                   className="h-full w-full"
                   fallback={
@@ -261,7 +261,7 @@ function MissionSection() {
           <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
             Lo que nos impulsa
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/60">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
             {organizationData.mission}
           </p>
         </Reveal>
@@ -278,7 +278,7 @@ function MissionSection() {
                   <m.icon size={28} />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-white">{m.title}</h3>
-                <p className="text-sm leading-relaxed text-white/60">{m.description}</p>
+                <p className="text-sm leading-relaxed text-white/80">{m.description}</p>
               </CardBase>
             </Reveal>
           ))}
@@ -472,7 +472,7 @@ function SpeciesSection({ onNavigate }: { onNavigate: (path: string) => void }) 
             Especies que{' '}
             <span className="text-secondary-400">protegemos</span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/60">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
             Conoce algunas de las especies emblemáticas que habitan en los bosques que restauramos.
           </p>
         </Reveal>
@@ -615,7 +615,7 @@ function TestimonialsSection() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-white/50">{t.role}</p>
+                  <p className="text-xs text-white/70">{t.role}</p>
                 </div>
               </div>
             </CardBase>
@@ -651,8 +651,8 @@ function PartnersSection() {
       </Container>
 
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent dark:from-dark-950" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent dark:from-dark-950" />
 
         <motion.div
           className="flex gap-8"
@@ -696,7 +696,7 @@ function JoinSection() {
             Sé parte del{' '}
             <span className="text-secondary-400">cambio</span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/60">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
             Hay muchas formas de contribuir a la protección de la Amazonía peruana.
             Elige la que más se alinee contigo.
           </p>
@@ -711,7 +711,7 @@ function JoinSection() {
                   <Heart size={32} />
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-white">Voluntariado</h3>
-                <p className="mb-6 text-white/60">
+                <p className="mb-6 text-white/80">
                   Únete a nuestras jornadas de reforestación, talleres educativos y expediciones
                   de monitoreo. Tu tiempo y entusiasmo pueden marcar la diferencia.
                 </p>
@@ -732,7 +732,7 @@ function JoinSection() {
                   <Leaf size={32} />
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-white">Donaciones</h3>
-                <p className="mb-6 text-white/60">
+                <p className="mb-6 text-white/80">
                   Tu contribución económica nos permite plantar más árboles, educar a más niños
                   y proteger más especies. Cada donación cuenta.
                 </p>
@@ -864,7 +864,7 @@ function ContactSection() {
         <div className="grid gap-8 lg:grid-cols-2">
           <Reveal direction="left">
             <div className="space-y-6">
-              <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
+              <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-800">
                 <div className="aspect-[16/9] bg-gradient-to-br from-primary-100 via-accent-50 to-secondary-100" />
               </div>
 
@@ -933,7 +933,7 @@ function NewsletterSection() {
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <h3 className="mb-3 text-3xl font-bold text-white">Mantente informado</h3>
-            <p className="mb-8 text-white/60">
+            <p className="mb-8 text-white/80">
               Recibe nuestras noticias, eventos y formas de participar directamente en tu correo.
             </p>
           </Reveal>
@@ -950,7 +950,7 @@ function NewsletterSection() {
               Suscribirme
             </Button>
           </form>
-          <p className="mt-3 text-xs text-white/40">
+          <p className="mt-3 text-xs text-white/60">
             Sin spam. Puedes darte de baja en cualquier momento.
           </p>
         </div>

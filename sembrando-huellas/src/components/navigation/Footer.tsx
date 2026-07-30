@@ -31,7 +31,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
       <footer
         ref={ref}
         className={cn(
-          'bg-gray-900 text-gray-300 dark:bg-black',
+          'bg-dark-900 text-neutral-300',
           className
         )}
       >
@@ -46,7 +46,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                    className="text-neutral-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
                     aria-label={`Visit us on ${social.href}`}
                   >
                     {social.icon}
@@ -56,7 +56,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
             </div>
             {columns.map((column) => (
               <div key={column.title}>
-                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
                   {column.title}
                 </h3>
                 <ul className="space-y-2">
@@ -64,7 +64,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
                     <li key={link.href}>
                       <Link
                         to={link.href}
-                        className="text-sm text-gray-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                        className="text-sm text-neutral-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
                       >
                         {link.label}
                       </Link>
@@ -74,7 +74,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
               </div>
             ))}
           </div>
-          <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+          <div className="mt-10 border-t border-neutral-800 pt-6 text-center text-sm text-neutral-500">
             <p>{copyright}</p>
           </div>
         </div>

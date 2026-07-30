@@ -26,7 +26,7 @@ export default function Footer({ className }: FooterProps) {
             <h3 className="mb-4 text-xl font-bold text-white">
               Sembrando <span className="text-secondary-400">Huellas</span> Perú
             </h3>
-            <p className="mb-6 text-sm leading-relaxed text-white/50">
+            <p className="mb-6 text-sm leading-relaxed text-white/70">
               {t('footer.description')}
             </p>
             <div className="flex gap-3">
@@ -38,7 +38,7 @@ export default function Footer({ className }: FooterProps) {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-white/40 transition-all hover:bg-primary-600 hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-white/60 transition-all hover:bg-primary-600 hover:text-white"
                     aria-label={platform}
                   >
                     <span className="text-xs font-bold uppercase">{platform.charAt(0)}</span>
@@ -49,7 +49,7 @@ export default function Footer({ className }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/40 uppercase">
+            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/60 uppercase">
               {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
@@ -65,7 +65,7 @@ export default function Footer({ className }: FooterProps) {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-white/50 transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -75,7 +75,7 @@ export default function Footer({ className }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/40 uppercase">
+            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/60 uppercase">
               {t('nav.programs')}
             </h4>
             <ul className="space-y-3">
@@ -83,7 +83,7 @@ export default function Footer({ className }: FooterProps) {
                 <li key={p.id}>
                   <Link
                     to={`/programas/${p.slug}`}
-                    className="text-sm text-white/50 transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {p.title}
                   </Link>
@@ -93,10 +93,10 @@ export default function Footer({ className }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/40 uppercase">
+            <h4 className="mb-4 text-sm font-semibold tracking-widest text-white/60 uppercase">
               {t('footer.contact')}
             </h4>
-            <ul className="space-y-3 text-sm text-white/50">
+            <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 shrink-0 text-secondary-400" />
                 <span>{organizationData.address}</span>
@@ -119,10 +119,10 @@ export default function Footer({ className }: FooterProps) {
 
         <div className="mt-12 border-t border-white/5 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row">
-            <p className="text-sm text-white/40">
+            <p className="text-sm text-white/60">
               &copy; {currentYear} {siteConfig.name}. {t('footer.rights')}.
             </p>
-            <div className="flex gap-6 text-xs text-white/40">
+            <div className="flex gap-6 text-xs text-white/60">
               <Link to="/politicas" className="hover:text-white">{t('footer.privacy')}</Link>
               <Link to="/terminos" className="hover:text-white">{t('footer.terms')}</Link>
             </div>

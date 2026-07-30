@@ -5,7 +5,7 @@
     "role": "Líder comunitaria",
     "location": "Madre de Dios, Perú",
     "quote": "Antes veíamos el bosque solo como recursos para usar. Hoy entendemos que es nuestra casa y debemos protegerla. Sembrando Huellas nos enseñó a vivir en armonía con la naturaleza.",
-    "avatar": "/images/avatars/isabel.jpg",
+    "avatar": "/images/avatars/isabel.svg",
     "rating": 5,
     "featured": true,
     "date": "2024-06-15"
@@ -16,7 +16,7 @@
     "role": "Docente rural",
     "location": "Loreto, Perú",
     "quote": "Los talleres de educación ambiental transformaron mi forma de enseñar. Ahora mis alumnos lideran la brigada ecológica de la escuela y han involucrado a toda la comunidad.",
-    "avatar": "/images/avatars/pedro.jpg",
+    "avatar": "/images/avatars/pedro.svg",
     "rating": 5,
     "featured": true,
     "date": "2024-07-20"
@@ -27,7 +27,7 @@
     "role": "Voluntaria internacional",
     "location": "Lima, Perú",
     "quote": "Ser parte de las jornadas de reforestación fue una experiencia que cambió mi vida. Ver cómo cada árbol plantado es un paso hacia la esperanza me llena de propósito.",
-    "avatar": "/images/avatars/ana.jpg",
+    "avatar": "/images/avatars/ana.svg",
     "rating": 5,
     "featured": false,
     "date": "2024-08-10"
@@ -38,7 +38,7 @@
     "role": "Empresario aliado",
     "location": "San Isidro, Lima",
     "quote": "Aliarnos con Sembrando Huellas ha sido una de las mejores decisiones. Su profesionalismo, transparencia y compromiso con la conservación son ejemplares.",
-    "avatar": "/images/avatars/juan.jpg",
+    "avatar": "/images/avatars/juan.svg",
     "rating": 5,
     "featured": true,
     "date": "2024-09-05"

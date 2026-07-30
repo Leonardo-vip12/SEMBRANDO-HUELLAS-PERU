@@ -55,7 +55,7 @@ export default function DonationsPage() {
                 <p className="mb-4 text-sm font-semibold text-neutral-700">Selecciona un monto:</p>
                 <div className="mb-6 grid grid-cols-3 gap-3">
                   {donationAmounts.map(a => (
-                    <button key={a} onClick={() => { setAmount(a); setCustomAmount('') }} className={`rounded-xl border-2 py-4 text-center font-bold text-lg transition-all ${amount === a ? 'border-primary-600 bg-primary-50 text-primary-600' : 'border-neutral-200 text-neutral-600 hover:border-primary-300'}`}>
+                    <button key={a} onClick={() => { setAmount(a); setCustomAmount('') }} className={`rounded-xl border-2 py-4 text-center font-bold text-lg transition-all ${amount === a ? 'border-warm-500 bg-warm-50 text-warm-700' : 'border-neutral-200 text-neutral-600 hover:border-warm-300'}`}>
                       S/{a}
                     </button>
                   ))}
@@ -89,12 +89,12 @@ export default function DonationsPage() {
 
             <div className="space-y-6">
               <Reveal direction="right">
-                <CardBase variant="elevated" className="bg-gradient-to-br from-primary-800 to-dark-800 text-white">
+                <CardBase variant="elevated" className="bg-gradient-to-br from-warm-800 to-dark-900 text-white">
                   <h3 className="mb-4 text-2xl font-bold">Con tu ayuda hemos logrado</h3>
                   <div className="space-y-4">
                     {impactData.metrics?.slice(0, 4).map(m => (
                       <div key={m.label} className="flex items-center justify-between border-b border-white/10 pb-2">
-                        <span className="text-sm text-white/60">{m.label}</span>
+                        <span className="text-sm text-white/80">{m.label}</span>
                         <span className="text-lg font-bold text-secondary-400">{m.value}</span>
                       </div>
                     ))}
@@ -107,7 +107,7 @@ export default function DonationsPage() {
                 return (
                   <Reveal key={i} direction="right" delay={i * 0.05}>
                     <CardBase variant="flat" className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600"><Icon size={24} /></div>
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-warm-100 text-warm-600"><Icon size={24} /></div>
                       <div><h3 className="font-semibold text-dark-800">{r.title}</h3><p className="text-sm text-neutral-600">{r.description}</p></div>
                     </CardBase>
                   </Reveal>

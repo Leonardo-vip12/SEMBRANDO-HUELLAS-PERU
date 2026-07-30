@@ -5,7 +5,7 @@
     "slug": "conservation-international",
     "description": "Organización global de conservación aliada en nuestros proyectos de restauración ecológica.",
     "website": "https://www.conservation.org",
-    "logo": "/images/partners/ci.png",
+    "logo": "/images/partners/ci.svg",
     "type": "ONG Internacional",
     "since": 2020,
     "active": true
@@ -16,7 +16,7 @@
     "slug": "sernanp",
     "description": "Servicio Nacional de Áreas Naturales Protegidas del Perú.",
     "website": "https://www.sernanp.gob.pe",
-    "logo": "/images/partners/sernanp.png",
+    "logo": "/images/partners/sernanp.svg",
     "type": "Gubernamental",
     "since": 2019,
     "active": true
@@ -27,7 +27,7 @@
     "slug": "unicef-peru",
     "description": "Aliado en nuestros programas de educación ambiental para la niñez amazónica.",
     "website": "https://www.unicef.org/peru",
-    "logo": "/images/partners/unicef.png",
+    "logo": "/images/partners/unicef.svg",
     "type": "ONU",
     "since": 2022,
     "active": true
@@ -38,7 +38,7 @@
     "slug": "gore-madre-de-dios",
     "description": "Aliado institucional en proyectos de conservación y desarrollo sostenible.",
     "website": "https://www.gob.pe/goremadrededios",
-    "logo": "/images/partners/gore-mdd.png",
+    "logo": "/images/partners/gore-mdd.svg",
     "type": "Gubernamental",
     "since": 2019,
     "active": true
@@ -49,7 +49,7 @@
     "slug": "unalm",
     "description": "Aliado académico en investigaciones sobre biodiversidad y reforestación.",
     "website": "https://www.lamolina.edu.pe",
-    "logo": "/images/partners/lamolina.png",
+    "logo": "/images/partners/lamolina.svg",
     "type": "Académico",
     "since": 2021,
     "active": true
@@ -60,7 +60,7 @@
     "slug": "rainforest-alliance",
     "description": "Organización internacional aliada en prácticas de agricultura sostenible.",
     "website": "https://www.rainforest-alliance.org",
-    "logo": "/images/partners/rainforest.png",
+    "logo": "/images/partners/rainforest.svg",
     "type": "ONG Internacional",
     "since": 2023,
     "active": true

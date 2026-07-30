@@ -75,13 +75,13 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
               animate="visible"
               exit="exit"
               transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-              className="fixed left-0 top-0 flex h-full w-72 flex-col bg-white dark:bg-gray-900 shadow-xl"
+              className="fixed left-0 top-0 flex h-full w-72 flex-col bg-white dark:bg-neutral-900 shadow-xl"
             >
-              <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-4">
+              <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-700 px-4 py-4">
                 {logo}
                 <button
                   onClick={onToggle}
-                  className="rounded-lg p-1.5 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                  className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   aria-label="Close navigation menu"
                 >
                   <X size={20} />
@@ -98,16 +98,16 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
                           onToggle()
                         }}
                         className={cn(
-                          'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
+                          'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                           activePath === item.href
-                            ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
-                            : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                            ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/50 dark:text-primary-300'
+                            : 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800'
                         )}
                       >
                         {item.label}
                       </Link>
                       {item.children && item.children.length > 0 && (
-                        <ul className="ml-4 mt-1 space-y-1 border-l border-gray-200 dark:border-gray-700 pl-3">
+                        <ul className="ml-4 mt-1 space-y-1 border-l border-neutral-200 dark:border-neutral-700 pl-3">
                           {item.children.map((child) => (
                             <li key={child.href}>
                               <Link
@@ -117,10 +117,10 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
                                   onToggle()
                                 }}
                                 className={cn(
-                                  'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
+                                  'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                                   activePath === child.href
-                                    ? 'text-blue-700 dark:text-blue-300'
-                                    : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'
+                                    ? 'text-primary-700 dark:text-primary-300'
+                                    : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
                                 )}
                               >
                                 {child.label}

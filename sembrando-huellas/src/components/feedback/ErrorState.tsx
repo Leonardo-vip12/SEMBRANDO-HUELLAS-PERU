@@ -24,11 +24,11 @@ const ErrorState = forwardRef<HTMLDivElement, ErrorStateProps>(
         <div className="mb-4 rounded-full bg-red-100 p-3 dark:bg-red-900/30">
           <XCircle size={40} className="text-red-600 dark:text-red-400" />
         </div>
-        <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-gray-100">
+        <h3 className="mb-2 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
           {title}
         </h3>
         {message && (
-          <p className="mb-6 max-w-sm text-sm text-gray-600 dark:text-gray-400">
+          <p className="mb-6 max-w-sm text-sm text-neutral-600 dark:text-neutral-400">
             {message}
           </p>
         )}
@@ -36,9 +36,9 @@ const ErrorState = forwardRef<HTMLDivElement, ErrorStateProps>(
           <button
             onClick={retry.onClick}
             className={cn(
-              'rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white',
-              'transition-colors hover:bg-blue-700',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500'
+              'rounded-lg bg-primary-600 px-6 py-2 text-sm font-medium text-white',
+              'transition-colors hover:bg-primary-700',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500'
             )}
           >
             {retry.label}

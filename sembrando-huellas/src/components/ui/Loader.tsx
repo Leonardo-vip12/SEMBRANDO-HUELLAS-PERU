@@ -7,7 +7,7 @@ export default function Loader({ className, ...props }: LoaderProps) {
   return (
     <div
       className={cn(
-        'fixed inset-0 z-50 flex items-center justify-center bg-white',
+        'fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-neutral-900',
         className
       )}
       {...props}

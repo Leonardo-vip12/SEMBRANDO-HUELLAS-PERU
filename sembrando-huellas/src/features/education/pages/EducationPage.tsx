@@ -19,7 +19,7 @@ function resolveIcon(name: string): React.ElementType {
 }
 
 const resourceCategories = [
-  { title: 'Guías Pedagógicas', description: 'Materiales completos para docentes sobre educación ambiental en la Amazonía.', icon: BookOpen, color: 'bg-blue-100 text-blue-600' },
+  { title: 'Guías Pedagógicas', description: 'Materiales completos para docentes sobre educación ambiental en la Amazonía.', icon: BookOpen, color: 'bg-info-100 text-info-600' },
   { title: 'Infografías', description: 'Recursos visuales sobre biodiversidad, cambio climático y conservación.', icon: Image, color: 'bg-green-100 text-green-600' },
   { title: 'Videos Educativos', description: 'Contenido audiovisual para aprender sobre la Amazonía peruana.', icon: Video, color: 'bg-purple-100 text-purple-600' },
   { title: 'Campañas', description: 'Material de campañas de sensibilización ambiental listo para compartir.', icon: Newspaper, color: 'bg-coral-100 text-coral-600' },
@@ -27,8 +27,8 @@ const resourceCategories = [
 ]
 
 const bannerCampaigns = [
-  { title: 'Yo cuido la Amazonía', description: 'Campaña de sensibilización sobre la importancia de la Amazonía peruana para el mundo.', image: '/images/campaigns/amazonia.jpg' },
-  { title: 'Planta esperanza', description: 'Campaña de reforestación participativa que invita a la ciudadanía a plantar árboles nativos.', image: '/images/campaigns/planta.jpg' },
+  { title: 'Yo cuido la Amazonía', description: 'Campaña de sensibilización sobre la importancia de la Amazonía peruana para el mundo.', image: '/images/campaigns/amazonia.svg' },
+  { title: 'Planta esperanza', description: 'Campaña de reforestación participativa que invita a la ciudadanía a plantar árboles nativos.', image: '/images/campaigns/planta.svg' },
 ]
 
 export default function EducationPage() {
@@ -107,7 +107,7 @@ export default function EducationPage() {
                 <CardBase variant="default" hover className="group overflow-hidden border-primary-800/30 bg-white/5">
                   <div className="mb-4 aspect-[16/9] overflow-hidden rounded-lg bg-gradient-to-br from-primary-800 to-dark-800" />
                   <h3 className="mb-2 text-xl font-bold text-white">{c.title}</h3>
-                  <p className="text-sm text-white/60">{c.description}</p>
+                  <p className="text-sm text-white/80">{c.description}</p>
                 </CardBase>
               </Reveal>
             ))}
@@ -132,7 +132,7 @@ export default function EducationPage() {
         </Container>
       </Section>
 
-      <Section className="bg-primary-600">
+      <Section className="bg-info-600">
         <Container className="text-center">
           <Reveal>
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">¿Eres docente o institución educativa?</h2>
