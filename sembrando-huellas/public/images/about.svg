@@ -1,20 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:transparent" />
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="25%" stop-color="#143528"/>
+      <stop offset="50%" stop-color="#1B4332"/>
+      <stop offset="75%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#40916C"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <circle cx="350" cy="220" r="80" fill="rgba(255,255,255,0.06)" />
-  <circle cx="450" cy="280" r="60" fill="rgba(255,255,255,0.05)" />
-  <text x="400" y="390" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="rgba(255,255,255,0.9)" text-anchor="middle" text-shadow="0 2px 4px rgba(0,0,0,0.3)">Nuestro Equipo</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.5)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <rect x="0" y="550" width="800" height="50" fill="url(#overlay)" />
-  <text x="400" y="575" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">Placeholder · Próximamente fotografía real</text>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background trees -->
+  <ellipse cx="100" cy="350" rx="60" ry="40" fill="#1B4332" opacity="0.4"/>
+  <ellipse cx="250" cy="340" rx="70" ry="45" fill="#2D6A4F" opacity="0.3"/>
+  <ellipse cx="550" cy="345" rx="65" ry="42" fill="#1B4332" opacity="0.4"/>
+  <ellipse cx="700" cy="350" rx="55" ry="38" fill="#2D6A4F" opacity="0.3"/>
+  
+  <!-- Ground -->
+  <ellipse cx="400" cy="450" rx="350" ry="50" fill="#1B4332" opacity="0.5"/>
+  
+  <!-- Central large tree -->
+  <rect x="395" y="250" width="12" height="120" fill="#143528"/>
+  <ellipse cx="401" cy="220" rx="50" ry="45" fill="#2D6A4F" opacity="0.7"/>
+  <ellipse cx="401" cy="210" rx="35" ry="30" fill="#40916C" opacity="0.6"/>
+  <ellipse cx="401" cy="200" rx="22" ry="18" fill="#52B788" opacity="0.5"/>
+  
+  <!-- People silhouettes around tree -->
+  <!-- Person 1 - left -->
+  <g transform="translate(280, 350)">
+    <circle cx="0" cy="-20" r="12" fill="#143528" opacity="0.8"/>
+    <path d="M-15 0c0-20 7-30 15-30s15 10 15 30v20h-30v-20z" fill="#143528" opacity="0.8"/>
+    <rect x="-8" y="20" width="6" height="25" fill="#0D2B1A" opacity="0.7"/>
+    <rect x="2" y="20" width="6" height="25" fill="#0D2B1A" opacity="0.7"/>
+  </g>
+  
+  <!-- Person 2 - left-center -->
+  <g transform="translate(340, 340)">
+    <circle cx="0" cy="-22" r="14" fill="#1B4332" opacity="0.85"/>
+    <path d="M-18 0c0-22 8-34 18-34s18 12 18 34v22h-36v-22z" fill="#1B4332" opacity="0.85"/>
+    <rect x="-9" y="22" width="7" height="28" fill="#143528" opacity="0.75"/>
+    <rect x="2" y="22" width="7" height="28" fill="#143528" opacity="0.75"/>
+  </g>
+  
+  <!-- Person 3 - right-center -->
+  <g transform="translate(460, 345)">
+    <circle cx="0" cy="-21" r="13" fill="#1B4332" opacity="0.85"/>
+    <path d="M-16 0c0-21 7-32 16-32s16 11 16 32v21h-32v-21z" fill="#1B4332" opacity="0.85"/>
+    <rect x="-8" y="21" width="6" height="26" fill="#143528" opacity="0.75"/>
+    <rect x="2" y="21" width="6" height="26" fill="#143528" opacity="0.75"/>
+  </g>
+  
+  <!-- Person 4 - right -->
+  <g transform="translate(520, 355)">
+    <circle cx="0" cy="-19" r="11" fill="#143528" opacity="0.8"/>
+    <path d="M-14 0c0-19 6-28 14-28s14 9 14 28v18h-28v-18z" fill="#143528" opacity="0.8"/>
+    <rect x="-7" y="18" width="5" height="24" fill="#0D2B1A" opacity="0.7"/>
+    <rect x="2" y="18" width="5" height="24" fill="#0D2B1A" opacity="0.7"/>
+  </g>
+  
+  <!-- Person 5 - center front (leader) -->
+  <g transform="translate(400, 360)">
+    <circle cx="0" cy="-18" r="15" fill="#2D6A4F" opacity="0.9"/>
+    <path d="M-20 0c0-22 9-35 20-35s20 13 20 35v20h-40v-20z" fill="#2D6A4F" opacity="0.9"/>
+    <rect x="-10" y="20" width="8" height="30" fill="#1B4332" opacity="0.8"/>
+    <rect x="2" y="20" width="8" height="30" fill="#1B4332" opacity="0.8"/>
+  </g>
+  
+  <!-- Hands reaching up (symbolizing unity/care) -->
+  <path d="M350 320l-10-30l5 0l5 25z" fill="#2D6A4F" opacity="0.4"/>
+  <path d="M450 320l10-30l-5 0l-5 25z" fill="#2D6A4F" opacity="0.4"/>
+  
+  <!-- Small plants at feet -->
+  <g transform="translate(320, 395)">
+    <rect x="-1" y="0" width="2" height="8" fill="#40916C"/>
+    <path d="M1 4c4-3 6-6 5-9c-3 1-4 4-5 9z" fill="#52B788" opacity="0.6"/>
+    <path d="M-1 2c-4-3-6-6-5-9c3 1 4 4 5 9z" fill="#52B788" opacity="0.5"/>
+  </g>
+  
+  <g transform="translate(480, 398)">
+    <rect x="-1" y="0" width="2" height="7" fill="#40916C"/>
+    <path d="M1 3c3-2 5-5 4-8c-3 1-4 3-4 8z" fill="#52B788" opacity="0.5"/>
+    <path d="M-1 2c-3-2-5-5-4-8c3 1 4 3 4 8z" fill="#52B788" opacity="0.4"/>
+  </g>
+  
+  <!-- Light rays from above -->
+  <path d="M400 0L380 150L420 150Z" fill="#95D5B2" opacity="0.04"/>
+  <path d="M350 0L340 120L370 120Z" fill="#95D5B2" opacity="0.03"/>
+  <path d="M450 0L440 120L470 120Z" fill="#95D5B2" opacity="0.03"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="white" opacity="0.9" font-weight="bold">Sembrando Huellas PerÃº</text>
+  <text x="400" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.8">Nuestro Equipo, Nuestra Fuerza</text>
+  
+  <!-- Mission text -->
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="white" opacity="0.7">Unidos por la conservaciÃ³n del bosque amazÃ³nico</text>
+  <text x="400" y="545" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#95D5B2" opacity="0.6">Comunidad Â· AcciÃ³n Â· Futuro</text>
 </svg>

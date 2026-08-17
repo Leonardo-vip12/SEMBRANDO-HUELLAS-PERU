@@ -1,13 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#143528;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Árboles 2024</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Young trees in rows -->
+  <rect x="100" y="300" width="5" height="80" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="102" cy="285" rx="20" ry="22" fill="#40916C" opacity="0.4" />
+  <rect x="160" y="290" width="5" height="90" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="162" cy="272" rx="22" ry="25" fill="#2D6A4F" opacity="0.45" />
+  <rect x="220" y="295" width="5" height="85" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="222" cy="278" rx="20" ry="23" fill="#40916C" opacity="0.4" />
+  <rect x="280" y="285" width="6" height="95" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="283" cy="265" rx="24" ry="27" fill="#2D6A4F" opacity="0.5" />
+  <rect x="350" y="280" width="6" height="100" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="353" cy="258" rx="25" ry="28" fill="#52B788" opacity="0.35" />
+  <rect x="420" y="290" width="5" height="90" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="422" cy="272" rx="22" ry="25" fill="#40916C" opacity="0.4" />
+  <rect x="480" y="295" width="5" height="85" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="482" cy="278" rx="20" ry="23" fill="#2D6A4F" opacity="0.4" />
+  <rect x="550" y="300" width="5" height="80" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="552" cy="285" rx="20" ry="22" fill="#40916C" opacity="0.35" />
+  <rect x="620" y="290" width="5" height="90" fill="#8B6914" opacity="0.3" />
+  <ellipse cx="622" cy="272" rx="22" ry="25" fill="#52B788" opacity="0.3" />
+  <!-- Ground -->
+  <rect x="0" y="380" width="800" height="220" fill="#143528" opacity="0.2" />
+  <!-- Hands planting a tree -->
+  <path d="M350 420 Q345 395 360 385 Q370 380 365 410" fill="#C4956A" opacity="0.2" />
+  <path d="M375 420 Q380 395 365 385 Q355 380 360 410" fill="#C4956A" opacity="0.18" />
+  <rect x="360" y="385" width="3" height="35" fill="#8B6914" opacity="0.25" />
+  <ellipse cx="361" cy="378" rx="10" ry="12" fill="#52B788" opacity="0.25" />
+  <!-- Sun -->
+  <circle cx="650" cy="100" r="45" fill="#52B788" opacity="0.08" />
+  <!-- Title -->
+  <text x="400" y="120" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">20 mil Ã¡rboles plantados en 2024</text>
+  <text x="400" y="148" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

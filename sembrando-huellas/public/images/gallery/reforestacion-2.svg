@@ -1,13 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2D6A4F;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#143528;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sapling" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#40916C" />
+      <stop offset="100%" style="stop-color:#95D5B2" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Reforestación 2</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Soil mound -->
+  <ellipse cx="400" cy="440" rx="200" ry="30" fill="#5C4033" opacity="0.3" />
+  <!-- Sapling -->
+  <rect x="397" y="300" width="6" height="140" fill="#8B6914" opacity="0.6" />
+  <ellipse cx="400" cy="290" rx="45" ry="55" fill="url(#sapling)" opacity="0.8" />
+  <ellipse cx="380" cy="305" rx="30" ry="38" fill="#52B788" opacity="0.6" />
+  <ellipse cx="420" cy="305" rx="30" ry="38" fill="#52B788" opacity="0.6" />
+  <ellipse cx="400" cy="270" rx="25" ry="32" fill="#95D5B2" opacity="0.4" />
+  <!-- Hands cupping soil around sapling -->
+  <path d="M320 440 Q330 410 370 400 Q390 395 395 430" fill="#C4956A" opacity="0.25" />
+  <path d="M480 440 Q470 410 430 400 Q410 395 405 430" fill="#C4956A" opacity="0.25" />
+  <!-- Soil being placed -->
+  <circle cx="360" cy="420" r="5" fill="#5C4033" opacity="0.3" />
+  <circle cx="440" cy="418" r="4" fill="#5C4033" opacity="0.25" />
+  <circle cx="380" cy="430" r="3" fill="#5C4033" opacity="0.2" />
+  <!-- Watering -->
+  <path d="M500 280 Q510 260 520 280 Q530 300 510 310 Q490 300 500 280Z" fill="#95D5B2" opacity="0.15" />
+  <circle cx="440" cy="350" r="2" fill="#95D5B2" opacity="0.3" />
+  <circle cx="445" cy="365" r="1.5" fill="#95D5B2" opacity="0.25" />
+  <circle cx="438" cy="380" r="1.8" fill="#95D5B2" opacity="0.2" />
+  <!-- Sun glow -->
+  <circle cx="650" cy="100" r="60" fill="#52B788" opacity="0.08" />
+  <circle cx="650" cy="100" r="35" fill="#95D5B2" opacity="0.06" />
+  <!-- Title -->
+  <text x="400" y="120" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">ReforestaciÃ³n â€” GalerÃ­a 2</text>
+  <text x="400" y="145" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

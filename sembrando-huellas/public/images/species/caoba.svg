@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#143528;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6348;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6914" />
+      <stop offset="100%" style="stop-color:#5C4033" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Caoba</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Large tree trunk -->
+  <rect x="340" y="150" width="120" height="450" fill="url(#bark)" opacity="0.25" rx="8" />
+  <!-- Bark texture -->
+  <line x1="370" y1="180" x2="368" y2="280" stroke="#5C4033" stroke-width="1" opacity="0.15" />
+  <line x1="420" y1="200" x2="422" y2="320" stroke="#5C4033" stroke-width="1" opacity="0.12" />
+  <line x1="395" y1="160" x2="393" y2="400" stroke="#5C4033" stroke-width="0.8" opacity="0.1" />
+  <!-- Roots -->
+  <path d="M340 550 Q300 530 270 560 Q290 570 340 560" fill="#5C4033" opacity="0.2" />
+  <path d="M460 550 Q500 530 530 560 Q510 570 460 560" fill="#5C4033" opacity="0.2" />
+  <path d="M350 555 Q320 545 300 570" stroke="#5C4033" stroke-width="3" fill="none" opacity="0.15" />
+  <path d="M450 555 Q480 545 500 570" stroke="#5C4033" stroke-width="3" fill="none" opacity="0.15" />
+  <!-- Canopy leaves -->
+  <ellipse cx="400" cy="130" rx="200" ry="80" fill="#2D6A4F" opacity="0.35" />
+  <ellipse cx="350" cy="140" rx="150" ry="60" fill="#40916C" opacity="0.25" />
+  <ellipse cx="450" cy="135" rx="140" ry="55" fill="#52B788" opacity="0.2" />
+  <!-- Leaves detail -->
+  <ellipse cx="300" cy="160" rx="30" ry="15" fill="#52B788" opacity="0.2" transform="rotate(-20 300 160)" />
+  <ellipse cx="500" cy="155" rx="28" ry="14" fill="#52B788" opacity="0.18" transform="rotate(15 500 155)" />
+  <ellipse cx="380" cy="110" rx="25" ry="12" fill="#95D5B2" opacity="0.15" />
+  <!-- Wood grain on trunk -->
+  <path d="M360 300 Q380 290 400 300 Q420 310 440 300" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.1" />
+  <path d="M355 380 Q380 370 400 380 Q420 390 445 380" stroke="#8B6914" stroke-width="1" fill="none" opacity="0.08" />
+  <!-- Light filtering through canopy -->
+  <circle cx="350" cy="180" r="15" fill="#95D5B2" opacity="0.06" />
+  <circle cx="430" cy="170" r="12" fill="#95D5B2" opacity="0.05" />
+  <!-- Forest floor -->
+  <rect x="0" y="550" width="800" height="50" fill="#143528" opacity="0.2" />
+  <!-- Title -->
+  <text x="400" y="80" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Caoba</text>
+  <text x="400" y="105" font-family="Georgia,serif" font-size="14" font-style="italic" fill="#95D5B2" opacity="0.7" text-anchor="middle">Swietenia macrophylla</text>
+  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.35" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

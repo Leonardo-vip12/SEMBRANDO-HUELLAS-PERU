@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="25%" stop-color="#1B4332"/>
+      <stop offset="50%" stop-color="#2D6A4F"/>
+      <stop offset="75%" stop-color="#40916C"/>
+      <stop offset="100%" stop-color="#2D6348"/>
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143528"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background dense forest -->
+  <ellipse cx="80" cy="380" rx="70" ry="45" fill="#143528" opacity="0.4"/>
+  <ellipse cx="200" cy="370" rx="80" ry="50" fill="#1B4332" opacity="0.35"/>
+  <ellipse cx="350" cy="375" rx="75" ry="48" fill="#2D6A4F" opacity="0.3"/>
+  <ellipse cx="500" cy="372" rx="85" ry="52" fill="#1B4332" opacity="0.35"/>
+  <ellipse cx="650" cy="378" rx="70" ry="45" fill="#2D6A4F" opacity="0.3"/>
+  <ellipse cx="750" cy="382" rx="60" ry="40" fill="#143528" opacity="0.4"/>
+  
+  <!-- Conservation shield icon -->
+  <g transform="translate(680, 100)" opacity="0.2">
+    <path d="M20 5L5 12v15c0 12 15 18 15 18s15-6 15-18V12L20 5z" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <path d="M20 15v12" stroke="#52B788" stroke-width="1.5"/>
+    <path d="M20 15c-4 3-7 6-9 8" stroke="#52B788" stroke-width="1"/>
+    <path d="M20 15c4 3 7 6 9 8" stroke="#52B788" stroke-width="1"/>
+  </g>
+  
+  <!-- Tree icons -->
+  <g transform="translate(100, 450)" opacity="0.18">
+    <rect x="0" y="15" width="5" height="20" fill="#1B4332"/>
+    <ellipse cx="2" cy="8" rx="12" ry="10" fill="#40916C"/>
+    <ellipse cx="2" cy="4" rx="8" ry="6" fill="#52B788"/>
+  </g>
+  
+  <!-- Decorative circles -->
+  <circle cx="130" cy="130" r="40" fill="#143528" opacity="0.15"/>
+  <circle cx="700" cy="480" r="55" fill="#0D2B1A" opacity="0.12"/>
+  
+  <!-- Avatar circle -->
+  <circle cx="400" cy="220" r="110" fill="url(#circle)" opacity="0.3"/>
+  <circle cx="400" cy="220" r="95" fill="#0D2B1A" opacity="0.7"/>
+  
+  <!-- Initials -->
+  <text x="400" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#95D5B2" font-weight="bold" opacity="0.9">RH</text>
+  
+  <!-- Person silhouette -->
+  <circle cx="400" cy="185" r="22" fill="#52B788" opacity="0.25"/>
+  <path d="M368 230c0-28 14-45 32-45s32 17 32 45v22h-64v-22z" fill="#52B788" opacity="0.15"/>
+  
+  <!-- Name -->
+  <text x="400" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="white" opacity="0.9" font-weight="bold">Roberto Huamán</text>
+  
+  <!-- Role -->
+  <text x="400" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.85">Coordinador de Conservación</text>
+  
+  <!-- Decorative line -->
+  <line x1="300" y1="445" x2="500" y2="445" stroke="#52B788" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Conservation shield small icon -->
+  <g transform="translate(400, 495)" opacity="0.35">
+    <path d="M0-12L-10-6v10c0 8 10 12 10 12s10-4 10-12V-6L0-12z" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <path d="M0-4v6" stroke="#52B788" stroke-width="1"/>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Sembrando Huellas Perú</text>
+</svg>

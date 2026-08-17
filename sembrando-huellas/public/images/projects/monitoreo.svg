@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2D6348;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lens" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#52B788;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:0.8" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Monitoreo Ambiental</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Binoculars body -->
+  <ellipse cx="340" cy="280" rx="70" ry="85" fill="#1B4332" stroke="#40916C" stroke-width="2" opacity="0.8" />
+  <ellipse cx="460" cy="280" rx="70" ry="85" fill="#1B4332" stroke="#40916C" stroke-width="2" opacity="0.8" />
+  <!-- Lenses -->
+  <circle cx="340" cy="280" r="50" fill="url(#lens)" />
+  <circle cx="460" cy="280" r="50" fill="url(#lens)" />
+  <circle cx="340" cy="280" r="45" fill="none" stroke="#52B788" stroke-width="1" opacity="0.5" />
+  <circle cx="460" cy="280" r="45" fill="none" stroke="#52B788" stroke-width="1" opacity="0.5" />
+  <!-- Lens reflections -->
+  <circle cx="325" cy="265" r="12" fill="white" opacity="0.08" />
+  <circle cx="445" cy="265" r="12" fill="white" opacity="0.08" />
+  <!-- Bridge -->
+  <path d="M400 250 Q400 220 400 250" stroke="#40916C" stroke-width="4" fill="none" opacity="0.6" />
+  <rect x="390" y="240" width="20" height="25" fill="#2D6A4F" rx="4" opacity="0.7" />
+  <!-- Focus wheel -->
+  <circle cx="400" cy="290" r="10" fill="#2D6A4F" stroke="#52B788" stroke-width="1" opacity="0.6" />
+  <!-- Eyepieces -->
+  <rect x="315" y="185" width="50" height="20" fill="#2D6A4F" rx="4" opacity="0.7" />
+  <rect x="435" y="185" width="50" height="20" fill="#2D6A4F" rx="4" opacity="0.7" />
+  <!-- Trees silhouettes in background -->
+  <polygon points="100,500 130,380 160,500" fill="#1B4332" opacity="0.3" />
+  <polygon points="140,500 165,400 190,500" fill="#1B4332" opacity="0.25" />
+  <polygon points="640,500 670,390 700,500" fill="#1B4332" opacity="0.3" />
+  <polygon points="680,500 710,410 740,500" fill="#1B4332" opacity="0.25" />
+  <!-- WiFi/signal waves -->
+  <path d="M520 200 Q540 180 560 200" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.3" />
+  <path d="M530 185 Q545 168 560 185" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.2" />
+  <!-- Title -->
+  <text x="400" y="470" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Monitoreo de Fauna</text>
+  <text x="400" y="500" font-family="Arial,sans-serif" font-size="13" fill="#95D5B2" opacity="0.7" text-anchor="middle">Sembrando Huellas PerÃº</text>
+  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.35" text-anchor="middle">PrÃ³ximamente fotografÃ­a oficial</text>
 </svg>

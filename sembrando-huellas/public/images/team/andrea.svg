@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143528"/>
+      <stop offset="25%" stop-color="#2D6A4F"/>
+      <stop offset="50%" stop-color="#40916C"/>
+      <stop offset="75%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#40916C"/>
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#40916C"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background -->
+  <ellipse cx="150" cy="400" rx="80" ry="50" fill="#143528" opacity="0.3"/>
+  <ellipse cx="350" cy="390" rx="90" ry="55" fill="#1B4332" opacity="0.25"/>
+  <ellipse cx="600" cy="395" rx="75" ry="48" fill="#143528" opacity="0.3"/>
+  <ellipse cx="750" cy="400" rx="65" ry="42" fill="#1B4332" opacity="0.25"/>
+  
+  <!-- Communication icons - megaphone -->
+  <g transform="translate(680, 100)" opacity="0.18">
+    <path d="M0 0l20-8v16l-20-8z" fill="#52B788"/>
+    <rect x="-2" y="-6" width="4" height="12" fill="#52B788"/>
+    <path d="M-8-4c-4-2-8 0-8 4s4 6 8 4" stroke="#52B788" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Social media / waves icons -->
+  <g transform="translate(100, 470)" opacity="0.18">
+    <circle cx="0" cy="0" r="4" fill="#52B788"/>
+    <circle cx="12" cy="0" r="4" fill="#52B788"/>
+    <circle cx="24" cy="0" r="4" fill="#52B788"/>
+    <path d="M4-8c6-4 16-4 20 0" stroke="#52B788" stroke-width="1.2" fill="none"/>
+    <path d="M4-14c8-6 20-6 24 0" stroke="#52B788" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Decorative circles -->
+  <circle cx="120" cy="120" r="45" fill="#1B4332" opacity="0.12"/>
+  <circle cx="700" cy="480" r="60" fill="#0D2B1A" opacity="0.1"/>
+  
+  <!-- Leaf decorations -->
+  <g transform="translate(650, 500)" opacity="0.15">
+    <path d="M0 0c10-14 22-18 35-14c-5 10-14 18-35 14z" fill="#52B788"/>
+    <path d="M0 0c-10-14-22-18-35-14c5 10 14 18 35 14z" fill="#40916C"/>
+  </g>
+  
+  <!-- Avatar circle -->
+  <circle cx="400" cy="220" r="110" fill="url(#circle)" opacity="0.3"/>
+  <circle cx="400" cy="220" r="95" fill="#1B4332" opacity="0.7"/>
+  
+  <!-- Initials -->
+  <text x="400" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#95D5B2" font-weight="bold" opacity="0.9">AM</text>
+  
+  <!-- Person silhouette -->
+  <circle cx="400" cy="185" r="22" fill="#52B788" opacity="0.25"/>
+  <path d="M368 230c0-28 14-45 32-45s32 17 32 45v22h-64v-22z" fill="#52B788" opacity="0.15"/>
+  
+  <!-- Name -->
+  <text x="400" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="white" opacity="0.9" font-weight="bold">Andrea Mendoza</text>
+  
+  <!-- Role -->
+  <text x="400" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.85">Coordinadora de Comunicaciones</text>
+  
+  <!-- Decorative line -->
+  <line x1="280" y1="445" x2="520" y2="445" stroke="#52B788" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Communication icon small -->
+  <g transform="translate(400, 500)" opacity="0.35">
+    <rect x="-8" y="-5" width="16" height="10" rx="2" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <path d="M-8-2l8 5l8-5" stroke="#52B788" stroke-width="1.2" fill="none"/>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Sembrando Huellas Perú</text>
+</svg>

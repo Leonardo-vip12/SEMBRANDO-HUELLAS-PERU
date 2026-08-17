@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143528"/>
+      <stop offset="25%" stop-color="#1B4332"/>
+      <stop offset="50%" stop-color="#2D6A4F"/>
+      <stop offset="75%" stop-color="#40916C"/>
+      <stop offset="100%" stop-color="#52B788"/>
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background mountains -->
+  <path d="M0 400L100 350L200 380L300 320L400 360L500 300L600 340L700 310L800 350L800 600L0 600Z" fill="#0D2B1A" opacity="0.3"/>
+  
+  <!-- Background trees -->
+  <ellipse cx="150" cy="380" rx="50" ry="35" fill="#1B4332" opacity="0.4"/>
+  <ellipse cx="350" cy="370" rx="60" ry="40" fill="#2D6A4F" opacity="0.35"/>
+  <ellipse cx="650" cy="375" rx="55" ry="38" fill="#1B4332" opacity="0.4"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="150" r="50" fill="#143528" opacity="0.15"/>
+  <circle cx="720" cy="480" r="70" fill="#0D2B1A" opacity="0.12"/>
+  
+  <!-- Project/map icons decoration -->
+  <g transform="translate(680, 100)" opacity="0.15">
+    <rect x="0" y="0" width="30" height="22" rx="2" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <line x1="5" y1="7" x2="25" y2="7" stroke="#52B788" stroke-width="1"/>
+    <line x1="5" y1="12" x2="20" y2="12" stroke="#52B788" stroke-width="1"/>
+    <line x1="5" y1="17" x2="22" y2="17" stroke="#52B788" stroke-width="1"/>
+  </g>
+  
+  <!-- Compass decoration -->
+  <g transform="translate(120, 480)" opacity="0.15">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#52B788" stroke-width="1"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#52B788" stroke-width="1"/>
+    <polygon points="0,-10 -3,-4 3,-4" fill="#52B788"/>
+  </g>
+  
+  <!-- Avatar circle -->
+  <circle cx="400" cy="220" r="110" fill="url(#circle)" opacity="0.3"/>
+  <circle cx="400" cy="220" r="95" fill="#143528" opacity="0.7"/>
+  
+  <!-- Initials -->
+  <text x="400" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#95D5B2" font-weight="bold" opacity="0.9">CR</text>
+  
+  <!-- Person silhouette -->
+  <circle cx="400" cy="185" r="22" fill="#52B788" opacity="0.25"/>
+  <path d="M368 230c0-28 14-45 32-45s32 17 32 45v22h-64v-22z" fill="#52B788" opacity="0.15"/>
+  
+  <!-- Name -->
+  <text x="400" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="white" opacity="0.9" font-weight="bold">Carlos Enrique Rivas</text>
+  
+  <!-- Role -->
+  <text x="400" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.85">Director de Proyectos</text>
+  
+  <!-- Decorative line -->
+  <line x1="300" y1="445" x2="500" y2="445" stroke="#52B788" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Project gear icon -->
+  <g transform="translate(400, 495)" opacity="0.35">
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#52B788" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#52B788"/>
+    <line x1="0" y1="-12" x2="0" y2="-8" stroke="#52B788" stroke-width="1.5"/>
+    <line x1="0" y1="8" x2="0" y2="12" stroke="#52B788" stroke-width="1.5"/>
+    <line x1="-12" y1="0" x2="-8" y2="0" stroke="#52B788" stroke-width="1.5"/>
+    <line x1="8" y1="0" x2="12" y2="0" stroke="#52B788" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Sembrando Huellas Perú</text>
+</svg>

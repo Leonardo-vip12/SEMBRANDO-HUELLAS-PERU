@@ -2,12 +2,46 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6348;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#52B788;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#95D5B2;stop-opacity:0.6" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Biodiversidad 1</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Tropical tree -->
+  <rect x="380" y="200" width="12" height="250" fill="#5C4033" opacity="0.4" />
+  <ellipse cx="386" cy="180" rx="100" ry="60" fill="#2D6A4F" opacity="0.4" />
+  <ellipse cx="350" cy="195" rx="70" ry="45" fill="#40916C" opacity="0.35" />
+  <ellipse cx="420" cy="190" rx="60" ry="40" fill="#52B788" opacity="0.3" />
+  <!-- Macaw on branch -->
+  <path d="M340 200 Q310 180 290 200" stroke="#5C4033" stroke-width="4" fill="none" opacity="0.3" />
+  <!-- Bird body -->
+  <ellipse cx="310" cy="185" rx="22" ry="14" fill="#D90429" opacity="0.5" />
+  <ellipse cx="310" cy="185" rx="18" ry="11" fill="#E85D2C" opacity="0.4" />
+  <!-- Head -->
+  <circle cx="295" cy="178" r="10" fill="#FFD166" opacity="0.45" />
+  <!-- Beak -->
+  <path d="M285 178 L275 182 L285 185" fill="#1B4332" opacity="0.5" />
+  <!-- Eye -->
+  <circle cx="292" cy="176" r="2" fill="#1B4332" opacity="0.6" />
+  <circle cx="292" cy="176" r="0.8" fill="white" opacity="0.4" />
+  <!-- Wing -->
+  <path d="M315 178 Q340 165 350 190 Q335 195 315 190Z" fill="url(#wing)" />
+  <!-- Tail feathers -->
+  <path d="M330 188 Q360 200 370 230" stroke="#D90429" stroke-width="3" fill="none" opacity="0.35" />
+  <path d="M332 190 Q358 205 365 235" stroke="#2D6A4F" stroke-width="2.5" fill="none" opacity="0.3" />
+  <path d="M328 192 Q352 210 358 240" stroke="#FFD166" stroke-width="2" fill="none" opacity="0.25" />
+  <!-- Branch -->
+  <path d="M280 195 Q310 190 340 200" stroke="#5C4033" stroke-width="5" fill="none" opacity="0.3" />
+  <!-- Forest floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#143528" opacity="0.3" />
+  <!-- Small flowers -->
+  <circle cx="200" cy="460" r="3" fill="#D90429" opacity="0.2" />
+  <circle cx="450" cy="465" r="2.5" fill="#FFD166" opacity="0.2" />
+  <circle cx="600" cy="458" r="3" fill="#E85D2C" opacity="0.15" />
+  <!-- Title -->
+  <text x="400" y="100" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Biodiversidad â€” GalerÃ­a 1</text>
+  <text x="400" y="125" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

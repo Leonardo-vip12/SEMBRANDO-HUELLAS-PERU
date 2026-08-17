@@ -1,13 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#254F73;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A3348;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Escuelas Sostenibles</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Ground -->
+  <rect x="0" y="420" width="800" height="180" fill="#143528" opacity="0.5" />
+  <!-- School building -->
+  <rect x="280" y="280" width="240" height="140" fill="#1B4332" rx="4" />
+  <rect x="280" y="280" width="240" height="140" stroke="#40916C" stroke-width="1.5" fill="none" opacity="0.5" rx="4" />
+  <!-- Roof -->
+  <polygon points="260,280 400,200 540,280" fill="#2D6A4F" />
+  <polygon points="260,280 400,200 540,280" stroke="#52B788" stroke-width="1" fill="none" opacity="0.4" />
+  <!-- Windows -->
+  <rect x="310" y="310" width="35" height="35" fill="#52B788" opacity="0.3" rx="2" />
+  <rect x="360" y="310" width="35" height="35" fill="#52B788" opacity="0.25" rx="2" />
+  <rect x="410" y="310" width="35" height="35" fill="#52B788" opacity="0.3" rx="2" />
+  <rect x="460" y="310" width="35" height="35" fill="#52B788" opacity="0.25" rx="2" />
+  <!-- Door -->
+  <rect x="380" y="360" width="40" height="60" fill="#52B788" opacity="0.4" rx="2" />
+  <circle cx="413" cy="392" r="3" fill="#52B788" opacity="0.6" />
+  <!-- Flag -->
+  <rect x="400" y="140" width="3" height="62" fill="#95D5B2" opacity="0.6" />
+  <polygon points="403,140 440,152 403,165" fill="#D90429" opacity="0.6" />
+  <!-- Trees around -->
+  <rect x="160" y="370" width="6" height="50" fill="#5C4033" opacity="0.4" />
+  <polygon points="163,320 138,380 188,380" fill="#2D6A4F" opacity="0.5" />
+  <rect x="620" y="360" width="6" height="60" fill="#5C4033" opacity="0.4" />
+  <polygon points="623,305 595,370 651,370" fill="#2D6A4F" opacity="0.5" />
+  <polygon points="623,330 600,372 646,372" fill="#40916C" opacity="0.4" />
+  <!-- Sun -->
+  <circle cx="650" cy="120" r="40" fill="#52B788" opacity="0.15" />
+  <circle cx="650" cy="120" r="25" fill="#52B788" opacity="0.1" />
+  <!-- Title -->
+  <text x="400" y="100" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Escuelas en la AmazonÃ­a</text>
+  <text x="400" y="125" font-family="Arial,sans-serif" font-size="13" fill="#95D5B2" opacity="0.7" text-anchor="middle">Sembrando Huellas PerÃº</text>
+  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.35" text-anchor="middle">PrÃ³ximamente fotografÃ­a oficial</text>
 </svg>

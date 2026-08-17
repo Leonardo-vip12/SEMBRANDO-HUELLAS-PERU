@@ -1,13 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#143528;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leaf" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#40916C" />
+      <stop offset="100%" style="stop-color:#95D5B2" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Vivero Comunitario</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Ground -->
+  <rect x="0" y="430" width="800" height="170" fill="#143528" opacity="0.4" />
+  <!-- Rows of seedlings - row 1 -->
+  <rect x="120" y="410" width="20" height="18" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M130 410 C130 390 125 380 130 365" stroke="#40916C" stroke-width="2" fill="none" />
+  <ellipse cx="130" cy="362" rx="12" ry="16" fill="url(#leaf)" opacity="0.7" />
+  <ellipse cx="122" cy="370" rx="8" ry="11" fill="#52B788" opacity="0.5" />
+  <ellipse cx="138" cy="370" rx="8" ry="11" fill="#52B788" opacity="0.5" />
+
+  <rect x="180" y="410" width="20" height="18" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M190 410 C190 385 185 372 190 355" stroke="#40916C" stroke-width="2" fill="none" />
+  <ellipse cx="190" cy="352" rx="14" ry="18" fill="url(#leaf)" opacity="0.8" />
+  <ellipse cx="180" cy="362" rx="9" ry="12" fill="#52B788" opacity="0.5" />
+  <ellipse cx="200" cy="362" rx="9" ry="12" fill="#52B788" opacity="0.5" />
+
+  <rect x="240" y="410" width="20" height="18" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M250 410 C250 388 245 375 250 360" stroke="#40916C" stroke-width="2" fill="none" />
+  <ellipse cx="250" cy="357" rx="13" ry="17" fill="url(#leaf)" opacity="0.75" />
+  <ellipse cx="241" cy="366" rx="8" ry="11" fill="#52B788" opacity="0.5" />
+  <ellipse cx="259" cy="366" rx="8" ry="11" fill="#52B788" opacity="0.5" />
+
+  <!-- Rows of seedlings - row 2 (taller) -->
+  <rect x="340" y="405" width="22" height="22" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M351 405 C351 370 344 350 351 325" stroke="#40916C" stroke-width="2.5" fill="none" />
+  <ellipse cx="351" cy="320" rx="18" ry="22" fill="url(#leaf)" opacity="0.85" />
+  <ellipse cx="339" cy="335" rx="12" ry="15" fill="#52B788" opacity="0.55" />
+  <ellipse cx="363" cy="335" rx="12" ry="15" fill="#52B788" opacity="0.55" />
+
+  <rect x="405" y="405" width="22" height="22" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M416 405 C416 365 410 342 416 315" stroke="#40916C" stroke-width="2.5" fill="none" />
+  <ellipse cx="416" cy="310" rx="20" ry="24" fill="url(#leaf)" opacity="0.9" />
+  <ellipse cx="403" cy="326" rx="13" ry="16" fill="#52B788" opacity="0.55" />
+  <ellipse cx="429" cy="326" rx="13" ry="16" fill="#52B788" opacity="0.55" />
+
+  <rect x="470" y="405" width="22" height="22" fill="#5C4033" opacity="0.5" rx="2" />
+  <path d="M481 405 C481 372 475 352 481 330" stroke="#40916C" stroke-width="2.5" fill="none" />
+  <ellipse cx="481" cy="325" rx="17" ry="21" fill="url(#leaf)" opacity="0.8" />
+  <ellipse cx="469" cy="340" rx="11" ry="14" fill="#52B788" opacity="0.55" />
+  <ellipse cx="493" cy="340" rx="11" ry="14" fill="#52B788" opacity="0.55" />
+
+  <!-- Watering can -->
+  <ellipse cx="620" cy="395" rx="30" ry="22" fill="#2D6A4F" opacity="0.6" />
+  <rect x="595" y="375" width="50" height="20" fill="#2D6A4F" opacity="0.6" rx="3" />
+  <path d="M645 380 L670 365 L680 370 L655 388" fill="#2D6A4F" opacity="0.5" />
+  <!-- Water drops -->
+  <circle cx="675" cy="378" r="2" fill="#95D5B2" opacity="0.4" />
+  <circle cx="680" cy="385" r="1.5" fill="#95D5B2" opacity="0.3" />
+  <circle cx="672" cy="388" r="1.8" fill="#95D5B2" opacity="0.35" />
+  <!-- Hands planting -->
+  <path d="M560 430 Q555 410 570 400 Q580 395 575 420" fill="#C4956A" opacity="0.3" />
+  <path d="M580 430 Q585 415 575 405 Q565 400 570 425" fill="#C4956A" opacity="0.25" />
+  <!-- Title -->
+  <text x="400" y="150" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Vivero Comunitario</text>
+  <text x="400" y="180" font-family="Arial,sans-serif" font-size="13" fill="#95D5B2" opacity="0.7" text-anchor="middle">Sembrando Huellas PerÃº</text>
+  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.35" text-anchor="middle">PrÃ³ximamente fotografÃ­a oficial</text>
 </svg>

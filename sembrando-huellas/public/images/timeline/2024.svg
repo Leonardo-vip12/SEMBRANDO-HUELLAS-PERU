@@ -1,13 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2D6348;stop-opacity:1" />
+      <stop offset="0%" stop-color="#2D6A4F"/>
+      <stop offset="30%" stop-color="#40916C"/>
+      <stop offset="60%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#40916C"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">2024 · Impacto</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="white" opacity="0.9" font-weight="bold">Sembrando Huellas PerÃº</text>
+  <text x="400" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.6">Nuestro Camino</text>
+  
+  <!-- Timeline line -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#95D5B2" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Multiple trees representing expansion -->
+  <g transform="translate(150, 100)">
+    <!-- Tree 1 - small -->
+    <rect x="40" y="70" width="5" height="15" fill="#1B4332"/>
+    <ellipse cx="42" cy="62" rx="12" ry="10" fill="#40916C"/>
+    <ellipse cx="42" cy="58" rx="8" ry="7" fill="#52B788"/>
+    
+    <!-- Tree 2 - medium -->
+    <rect x="100" y="55" width="7" height="25" fill="#1B4332"/>
+    <ellipse cx="103" cy="42" rx="18" ry="15" fill="#40916C"/>
+    <ellipse cx="103" cy="37" rx="12" ry="10" fill="#52B788"/>
+    
+    <!-- Tree 3 - large -->
+    <rect x="175" y="40" width="10" height="40" fill="#1B4332"/>
+    <ellipse cx="180" cy="22" rx="25" ry="20" fill="#40916C"/>
+    <ellipse cx="180" cy="17" rx="18" ry="14" fill="#52B788"/>
+    <ellipse cx="180" cy="12" rx="10" ry="8" fill="#95D5B2" opacity="0.6"/>
+    
+    <!-- Tree 4 - medium -->
+    <rect x="255" y="50" width="8" height="30" fill="#1B4332"/>
+    <ellipse cx="259" cy="37" rx="20" ry="16" fill="#40916C"/>
+    <ellipse cx="259" cy="32" rx="14" ry="11" fill="#52B788"/>
+    
+    <!-- Tree 5 - small -->
+    <rect x="320" y="60" width="6" height="20" fill="#1B4332"/>
+    <ellipse cx="323" cy="52" rx="14" ry="11" fill="#40916C"/>
+    <ellipse cx="323" cy="48" rx="9" ry="8" fill="#52B788"/>
+    
+    <!-- Ground -->
+    <ellipse cx="185" cy="85" rx="160" ry="8" fill="#1B4332" opacity="0.4"/>
+    
+    <!-- Connecting roots/network -->
+    <path d="M42 85Q100 80 180 85Q259 80 323 85" stroke="#2D6A4F" stroke-width="2" fill="none" opacity="0.5"/>
+    
+    <!-- Birds -->
+    <path d="M60 25l5-3l5 3" stroke="#95D5B2" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M300 30l4-2l4 2" stroke="#95D5B2" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Year -->
+  <text x="400" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="white" opacity="0.9" font-weight="bold">2024</text>
+  
+  <!-- Description -->
+  <text x="400" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="white" opacity="0.9">ExpansiÃ³n</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.7">Alcance regional y nuevas fronteras de conservaciÃ³n</text>
 </svg>

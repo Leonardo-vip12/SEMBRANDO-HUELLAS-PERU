@@ -89,7 +89,7 @@ function ScrollIndicator() {
   )
 }
 
-const HERO_BG = '/images/hero-bg.svg'
+const HERO_BG = '/images/hero-bg.jpg'
 
 function HeroSection() {
   return (
@@ -174,7 +174,7 @@ function AboutSection() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/about.svg"
+                  src="/images/about.jpg"
                   alt="Equipo de Sembrando Huellas Perú"
                   className="h-full w-full"
                   fallback={

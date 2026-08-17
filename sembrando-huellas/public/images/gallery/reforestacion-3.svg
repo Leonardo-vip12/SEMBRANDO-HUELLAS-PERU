@@ -2,12 +2,41 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2D6348;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Reforestación 3</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Young forest row -->
+  <rect x="60" y="300" width="5" height="120" fill="#8B6914" opacity="0.4" />
+  <polygon points="62,240 35,320 90,320" fill="#2D6A4F" opacity="0.6" />
+  <polygon points="62,265 42,322 82,322" fill="#40916C" opacity="0.5" />
+  <rect x="130" y="285" width="6" height="135" fill="#8B6914" opacity="0.4" />
+  <polygon points="133,215 100,300 166,300" fill="#2D6A4F" opacity="0.65" />
+  <polygon points="133,245 108,303 158,303" fill="#40916C" opacity="0.55" />
+  <rect x="210" y="290" width="5" height="130" fill="#8B6914" opacity="0.4" />
+  <polygon points="212,228 183,305 242,305" fill="#2D6A4F" opacity="0.6" />
+  <rect x="290" y="280" width="6" height="140" fill="#8B6914" opacity="0.4" />
+  <polygon points="293,208 258,295 328,295" fill="#2D6A4F" opacity="0.7" />
+  <polygon points="293,240 268,298 318,298" fill="#52B788" opacity="0.4" />
+  <rect x="370" y="275" width="6" height="145" fill="#8B6914" opacity="0.4" />
+  <polygon points="373,200 338,290 408,290" fill="#2D6A4F" opacity="0.7" />
+  <polygon points="373,232 348,293 398,293" fill="#52B788" opacity="0.45" />
+  <rect x="450" y="285" width="5" height="135" fill="#8B6914" opacity="0.4" />
+  <polygon points="452,218 422,298 482,298" fill="#2D6A4F" opacity="0.65" />
+  <rect x="530" y="295" width="6" height="125" fill="#8B6914" opacity="0.4" />
+  <polygon points="533,238 505,305 561,305" fill="#2D6A4F" opacity="0.6" />
+  <polygon points="533,262 512,307 554,307" fill="#40916C" opacity="0.5" />
+  <rect x="610" y="300" width="5" height="120" fill="#8B6914" opacity="0.35" />
+  <polygon points="612,248 588,310 636,310" fill="#2D6A4F" opacity="0.55" />
+  <rect x="690" y="295" width="5" height="125" fill="#8B6914" opacity="0.4" />
+  <polygon points="692,240 666,305 718,305" fill="#2D6A4F" opacity="0.6" />
+  <!-- Ground line -->
+  <rect x="0" y="420" width="800" height="180" fill="#143528" opacity="0.3" />
+  <!-- Butterfly -->
+  <ellipse cx="350" cy="180" rx="8" ry="6" fill="#52B788" opacity="0.4" transform="rotate(-20 350 180)" />
+  <ellipse cx="362" cy="178" rx="8" ry="6" fill="#52B788" opacity="0.35" transform="rotate(20 362 178)" />
+  <rect x="355" y="174" width="1" height="12" fill="#95D5B2" opacity="0.3" />
+  <!-- Title -->
+  <text x="400" y="130" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">ReforestaciÃ³n â€” GalerÃ­a 3</text>
+  <text x="400" y="155" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

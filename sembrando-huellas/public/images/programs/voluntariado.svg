@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6348;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" />
+  <!-- Forest canopy -->
+  <ellipse cx="200" cy="150" rx="160" ry="80" fill="#2D6A4F" opacity="0.2" />
+  <ellipse cx="500" cy="140" rx="180" ry="90" fill="#1B4332" opacity="0.2" />
+  <ellipse cx="680" cy="160" rx="140" ry="75" fill="#2D6A4F" opacity="0.18" />
+  <!-- Volunteers with tools -->
+  <!-- Person with machete -->
+  <circle cx="250" cy="310" r="14" fill="#C4956A" opacity="0.18" />
+  <rect x="245" y="324" width="10" height="35" fill="#1B4332" opacity="0.15" />
+  <line x1="265" y1="325" x2="290" y2="310" stroke="#95D5B2" stroke-width="2" opacity="0.2" />
+  <!-- Person planting -->
+  <circle cx="380" cy="320" r="14" fill="#C4956A" opacity="0.18" />
+  <rect x="375" y="334" width="10" height="32" fill="#1B4332" opacity="0.15" />
+  <ellipse cx="380" cy="370" rx="10" ry="12" fill="#52B788" opacity="0.2" />
+  <!-- Person with wheelbarrow -->
+  <circle cx="500" cy="305" r="14" fill="#C4956A" opacity="0.18" />
+  <rect x="495" y="319" width="10" height="35" fill="#1B4332" opacity="0.15" />
+  <rect x="510" y="340" width="50" height="25" fill="#5C4033" opacity="0.15" rx="3" />
+  <circle cx="520" cy="370" r="8" fill="#5C4033" opacity="0.12" />
+  <circle cx="550" cy="370" r="8" fill="#5C4033" opacity="0.12" />
+  <!-- Person with seedlings tray -->
+  <circle cx="620" cy="315" r="14" fill="#C4956A" opacity="0.18" />
+  <rect x="615" y="329" width="10" height="33" fill="#1B4332" opacity="0.15" />
+  <rect x="590" y="330" width="60" height="15" fill="#5C4033" opacity="0.12" rx="2" />
+  <ellipse cx="600" cy="327" rx="6" ry="8" fill="#52B788" opacity="0.18" />
+  <ellipse cx="620" cy="327" rx="6" ry="8" fill="#52B788" opacity="0.18" />
+  <ellipse cx="640" cy="327" rx="6" ry="8" fill="#52B788" opacity="0.18" />
+  <!-- Trees being planted -->
+  <rect x="150" y="350" width="4" height="40" fill="#8B6914" opacity="0.2" />
+  <ellipse cx="152" cy="342" rx="14" ry="16" fill="#40916C" opacity="0.2" />
+  <rect x="700" y="340" width="4" height="50" fill="#8B6914" opacity="0.2" />
+  <ellipse cx="702" cy="330" rx="16" ry="18" fill="#40916C" opacity="0.22" />
+  <!-- Ground -->
+  <rect x="0" y="380" width="800" height="220" fill="#143528" opacity="0.15" />
+  <!-- Title -->
+  <text x="400" y="100" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Voluntariado</text>
+  <text x="400" y="480" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas Perú</text>
+</svg>

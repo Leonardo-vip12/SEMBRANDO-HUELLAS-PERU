@@ -1,13 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leaf" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D6A4F" />
+      <stop offset="100%" style="stop-color:#52B788" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Reforestación 1</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Dense forest canopy -->
+  <ellipse cx="150" cy="200" rx="120" ry="80" fill="#1B4332" opacity="0.5" />
+  <ellipse cx="300" cy="180" rx="140" ry="90" fill="#2D6A4F" opacity="0.4" />
+  <ellipse cx="500" cy="190" rx="130" ry="85" fill="#1B4332" opacity="0.45" />
+  <ellipse cx="650" cy="210" rx="120" ry="75" fill="#2D6A4F" opacity="0.5" />
+  <!-- Tall trees -->
+  <rect x="100" y="250" width="12" height="200" fill="#5C4033" opacity="0.4" />
+  <polygon points="106,180 60,270 152,270" fill="url(#leaf)" opacity="0.7" />
+  <polygon points="106,210 75,275 137,275" fill="#40916C" opacity="0.6" />
+  <rect x="200" y="230" width="14" height="220" fill="#5C4033" opacity="0.4" />
+  <polygon points="207,150 150,250 264,250" fill="url(#leaf)" opacity="0.75" />
+  <polygon points="207,185 165,255 249,255" fill="#40916C" opacity="0.65" />
+  <rect x="350" y="240" width="12" height="210" fill="#5C4033" opacity="0.35" />
+  <polygon points="356,170 310,260 402,260" fill="url(#leaf)" opacity="0.7" />
+  <rect x="450" y="235" width="14" height="215" fill="#5C4033" opacity="0.4" />
+  <polygon points="457,160 405,255 509,255" fill="url(#leaf)" opacity="0.8" />
+  <polygon points="457,195 420,260 494,260" fill="#40916C" opacity="0.65" />
+  <rect x="580" y="245" width="12" height="205" fill="#5C4033" opacity="0.4" />
+  <polygon points="586,180 540,260 632,260" fill="url(#leaf)" opacity="0.7" />
+  <rect x="680" y="255" width="10" height="195" fill="#5C4033" opacity="0.35" />
+  <polygon points="685,195 645,265 725,265" fill="url(#leaf)" opacity="0.65" />
+  <!-- River reflection -->
+  <path d="M0 480 Q200 460 400 475 Q600 490 800 470 L800 600 L0 600Z" fill="#1B4332" opacity="0.3" />
+  <path d="M0 500 Q200 485 400 495 Q600 505 800 490 L800 600 L0 600Z" fill="#2D6A4F" opacity="0.15" />
+  <!-- Light rays -->
+  <line x1="400" y1="0" x2="350" y2="300" stroke="#52B788" stroke-width="1" opacity="0.08" />
+  <line x1="420" y1="0" x2="450" y2="300" stroke="#52B788" stroke-width="1" opacity="0.06" />
+  <line x1="380" y1="0" x2="300" y2="280" stroke="#52B788" stroke-width="0.8" opacity="0.05" />
+  <!-- Parrots -->
+  <path d="M250 120 Q260 110 270 120" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.5" />
+  <path d="M280 105 Q288 97 296 105" stroke="#52B788" stroke-width="1.5" fill="none" opacity="0.4" />
+  <circle cx="246" cy="118" r="3" fill="#D90429" opacity="0.3" />
+  <circle cx="276" cy="103" r="3" fill="#D90429" opacity="0.25" />
+  <!-- Title -->
+  <text x="400" y="530" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">ReforestaciÃ³n â€” GalerÃ­a 1</text>
+  <text x="400" y="555" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

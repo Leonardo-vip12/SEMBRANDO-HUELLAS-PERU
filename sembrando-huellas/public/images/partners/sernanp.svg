@@ -1,13 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#254F73;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A3348;stop-opacity:1" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="100%" stop-color="#143528"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">SERNANP</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <rect width="200" height="60" rx="6" fill="url(#bg)"/>
+  <!-- Shield icon -->
+  <g transform="translate(12, 8)">
+    <path d="M14 2L4 8v12c0 10 10 16 10 16s10-6 10-16V8L14 2z" fill="#1B4332" stroke="#40916C" stroke-width="2"/>
+    <path d="M14 10v14" stroke="#52B788" stroke-width="2"/>
+    <path d="M14 10c-3 3-6 5-8 6" stroke="#52B788" stroke-width="1.5" fill="none"/>
+    <path d="M14 10c3 3 6 5 8 6" stroke="#52B788" stroke-width="1.5" fill="none"/>
+    <circle cx="14" cy="16" r="3" fill="#95D5B2" opacity="0.6"/>
+  </g>
+  <!-- SERNANP text -->
+  <text x="46" y="36" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="white" opacity="0.95">SERNANP</text>
 </svg>

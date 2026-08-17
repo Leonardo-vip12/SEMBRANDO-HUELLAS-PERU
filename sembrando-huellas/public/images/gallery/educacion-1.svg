@@ -1,13 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#254F73;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A3348;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Educación 1</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Chalkboard -->
+  <rect x="200" y="150" width="400" height="250" fill="#143528" rx="6" />
+  <rect x="200" y="150" width="400" height="250" stroke="#40916C" stroke-width="2" fill="none" rx="6" opacity="0.4" />
+  <!-- Chalk tray -->
+  <rect x="300" y="400" width="200" height="8" fill="#5C4033" opacity="0.4" rx="2" />
+  <!-- Chalk marks on board -->
+  <line x1="240" y1="210" x2="350" y2="210" stroke="#95D5B2" stroke-width="2" opacity="0.4" />
+  <line x1="240" y1="240" x2="400" y2="240" stroke="#95D5B2" stroke-width="2" opacity="0.35" />
+  <line x1="240" y1="270" x2="380" y2="270" stroke="#95D5B2" stroke-width="2" opacity="0.3" />
+  <!-- Tree drawing on board -->
+  <line x1="500" y1="280" x2="500" y2="220" stroke="#52B788" stroke-width="2" opacity="0.5" />
+  <polygon points="500,180 470,230 530,230" fill="none" stroke="#52B788" stroke-width="1.5" opacity="0.4" />
+  <polygon points="500,200 478,235 522,235" fill="none" stroke="#52B788" stroke-width="1.5" opacity="0.35" />
+  <!-- Globe on desk -->
+  <circle cx="280" cy="450" r="25" fill="#1B4332" stroke="#40916C" stroke-width="1.5" opacity="0.5" />
+  <ellipse cx="280" cy="450" rx="25" ry="8" fill="none" stroke="#40916C" stroke-width="1" opacity="0.3" />
+  <path d="M280 425 Q295 440 280 450" fill="none" stroke="#52B788" stroke-width="1" opacity="0.3" />
+  <path d="M280 425 Q265 440 280 450" fill="none" stroke="#52B788" stroke-width="1" opacity="0.3" />
+  <!-- Open book -->
+  <path d="M520 435 Q550 425 580 435 L580 470 Q550 460 520 470Z" fill="#1B4332" stroke="#40916C" stroke-width="1" opacity="0.4" />
+  <line x1="550" y1="425" x2="550" y2="460" stroke="#40916C" stroke-width="0.5" opacity="0.3" />
+  <!-- Pencils -->
+  <rect x="620" y="440" width="40" height="5" fill="#D90429" opacity="0.3" rx="1" transform="rotate(-5 640 442)" />
+  <rect x="615" y="448" width="40" height="5" fill="#FFD166" opacity="0.25" rx="1" transform="rotate(-3 635 450)" />
+  <!-- Students silhouettes -->
+  <ellipse cx="300" cy="520" rx="20" ry="15" fill="#143528" opacity="0.4" />
+  <circle cx="300" cy="495" r="12" fill="#143528" opacity="0.4" />
+  <ellipse cx="380" cy="525" rx="20" ry="15" fill="#143528" opacity="0.35" />
+  <circle cx="380" cy="500" r="12" fill="#143528" opacity="0.35" />
+  <ellipse cx="460" cy="520" rx="20" ry="15" fill="#143528" opacity="0.4" />
+  <circle cx="460" cy="495" r="12" fill="#143528" opacity="0.4" />
+  <ellipse cx="540" cy="525" rx="20" ry="15" fill="#143528" opacity="0.35" />
+  <circle cx="540" cy="500" r="12" fill="#143528" opacity="0.35" />
+  <!-- Title -->
+  <text x="400" y="100" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">EducaciÃ³n Ambiental â€” GalerÃ­a 1</text>
+  <text x="400" y="125" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

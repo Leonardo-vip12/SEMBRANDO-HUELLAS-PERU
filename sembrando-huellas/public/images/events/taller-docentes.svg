@@ -1,13 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#254F73;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A3348;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D6A4F;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Taller Docentes</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Workshop room -->
+  <rect x="150" y="200" width="500" height="250" fill="#143528" opacity="0.25" rx="4" />
+  <!-- Whiteboard -->
+  <rect x="250" y="210" width="300" height="100" fill="#0D2B1A" opacity="0.2" rx="2" />
+  <line x1="270" y1="240" x2="400" y2="240" stroke="#52B788" stroke-width="1.5" opacity="0.25" />
+  <line x1="270" y1="260" x2="380" y2="260" stroke="#52B788" stroke-width="1.5" opacity="0.2" />
+  <line x1="270" y1="280" x2="350" y2="280" stroke="#52B788" stroke-width="1.5" opacity="0.15" />
+  <!-- Leaf drawing on board -->
+  <path d="M460 230 Q480 220 475 245 Q470 260 460 230Z" fill="#52B788" opacity="0.3" />
+  <line x1="460" y1="245" x2="465" y2="265" stroke="#40916C" stroke-width="1" opacity="0.2" />
+  <!-- People at tables -->
+  <rect x="180" y="350" width="200" height="8" fill="#5C4033" opacity="0.15" rx="1" />
+  <rect x="420" y="350" width="200" height="8" fill="#5C4033" opacity="0.15" rx="1" />
+  <!-- People sitting -->
+  <circle cx="220" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <circle cx="280" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <circle cx="340" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <circle cx="460" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <circle cx="520" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <circle cx="580" cy="335" r="10" fill="#C4956A" opacity="0.12" />
+  <!-- Presenter standing -->
+  <circle cx="400" cy="330" r="12" fill="#C4956A" opacity="0.15" />
+  <rect x="396" y="342" width="8" height="25" fill="#1B4332" opacity="0.12" />
+  <!-- Materials on table -->
+  <rect x="230" y="344" width="30" height="5" fill="#52B788" opacity="0.1" rx="1" />
+  <rect x="470" y="344" width="30" height="5" fill="#52B788" opacity="0.1" rx="1" />
+  <!-- Ground -->
+  <rect x="0" y="450" width="800" height="150" fill="#143528" opacity="0.15" />
+  <!-- Title -->
+  <text x="400" y="120" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Taller para Docentes</text>
+  <text x="400" y="150" font-family="Arial,sans-serif" font-size="13" fill="#95D5B2" opacity="0.7" text-anchor="middle">Sembrando Huellas PerÃº</text>
+  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="white" opacity="0.35" text-anchor="middle">PrÃ³ximamente fotografÃ­a oficial</text>
 </svg>

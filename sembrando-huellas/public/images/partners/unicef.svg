@@ -1,13 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2D6348;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="100%" stop-color="#143528"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">UNICEF</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <rect width="200" height="60" rx="6" fill="url(#bg)"/>
+  <!-- Globe/child icon -->
+  <g transform="translate(10, 6)">
+    <circle cx="16" cy="18" r="14" fill="none" stroke="#40916C" stroke-width="1.5"/>
+    <ellipse cx="16" cy="18" rx="7" ry="14" fill="none" stroke="#40916C" stroke-width="1"/>
+    <line x1="2" y1="18" x2="30" y2="18" stroke="#40916C" stroke-width="1"/>
+    <path d="M6 10h20" stroke="#40916C" stroke-width="0.8"/>
+    <path d="M6 26h20" stroke="#40916C" stroke-width="0.8"/>
+    <!-- Small figure -->
+    <circle cx="16" cy="14" r="2.5" fill="#95D5B2"/>
+    <path d="M12 20c0-2 2-4 4-4s4 2 4 4v4h-8v-4z" fill="#95D5B2"/>
+  </g>
+  <!-- UNICEF text -->
+  <text x="46" y="36" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="white" opacity="0.95">UNICEF</text>
 </svg>

@@ -4,10 +4,38 @@
       <stop offset="0%" style="stop-color:#1B4332;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0D2B1A;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D6A4F;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:0.6" />
+    </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Biodiversidad 2</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Water -->
+  <rect x="0" y="350" width="800" height="250" fill="url(#water)" />
+  <!-- Ripples -->
+  <ellipse cx="400" cy="380" rx="120" ry="15" fill="none" stroke="#52B788" stroke-width="0.8" opacity="0.2" />
+  <ellipse cx="400" cy="395" rx="180" ry="20" fill="none" stroke="#52B788" stroke-width="0.6" opacity="0.15" />
+  <!-- River dolphin silhouette -->
+  <path d="M300 380 Q320 360 360 355 Q400 350 440 360 Q460 365 470 380 Q460 395 440 400 Q400 410 360 405 Q320 400 300 380Z" fill="#95D5B2" opacity="0.25" />
+  <!-- Fin -->
+  <path d="M380 355 L390 335 L400 355" fill="#95D5B2" opacity="0.2" />
+  <!-- Snout -->
+  <path d="M300 380 Q280 375 270 380 Q280 385 300 382" fill="#95D5B2" opacity="0.2" />
+  <!-- Eye -->
+  <circle cx="320" cy="375" r="2.5" fill="#1B4332" opacity="0.4" />
+  <!-- Vegetation on banks -->
+  <rect x="50" y="320" width="5" height="35" fill="#5C4033" opacity="0.3" />
+  <ellipse cx="52" cy="315" rx="15" ry="12" fill="#2D6A4F" opacity="0.3" />
+  <rect x="120" y="310" width="5" height="45" fill="#5C4033" opacity="0.25" />
+  <ellipse cx="122" cy="305" rx="18" ry="14" fill="#40916C" opacity="0.25" />
+  <rect x="680" y="325" width="5" height="30" fill="#5C4033" opacity="0.3" />
+  <ellipse cx="682" cy="318" rx="16" ry="13" fill="#2D6A4F" opacity="0.3" />
+  <rect x="740" y="315" width="5" height="40" fill="#5C4033" opacity="0.25" />
+  <ellipse cx="742" cy="308" rx="20" ry="15" fill="#40916C" opacity="0.25" />
+  <!-- Fish silhouettes -->
+  <path d="M550 400 Q560 395 570 400 Q560 405 550 400Z" fill="#52B788" opacity="0.2" />
+  <path d="M600 420 Q608 416 616 420 Q608 424 600 420Z" fill="#52B788" opacity="0.15" />
+  <!-- Title -->
+  <text x="400" y="120" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Biodiversidad â€” GalerÃ­a 2</text>
+  <text x="400" y="145" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

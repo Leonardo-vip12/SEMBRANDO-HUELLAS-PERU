@@ -27,8 +27,8 @@ const resourceCategories = [
 ]
 
 const bannerCampaigns = [
-  { title: 'Yo cuido la Amazonía', description: 'Campaña de sensibilización sobre la importancia de la Amazonía peruana para el mundo.', image: '/images/campaigns/amazonia.svg' },
-  { title: 'Planta esperanza', description: 'Campaña de reforestación participativa que invita a la ciudadanía a plantar árboles nativos.', image: '/images/campaigns/planta.svg' },
+  { title: 'Yo cuido la Amazonía', description: 'Campaña de sensibilización sobre la importancia de la Amazonía peruana para el mundo.', image: '/images/campaigns/amazonia.jpg' },
+  { title: 'Planta esperanza', description: 'Campaña de reforestación participativa que invita a la ciudadanía a plantar árboles nativos.', image: '/images/campaigns/planta.jpg' },
 ]
 
 export default function EducationPage() {

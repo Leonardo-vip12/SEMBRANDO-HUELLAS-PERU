@@ -1,13 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1A3348;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#254F73;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#143528;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Educación 2</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- Outdoor classroom setting - trees in background -->
+  <rect x="80" y="150" width="8" height="150" fill="#5C4033" opacity="0.3" />
+  <polygon points="84,100 55,165 113,165" fill="#2D6A4F" opacity="0.4" />
+  <rect x="710" y="160" width="8" height="140" fill="#5C4033" opacity="0.3" />
+  <polygon points="714,115 688,170 740,170" fill="#2D6A4F" opacity="0.4" />
+  <!-- Whiteboard/easel -->
+  <rect x="300" y="180" width="200" height="150" fill="#1B4332" stroke="#40916C" stroke-width="1.5" rx="3" opacity="0.5" />
+  <line x1="320" y1="220" x2="480" y2="220" stroke="#52B788" stroke-width="1.5" opacity="0.4" />
+  <line x1="320" y1="250" x2="460" y2="250" stroke="#52B788" stroke-width="1.5" opacity="0.35" />
+  <line x1="320" y1="280" x2="440" y2="280" stroke="#52B788" stroke-width="1.5" opacity="0.3" />
+  <!-- Leaf drawing on board -->
+  <path d="M460 200 Q480 190 475 210 Q470 225 460 200Z" fill="#52B788" opacity="0.4" />
+  <!-- Children planting -->
+  <circle cx="200" cy="400" r="14" fill="#1B4332" opacity="0.4" />
+  <rect x="195" y="414" width="10" height="30" fill="#1B4332" opacity="0.35" />
+  <circle cx="280" cy="405" r="14" fill="#1B4332" opacity="0.35" />
+  <rect x="275" y="419" width="10" height="28" fill="#1B4332" opacity="0.3" />
+  <circle cx="360" cy="398" r="14" fill="#1B4332" opacity="0.4" />
+  <rect x="355" y="412" width="10" height="30" fill="#1B4332" opacity="0.35" />
+  <circle cx="440" cy="403" r="14" fill="#1B4332" opacity="0.35" />
+  <rect x="435" y="417" width="10" height="28" fill="#1B4332" opacity="0.3" />
+  <circle cx="520" cy="400" r="14" fill="#1B4332" opacity="0.4" />
+  <rect x="515" y="414" width="10" height="30" fill="#1B4332" opacity="0.35" />
+  <!-- Small plants they're holding -->
+  <ellipse cx="200" cy="440" rx="8" ry="10" fill="#40916C" opacity="0.3" />
+  <ellipse cx="280" cy="442" rx="8" ry="10" fill="#52B788" opacity="0.25" />
+  <ellipse cx="360" cy="438" rx="8" ry="10" fill="#40916C" opacity="0.3" />
+  <ellipse cx="440" cy="440" rx="8" ry="10" fill="#52B788" opacity="0.25" />
+  <ellipse cx="520" cy="438" rx="8" ry="10" fill="#40916C" opacity="0.3" />
+  <!-- Ground -->
+  <rect x="0" y="450" width="800" height="150" fill="#143528" opacity="0.25" />
+  <!-- Title -->
+  <text x="400" y="100" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">EducaciÃ³n Ambiental â€” GalerÃ­a 2</text>
+  <text x="400" y="125" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

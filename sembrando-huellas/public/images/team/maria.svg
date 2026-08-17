@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="25%" stop-color="#143528"/>
+      <stop offset="50%" stop-color="#1B4332"/>
+      <stop offset="75%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#40916C"/>
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#52B788"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background forest -->
+  <ellipse cx="100" cy="400" rx="80" ry="50" fill="#1B4332" opacity="0.3"/>
+  <ellipse cx="250" cy="390" rx="90" ry="55" fill="#2D6A4F" opacity="0.25"/>
+  <ellipse cx="550" cy="395" rx="85" ry="52" fill="#1B4332" opacity="0.3"/>
+  <ellipse cx="700" cy="400" rx="75" ry="48" fill="#2D6A4F" opacity="0.25"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="120" cy="120" r="60" fill="#1B4332" opacity="0.15"/>
+  <circle cx="680" cy="500" r="80" fill="#143528" opacity="0.15"/>
+  
+  <!-- Leaf decorations -->
+  <g transform="translate(150, 100)" opacity="0.25">
+    <path d="M0 0c15-20 35-28 55-20c-8 15-22 28-55 20z" fill="#52B788"/>
+    <path d="M0 0c-15-20-35-28-55-20c8 15 22 28 55 20z" fill="#40916C"/>
+  </g>
+  
+  <g transform="translate(650, 480)" opacity="0.2">
+    <path d="M0 0c12-16 28-22 44-16c-6 12-18 22-44 16z" fill="#52B788"/>
+    <path d="M0 0c-12-16-28-22-44-16c6 12 18 22 44 16z" fill="#40916C"/>
+  </g>
+  
+  <!-- Avatar circle -->
+  <circle cx="400" cy="220" r="110" fill="url(#circle)" opacity="0.3"/>
+  <circle cx="400" cy="220" r="95" fill="#1B4332" opacity="0.7"/>
+  
+  <!-- Initials -->
+  <text x="400" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#95D5B2" font-weight="bold" opacity="0.9">MA</text>
+  
+  <!-- Person silhouette -->
+  <circle cx="400" cy="185" r="22" fill="#52B788" opacity="0.25"/>
+  <path d="M368 230c0-28 14-45 32-45s32 17 32 45v22h-64v-22z" fill="#52B788" opacity="0.15"/>
+  
+  <!-- Name -->
+  <text x="400" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="white" opacity="0.9" font-weight="bold">María José Alvarado</text>
+  
+  <!-- Role -->
+  <text x="400" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.85">Directora Ejecutiva</text>
+  
+  <!-- Decorative elements -->
+  <line x1="300" y1="445" x2="500" y2="445" stroke="#52B788" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Small tree icon representing leadership -->
+  <g transform="translate(400, 490)" opacity="0.4">
+    <rect x="-2" y="5" width="4" height="15" fill="#40916C"/>
+    <ellipse cx="0" cy="0" rx="12" ry="10" fill="#52B788"/>
+    <ellipse cx="0" cy="-4" rx="8" ry="6" fill="#95D5B2" opacity="0.6"/>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Sembrando Huellas Perú</text>
+</svg>

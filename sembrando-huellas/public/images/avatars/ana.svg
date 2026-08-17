@@ -1,13 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#254F73;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A3348;stop-opacity:1" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="30%" stop-color="#143528"/>
+      <stop offset="60%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#40916C"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Ana</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Background decorative elements -->
+  <circle cx="100" cy="100" r="80" fill="#1B4332" opacity="0.2"/>
+  <circle cx="700" cy="500" r="100" fill="#1B4332" opacity="0.15"/>
+  <circle cx="650" cy="150" r="50" fill="#143528" opacity="0.2"/>
+  
+  <!-- Leaf decorations -->
+  <g transform="translate(150, 150)" opacity="0.3">
+    <path d="M0 0c10-15 25-20 40-15c-5 10-15 20-40 15z" fill="#52B788"/>
+    <path d="M0 0c-10-15-25-20-40-15c5 10 15 20 40 15z" fill="#40916C"/>
+  </g>
+  
+  <g transform="translate(650, 450)" opacity="0.25">
+    <path d="M0 0c12-18 30-24 48-18c-6 12-18 24-48 18z" fill="#52B788"/>
+    <path d="M0 0c-12-18-30-24-48-18c6 12 18 24 48 18z" fill="#40916C"/>
+  </g>
+  
+  <!-- Avatar circle -->
+  <circle cx="400" cy="240" r="100" fill="url(#circle)" opacity="0.3"/>
+  <circle cx="400" cy="240" r="85" fill="#1B4332" opacity="0.6"/>
+  
+  <!-- Initials -->
+  <text x="400" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#95D5B2" font-weight="bold" opacity="0.9">A</text>
+  
+  <!-- Person silhouette hint -->
+  <circle cx="400" cy="210" r="20" fill="#52B788" opacity="0.3"/>
+  <path d="M370 250c0-25 13-40 30-40s30 15 30 40v20h-60v-20z" fill="#52B788" opacity="0.2"/>
+  
+  <!-- Name -->
+  <text x="400" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="white" opacity="0.9" font-weight="bold">Ana</text>
+  
+  <!-- Role/description -->
+  <text x="400" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.8">Testimonial</text>
+  
+  <!-- Decorative line -->
+  <line x1="350" y1="460" x2="450" y2="460" stroke="#52B788" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Quote marks decoration -->
+  <text x="300" y="320" font-family="Georgia, serif" font-size="60" fill="#52B788" opacity="0.2">"</text>
+  <text x="480" y="320" font-family="Georgia, serif" font-size="60" fill="#52B788" opacity="0.2">"</text>
+  
+  <!-- Bottom text -->
+  <text x="400" y="550" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Sembrando Huellas PerÃº</text>
 </svg>

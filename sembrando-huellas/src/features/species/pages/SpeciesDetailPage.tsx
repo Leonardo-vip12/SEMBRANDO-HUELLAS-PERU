@@ -36,8 +36,12 @@ export default function SpeciesDetailPage() {
         <Container>
           <div className="grid gap-8 lg:grid-cols-2">
             <Reveal direction="left">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-primary-100 to-accent-100">
-                <div className="flex h-full w-full items-center justify-center"><Heart size={80} className="text-primary-300" /></div>
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100">
+                <img
+                  src={species.image}
+                  alt={species.name}
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
             </Reveal>
 

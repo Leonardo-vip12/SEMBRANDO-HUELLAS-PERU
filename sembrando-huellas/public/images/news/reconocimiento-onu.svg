@@ -1,13 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2D6348;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
     </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">Reconocimiento ONU</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <!-- UN building silhouette -->
+  <rect x="300" y="200" width="200" height="200" fill="#2D6A4F" opacity="0.2" rx="4" />
+  <rect x="310" y="210" width="180" height="180" fill="#1B4332" opacity="0.15" rx="2" />
+  <!-- Windows -->
+  <rect x="320" y="220" width="20" height="20" fill="#52B788" opacity="0.12" rx="1" />
+  <rect x="350" y="220" width="20" height="20" fill="#52B788" opacity="0.1" rx="1" />
+  <rect x="380" y="220" width="20" height="20" fill="#52B788" opacity="0.12" rx="1" />
+  <rect x="410" y="220" width="20" height="20" fill="#52B788" opacity="0.1" rx="1" />
+  <rect x="440" y="220" width="20" height="20" fill="#52B788" opacity="0.12" rx="1" />
+  <rect x="460" y="220" width="20" height="20" fill="#52B788" opacity="0.1" rx="1" />
+  <!-- Emblem circle -->
+  <circle cx="400" cy="300" r="30" fill="none" stroke="#52B788" stroke-width="1.5" opacity="0.3" />
+  <circle cx="400" cy="300" r="25" fill="none" stroke="#52B788" stroke-width="0.8" opacity="0.2" />
+  <!-- Globe lines inside emblem -->
+  <ellipse cx="400" cy="300" rx="15" ry="25" fill="none" stroke="#52B788" stroke-width="0.8" opacity="0.2" />
+  <line x1="385" y1="300" x2="415" y2="300" stroke="#52B788" stroke-width="0.8" opacity="0.2" />
+  <!-- Olive branches -->
+  <path d="M370 315 Q360 330 375 340" stroke="#52B788" stroke-width="1" fill="none" opacity="0.2" />
+  <path d="M430 315 Q440 330 425 340" stroke="#52B788" stroke-width="1" fill="none" opacity="0.2" />
+  <!-- Flags -->
+  <rect x="180" y="250" width="3" height="150" fill="white" opacity="0.3" />
+  <polygon points="183,250 220,265 183,280" fill="#D90429" opacity="0.15" />
+  <rect x="580" y="250" width="3" height="150" fill="white" opacity="0.3" />
+  <polygon points="583,250 620,265 583,280" fill="#2D6A4F" opacity="0.2" />
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="200" fill="#143528" opacity="0.15" />
+  <!-- Trophy/award shape -->
+  <path d="M385 380 L400 370 L415 380 L410 400 L390 400Z" fill="#FFD166" opacity="0.15" />
+  <rect x="395" y="400" width="10" height="15" fill="#FFD166" opacity="0.12" />
+  <rect x="385" y="415" width="30" height="5" fill="#FFD166" opacity="0.12" rx="1" />
+  <!-- Title -->
+  <text x="400" y="120" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="white" opacity="0.9" text-anchor="middle">Reconocimiento de las Naciones Unidas</text>
+  <text x="400" y="148" font-family="Arial,sans-serif" font-size="11" fill="#95D5B2" opacity="0.6" text-anchor="middle">Sembrando Huellas PerÃº</text>
 </svg>

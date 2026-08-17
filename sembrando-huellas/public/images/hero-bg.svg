@@ -1,20 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="20%" stop-color="#143528"/>
+      <stop offset="40%" stop-color="#1B4332"/>
+      <stop offset="60%" stop-color="#2D6A4F"/>
+      <stop offset="80%" stop-color="#2D6348"/>
+      <stop offset="100%" stop-color="#40916C"/>
     </linearGradient>
-    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:transparent" />
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)" />
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#143528" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1B4332" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="30%" stop-color="#2D6A4F"/>
+      <stop offset="50%" stop-color="#40916C"/>
+      <stop offset="70%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#1B4332"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <circle cx="350" cy="220" r="80" fill="rgba(255,255,255,0.06)" />
-  <circle cx="450" cy="280" r="60" fill="rgba(255,255,255,0.05)" />
-  <text x="400" y="390" font-family="Georgia,serif" font-size="28" font-weight="bold" fill="rgba(255,255,255,0.9)" text-anchor="middle" text-shadow="0 2px 4px rgba(0,0,0,0.3)">Amazonía Peruana</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.5)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <rect x="0" y="550" width="800" height="50" fill="url(#overlay)" />
-  <text x="400" y="575" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">Placeholder · Próximamente fotografía real</text>
+  
+  <!-- Sky gradient -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="300" fill="url(#sky)"/>
+  
+  <!-- Mist/fog layer -->
+  <ellipse cx="400" cy="180" rx="500" ry="40" fill="#95D5B2" opacity="0.08"/>
+  <ellipse cx="300" cy="200" rx="350" ry="25" fill="#95D5B2" opacity="0.06"/>
+  
+  <!-- Distant mountains -->
+  <path d="M0 250L50 200L120 230L200 170L280 210L360 150L440 190L520 130L600 180L680 140L760 190L800 160L800 300L0 300Z" fill="#0D2B1A" opacity="0.6"/>
+  
+  <!-- Mid-distance forest -->
+  <ellipse cx="80" cy="270" rx="60" ry="30" fill="#1B4332" opacity="0.7"/>
+  <ellipse cx="180" cy="265" rx="70" ry="35" fill="#2D6A4F" opacity="0.6"/>
+  <ellipse cx="300" cy="272" rx="65" ry="32" fill="#1B4332" opacity="0.7"/>
+  <ellipse cx="420" cy="268" rx="75" ry="38" fill="#2D6A4F" opacity="0.6"/>
+  <ellipse cx="540" cy="270" rx="68" ry="34" fill="#1B4332" opacity="0.7"/>
+  <ellipse cx="660" cy="266" rx="72" ry="36" fill="#2D6A4F" opacity="0.6"/>
+  <ellipse cx="760" cy="272" rx="55" ry="28" fill="#1B4332" opacity="0.7"/>
+  
+  <!-- Main forest canopy -->
+  <ellipse cx="100" cy="290" rx="80" ry="40" fill="#2D6A4F"/>
+  <ellipse cx="250" cy="285" rx="90" ry="45" fill="#40916C"/>
+  <ellipse cx="400" cy="288" rx="85" ry="42" fill="#2D6A4F"/>
+  <ellipse cx="550" cy="286" rx="95" ry="48" fill="#40916C"/>
+  <ellipse cx="700" cy="290" rx="80" ry="40" fill="#2D6A4F"/>
+  
+  <!-- Individual tall trees -->
+  <rect x="148" y="260" width="8" height="35" fill="#1B4332"/>
+  <ellipse cx="152" cy="245" rx="25" ry="22" fill="#40916C"/>
+  <ellipse cx="152" cy="238" rx="16" ry="14" fill="#52B788"/>
+  
+  <rect x="398" y="255" width="10" height="40" fill="#1B4332"/>
+  <ellipse cx="403" cy="235" rx="30" ry="28" fill="#40916C"/>
+  <ellipse cx="403" cy="227" rx="20" ry="18" fill="#52B788"/>
+  <ellipse cx="403" cy="220" rx="12" ry="10" fill="#95D5B2" opacity="0.6"/>
+  
+  <rect x="648" y="258" width="9" height="37" fill="#1B4332"/>
+  <ellipse cx="652" cy="242" rx="28" ry="25" fill="#40916C"/>
+  <ellipse cx="652" cy="235" rx="18" ry="16" fill="#52B788"/>
+  
+  <!-- River - winding through landscape -->
+  <path d="M0 320Q100 310 150 325Q200 340 300 320Q400 300 500 330Q600 360 700 325Q750 310 800 320L800 380Q700 370 600 385Q500 400 400 375Q300 350 200 380Q100 410 0 390Z" fill="url(#water)" opacity="0.7"/>
+  
+  <!-- River reflections and highlights -->
+  <path d="M50 350Q150 340 250 355T450 345T650 355T800 348" stroke="#95D5B2" stroke-width="3" fill="none" opacity="0.25"/>
+  <path d="M0 360Q100 350 200 362T400 352T600 362T800 355" stroke="#95D5B2" stroke-width="2" fill="none" opacity="0.15"/>
+  
+  <!-- River shine spots -->
+  <ellipse cx="200" cy="355" rx="40" ry="4" fill="#95D5B2" opacity="0.12"/>
+  <ellipse cx="500" cy="350" rx="35" ry="3" fill="#95D5B2" opacity="0.1"/>
+  <ellipse cx="700" cy="352" rx="30" ry="3" fill="#95D5B2" opacity="0.08"/>
+  
+  <!-- River banks -->
+  <path d="M0 390Q100 380 200 395T400 385T600 395T800 385" stroke="#1B4332" stroke-width="4" fill="none" opacity="0.5"/>
+  
+  <!-- Foreground vegetation -->
+  <path d="M0 420Q80 400 160 420T320 410T480 425T640 408T800 420L800 600L0 600Z" fill="#0D2B1A" opacity="0.7"/>
+  
+  <!-- Large foreground trees/ferns -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="20" width="12" height="80" fill="#0D2B1A"/>
+    <path d="M6 30c-20-10-30-25-25-40c10 5 20 15 25 40z" fill="#2D6A4F" opacity="0.8"/>
+    <path d="M6 25c20-10 30-25 25-40c-10 5-20 15-25 40z" fill="#2D6A4F" opacity="0.8"/>
+    <ellipse cx="6" cy="15" rx="15" ry="12" fill="#40916C" opacity="0.7"/>
+  </g>
+  
+  <g transform="translate(720, 395)">
+    <rect x="0" y="20" width="10" height="85" fill="#0D2B1A"/>
+    <path d="M5 25c-18-8-28-22-24-36c9 4 18 14 24 36z" fill="#2D6A4F" opacity="0.8"/>
+    <path d="M5 20c18-8 28-22 24-36c-9 4-18 14-24 36z" fill="#2D6A4F" opacity="0.8"/>
+    <ellipse cx="5" cy="10" rx="14" ry="11" fill="#40916C" opacity="0.7"/>
+  </g>
+  
+  <!-- Small foreground ferns -->
+  <path d="M200 440c0-15 5-25 10-35" stroke="#52B788" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M205 435c-5-8-3-15 0-22" stroke="#40916C" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <path d="M600 445c0-12 4-20 8-28" stroke="#52B788" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M604 440c4-7 2-13 0-18" stroke="#40916C" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Wildlife silhouettes -->
+  <!-- Birds in sky -->
+  <path d="M200 100l8-4l8 4" stroke="#95D5B2" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M600 80l6-3l6 3" stroke="#95D5B2" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <path d="M350 120l5-2l5 2" stroke="#95D5B2" stroke-width="1.5" fill="none" opacity="0.2"/>
+  
+  <!-- Title area -->
+  <text x="400" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="white" opacity="0.9" font-weight="bold">Sembrando Huellas PerÃº</text>
+  <text x="400" y="535" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2" opacity="0.8">ConservaciÃ³n y Futuro para la AmazonÃ­a</text>
+  <text x="400" y="565" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.5">Protegiendo la biodiversidad, sembrando esperanza</text>
 </svg>

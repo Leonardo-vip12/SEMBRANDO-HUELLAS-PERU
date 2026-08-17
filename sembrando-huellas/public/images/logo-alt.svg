@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <text x="45" y="24" font-family="Georgia,serif" font-size="8" font-weight="bold" fill="rgba(255,255,255,0.7)" letter-spacing="4">SEMBRANDO</text>
+  <text x="45" y="40" font-family="Georgia,serif" font-size="16" font-weight="900" fill="#FFFFFF">Huellas</text>
+  <text x="45" y="52" font-family="Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)" letter-spacing="2">PERÚ</text>
+  <circle cx="22" cy="30" r="16" fill="white" opacity="0.25" />
+  <path d="M22 18 C28 24 28 32 22 38 C16 32 16 24 22 18Z" fill="#95D5B2" opacity="0.6"/>
+  <path d="M22 20 C26 26 26 34 22 36 C18 34 18 26 22 20Z" fill="rgba(255,255,255,0.5)"/>
+</svg>

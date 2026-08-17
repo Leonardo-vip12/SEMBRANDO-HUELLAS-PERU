@@ -1,13 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D2B1A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1B4332;stop-opacity:1" />
+      <stop offset="0%" stop-color="#0D2B1A"/>
+      <stop offset="30%" stop-color="#143528"/>
+      <stop offset="60%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <linearGradient id="seedling" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2D6A4F"/>
+      <stop offset="100%" stop-color="#52B788"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)" />
-  <circle cx="400" cy="250" r="120" fill="rgba(255,255,255,0.08)" />
-  <text x="400" y="380" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="rgba(255,255,255,0.85)" text-anchor="middle">2018 · Fundación</text>
-  <text x="400" y="420" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.45)" text-anchor="middle">Sembrando Huellas Perú</text>
-  <text x="400" y="570" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">Próximamente fotografía oficial</text>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="white" opacity="0.9" font-weight="bold">Sembrando Huellas PerÃº</text>
+  <text x="400" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.6">Nuestro Camino</text>
+  
+  <!-- Timeline line -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#40916C" stroke-width="3" opacity="0.6"/>
+  
+  <!-- 2018 marker -->
+  <circle cx="400" cy="200" r="20" fill="#1B4332" stroke="#52B788" stroke-width="3"/>
+  
+  <!-- Seedling icon -->
+  <g transform="translate(385, 160)">
+    <!-- Soil -->
+    <ellipse cx="15" cy="55" rx="15" ry="4" fill="#1B4332"/>
+    <!-- Stem -->
+    <path d="M15 50V30" stroke="#52B788" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left leaf -->
+    <path d="M15 38c-8-4-12-10-10-16c6 2 10 8 10 16z" fill="url(#seedling)"/>
+    <!-- Right leaf -->
+    <path d="M15 32c8-4 12-10 10-16c-6 2-10 8-10 16z" fill="url(#seedling)"/>
+    <!-- Small roots -->
+    <path d="M15 50c-3 3-5 5-7 5" stroke="#2D6A4F" stroke-width="1.5" fill="none"/>
+    <path d="M15 50c3 3 5 5 7 5" stroke="#2D6A4F" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Year -->
+  <text x="400" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="white" opacity="0.9" font-weight="bold">2018</text>
+  
+  <!-- Description -->
+  <text x="400" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#95D5B2">FundaciÃ³n</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="white" opacity="0.7">Semilla de esperanza para los bosques amazÃ³nicos</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="350" r="3" fill="#52B788" opacity="0.3"/>
+  <circle cx="700" cy="350" r="3" fill="#52B788" opacity="0.3"/>
+  <circle cx="150" cy="370" r="2" fill="#40916C" opacity="0.2"/>
+  <circle cx="650" cy="370" r="2" fill="#40916C" opacity="0.2"/>
 </svg>
