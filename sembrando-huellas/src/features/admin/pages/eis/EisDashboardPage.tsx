@@ -58,9 +58,9 @@ export default function EisDashboardPage() {
             </div>
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">EIS - Environmental Intelligence Suite</h1>
           </div>
-          <p className="mt-1 text-sm text-neutral-500">Suite de inteligencia ambiental: módulos avanzados del ecosistema IA</p>
+          <p className="mt-1 text-sm text-neutral-600">Suite de inteligencia ambiental: módulos avanzados del ecosistema IA</p>
         </div>
-        <button onClick={loadData} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800">
+        <button onClick={loadData} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
           <RefreshCw size={14} className={loading ? 'animate-spin' : ''} /> Actualizar
         </button>
       </div>
@@ -78,7 +78,7 @@ export default function EisDashboardPage() {
             className="rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800">
             <div className={`mb-2 ${m.color}`}>{m.icon}</div>
             <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{m.label}</h3>
-            <p className="mt-1 text-xs text-neutral-400">{m.desc}</p>
+            <p className="mt-1 text-xs text-neutral-500">{m.desc}</p>
           </a>
         ))}
       </motion.div>
@@ -93,7 +93,7 @@ export default function EisDashboardPage() {
                   {p.healthy ? 'Activo' : 'Caído'}
                 </span>
               </div>
-              <p className="mt-1 text-xs text-neutral-400">{p.model} • Fallos: {p.failures || 0}</p>
+              <p className="mt-1 text-xs text-neutral-500">{p.model} • Fallos: {p.failures || 0}</p>
             </div>
           ))}
         </motion.div>

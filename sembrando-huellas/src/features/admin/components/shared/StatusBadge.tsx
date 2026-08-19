@@ -5,11 +5,11 @@ type StatusType = 'published' | 'draft' | 'archived' | 'pending' | 'active' | 'i
 
 const statusStyles: Record<StatusType, string> = {
   published: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
-  draft: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400',
-  archived: 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800 dark:text-neutral-500',
+  draft: 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800 dark:text-neutral-200',
+  archived: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-200',
   pending: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
   active: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
-  inactive: 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800 dark:text-neutral-500',
+  inactive: 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-200',
   upcoming: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
   completed: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
   ongoing: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
@@ -36,7 +36,7 @@ export default function StatusBadge({ status, customLabel, className }: StatusBa
     completed: t('admin.completed'),
     cancelled: t('admin.cancelled'),
   };
-  const style = statusStyles[status as StatusType] || 'bg-neutral-100 text-neutral-600';
+  const style = statusStyles[status as StatusType] || 'bg-neutral-100 text-neutral-500';
   const label = customLabel || statusLabels[status] || status;
   return (
     <span className={cn('inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium', style, className)}>

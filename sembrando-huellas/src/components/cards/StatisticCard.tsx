@@ -52,7 +52,7 @@ export default function StatisticCard({
         </div>
       )}
       <div className="min-w-0 flex-1">
-        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-200">
           {label}
         </p>
         <div className="flex items-center gap-2">

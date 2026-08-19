@@ -57,7 +57,7 @@ export default function AiAssistantPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Asistente IA</h1>
-          <p className="text-sm text-neutral-500">Asesor especializado en medio ambiente y conservación</p>
+          <p className="text-sm text-neutral-600">Asesor especializado en medio ambiente y conservación</p>
         </div>
       </div>
 
@@ -87,7 +87,7 @@ export default function AiAssistantPage() {
               <div className={`rounded-2xl px-4 py-3 text-sm ${
                 msg.role === 'user'
                   ? 'bg-primary-500 text-white'
-                  : 'bg-neutral-100 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200'
+                  : 'bg-neutral-100 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200'
               }`}>
                 <p className="whitespace-pre-wrap">{msg.content}</p>
               </div>
@@ -98,7 +98,7 @@ export default function AiAssistantPage() {
                       key={j}
                       onClick={() => handleSend(s)}
                       disabled={loading}
-                      className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs text-neutral-500 transition-colors hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-400"
+                      className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs text-neutral-600 transition-colors hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-200"
                     >
                       {s}
                     </button>
@@ -119,7 +119,7 @@ export default function AiAssistantPage() {
               <Bot size={16} />
             </div>
             <div className="rounded-2xl bg-neutral-100 px-4 py-3 dark:bg-neutral-700">
-              <Loader2 size={16} className="animate-spin text-neutral-400" />
+              <Loader2 size={16} className="animate-spin text-neutral-500" />
             </div>
           </div>
         )}

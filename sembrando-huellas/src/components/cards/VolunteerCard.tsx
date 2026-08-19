@@ -36,7 +36,7 @@ export default function VolunteerCard({
       <p className="mb-2 text-sm font-medium text-primary-600 dark:text-primary-400">
         {volunteer.role}
       </p>
-      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-200">
         {volunteer.bio}
       </p>
       {volunteer.skills && volunteer.skills.length > 0 && (
@@ -44,7 +44,7 @@ export default function VolunteerCard({
           {volunteer.skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300"
+              className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 dark:bg-neutral-700 dark:text-neutral-200"
             >
               {skill}
             </span>

@@ -41,11 +41,11 @@ const HorizontalCard = forwardRef<HTMLDivElement, HorizontalCardProps>(
           <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
             {title}
           </h3>
-          <p className="mb-3 line-clamp-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="mb-3 line-clamp-2 text-sm text-neutral-500 dark:text-neutral-200">
             {description}
           </p>
           {metadata && (
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">
               {metadata}
             </p>
           )}

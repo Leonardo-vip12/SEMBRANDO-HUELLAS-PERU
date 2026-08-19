@@ -58,12 +58,12 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(
           <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
             {title}
           </h3>
-          <p className="mb-6 text-sm text-neutral-600 dark:text-neutral-400">{message}</p>
+          <p className="mb-6 text-sm text-neutral-500 dark:text-neutral-200">{message}</p>
           <div className="flex w-full gap-3">
             <button
               onClick={onClose}
               disabled={isLoading}
-              className="flex-1 rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-300 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 disabled:opacity-50"
+              className="flex-1 rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 disabled:opacity-50"
             >
               {cancelLabel}
             </button>

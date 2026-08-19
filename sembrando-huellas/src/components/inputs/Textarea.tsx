@@ -39,7 +39,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={textareaId}
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+            className="text-sm font-medium text-neutral-600 dark:text-neutral-200"
           >
             {label}
           </label>
@@ -69,7 +69,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           </p>
         )}
         {helperText && !error && (
-          <p id={helperId} className="text-sm text-neutral-500 dark:text-neutral-400">
+          <p id={helperId} className="text-sm text-neutral-600 dark:text-neutral-200">
             {helperText}
           </p>
         )}

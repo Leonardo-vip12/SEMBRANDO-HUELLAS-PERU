@@ -45,14 +45,14 @@ export default function TutorPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Tutor Adaptativo IA</h1>
-          <p className="text-sm text-neutral-500">Aprendizaje personalizado para cada nivel educativo</p>
+          <p className="text-sm text-neutral-600">Aprendizaje personalizado para cada nivel educativo</p>
         </div>
       </div>
 
       <div className="mb-4 flex flex-wrap gap-2">
         {LEVELS.map(l => (
           <button key={l.value} onClick={() => setLevel(l.value)}
-            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${level === l.value ? 'bg-emerald-500 text-white' : 'border border-neutral-200 bg-white text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'}`}>
+            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${level === l.value ? 'bg-emerald-500 text-white' : 'border border-neutral-200 bg-white text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200'}`}>
             {l.label}
           </button>
         ))}
@@ -60,7 +60,7 @@ export default function TutorPage() {
 
       <div className="mb-4 flex-1 space-y-4 overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800" style={{ minHeight: 400, maxHeight: 500 }}>
         {messages.length === 0 && (
-          <div className="flex h-full items-center justify-center text-sm text-neutral-400">
+          <div className="flex h-full items-center justify-center text-sm text-neutral-500">
             Selecciona un nivel y escribe tu pregunta para comenzar
           </div>
         )}
@@ -71,7 +71,7 @@ export default function TutorPage() {
                 <GraduationCap size={16} />
               </div>
             )}
-            <div className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm ${msg.role === 'user' ? 'bg-primary-500 text-white' : 'bg-neutral-100 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200'}`}>
+            <div className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm ${msg.role === 'user' ? 'bg-primary-500 text-white' : 'bg-neutral-100 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200'}`}>
               <p className="whitespace-pre-wrap">{msg.content}</p>
             </div>
             {msg.role === 'user' && (
@@ -87,7 +87,7 @@ export default function TutorPage() {
               <GraduationCap size={16} />
             </div>
             <div className="rounded-2xl bg-neutral-100 px-4 py-3 dark:bg-neutral-700">
-              <Loader2 size={16} className="animate-spin text-neutral-400" />
+              <Loader2 size={16} className="animate-spin text-neutral-500" />
             </div>
           </div>
         )}

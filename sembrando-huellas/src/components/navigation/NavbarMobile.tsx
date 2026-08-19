@@ -81,7 +81,7 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
                 {logo}
                 <button
                   onClick={onToggle}
-                  className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                  className="rounded-lg p-1.5 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   aria-label="Close navigation menu"
                 >
                   <X size={20} />
@@ -101,7 +101,7 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
                           'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                           activePath === item.href
                             ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/50 dark:text-primary-300'
-                            : 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800'
+                            : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800'
                         )}
                       >
                         {item.label}
@@ -120,7 +120,7 @@ const NavbarMobile = forwardRef<HTMLDivElement, NavbarMobileProps>(
                                   'flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                                   activePath === child.href
                                     ? 'text-primary-700 dark:text-primary-300'
-                                    : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
+                                    : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
                                 )}
                               >
                                 {child.label}

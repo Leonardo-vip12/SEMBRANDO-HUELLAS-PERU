@@ -32,11 +32,11 @@ export default function ExpandableCard({
         aria-controls={`expandable-content-${title.replace(/\s+/g, '-').toLowerCase()}`}
       >
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
             {title}
           </h3>
           {!expanded && (
-            <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-200">
               {preview}
             </p>
           )}
@@ -44,7 +44,7 @@ export default function ExpandableCard({
         <motion.div
           animate={{ rotate: expanded ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="ml-4 shrink-0 text-neutral-400 dark:text-neutral-500"
+          className="ml-4 shrink-0 text-neutral-600 dark:text-neutral-200"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -62,7 +62,7 @@ export default function ExpandableCard({
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="pt-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="pt-4 text-sm text-neutral-600 dark:text-neutral-200">
               {children}
             </div>
           </motion.div>

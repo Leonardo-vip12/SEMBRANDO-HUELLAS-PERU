@@ -33,7 +33,7 @@ export default function AdminBreadcrumb() {
     <nav className="flex items-center gap-1.5 text-sm" aria-label="Breadcrumb">
       <Link
         to="/admin"
-        className="flex items-center gap-1 rounded px-1.5 py-1 text-neutral-400 transition-colors hover:text-neutral-600 dark:hover:text-neutral-300"
+        className="flex items-center gap-1 rounded px-1.5 py-1 text-neutral-500 transition-colors hover:text-neutral-500 dark:hover:text-neutral-300"
       >
         <Home size={14} />
       </Link>
@@ -46,9 +46,9 @@ export default function AdminBreadcrumb() {
           <span key={seg} className="flex items-center gap-1.5">
             <ChevronRight size={12} className="text-neutral-300" />
             {isLast ? (
-              <span className="font-medium text-neutral-700 dark:text-neutral-300">{label}</span>
+              <span className="font-medium text-neutral-600 dark:text-neutral-200">{label}</span>
             ) : (
-              <Link to={href} className="text-neutral-400 transition-colors hover:text-neutral-600 dark:hover:text-neutral-300">
+              <Link to={href} className="text-neutral-500 transition-colors hover:text-neutral-500 dark:hover:text-neutral-300">
                 {label}
               </Link>
             )}

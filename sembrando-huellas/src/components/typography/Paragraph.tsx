@@ -22,9 +22,9 @@ export default function Paragraph({
   return (
     <p
       className={cn(
-        'text-neutral-700 leading-relaxed dark:text-neutral-300',
+        'text-neutral-500 leading-relaxed dark:text-neutral-200',
         sizeClasses[size],
-        lead && 'text-xl text-neutral-600 dark:text-neutral-400',
+        lead && 'text-xl text-neutral-500 dark:text-neutral-200',
         className,
       )}
       {...props}

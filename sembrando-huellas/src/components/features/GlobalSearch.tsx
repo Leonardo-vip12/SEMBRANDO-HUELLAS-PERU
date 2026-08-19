@@ -82,7 +82,7 @@ export default function GlobalSearch() {
             className="relative z-10 w-full max-w-2xl rounded-2xl border border-neutral-200 bg-white shadow-2xl dark:border-neutral-700 dark:bg-neutral-900"
           >
             <div className="flex items-center gap-3 border-b border-neutral-200 px-4 dark:border-neutral-700">
-              <Search size={20} className="shrink-0 text-neutral-400" />
+              <Search size={20} className="shrink-0 text-neutral-500" />
               <input
                 ref={inputRef}
                 type="text"
@@ -92,18 +92,18 @@ export default function GlobalSearch() {
                 className="w-full bg-transparent py-4 text-base text-neutral-900 placeholder-neutral-400 outline-none dark:text-neutral-100 dark:placeholder-neutral-500"
               />
               {query && (
-                <button onClick={clear} className="rounded p-1 text-neutral-400 hover:text-neutral-600">
+                <button onClick={clear} className="rounded p-1 text-neutral-500 hover:text-neutral-500">
                   <X size={18} />
                 </button>
               )}
-              <kbd className="hidden shrink-0 rounded-md border border-neutral-300 px-2 py-0.5 text-xs text-neutral-400 md:inline-block dark:border-neutral-600">
+              <kbd className="hidden shrink-0 rounded-md border border-neutral-300 px-2 py-0.5 text-xs text-neutral-500 md:inline-block dark:border-neutral-600">
                 ESC
               </kbd>
             </div>
 
             <div className="max-h-[60vh] overflow-y-auto">
               {isSearching && (
-                <div className="flex items-center justify-center gap-2 py-8 text-neutral-400">
+                <div className="flex items-center justify-center gap-2 py-8 text-neutral-500">
                   <Loader2 size={20} className="animate-spin" />
                   <span className="text-sm">Buscando...</span>
                 </div>
@@ -112,7 +112,7 @@ export default function GlobalSearch() {
               {!isSearching && hasSearched && results.length === 0 && (
                 <div className="py-12 text-center">
                   <Search size={32} className="mx-auto mb-2 text-neutral-300" />
-                  <p className="text-sm text-neutral-500">No se encontraron resultados para "{query}"</p>
+                  <p className="text-sm text-neutral-600">No se encontraron resultados para "{query}"</p>
                 </div>
               )}
 
@@ -124,8 +124,8 @@ export default function GlobalSearch() {
                     return (
                       <div key={type}>
                         <div className="flex items-center gap-2 px-4 py-2">
-                          <span className="text-neutral-400">{typeConfig[type].icon}</span>
-                          <span className="text-xs font-medium uppercase tracking-wider text-neutral-400">
+                          <span className="text-neutral-500">{typeConfig[type].icon}</span>
+                          <span className="text-xs font-medium uppercase tracking-wider text-neutral-500">
                             {typeConfig[type].label}
                           </span>
                         </div>
@@ -147,7 +147,7 @@ export default function GlobalSearch() {
                               <p className="truncate text-sm font-medium text-neutral-900 dark:text-neutral-100">
                                 {item.title}
                               </p>
-                              <p className="truncate text-xs text-neutral-500">
+                              <p className="truncate text-xs text-neutral-600">
                                 {item.description}
                               </p>
                             </div>
@@ -161,7 +161,7 @@ export default function GlobalSearch() {
 
               {!query && !hasSearched && (
                 <div className="py-8 text-center">
-                  <p className="text-sm text-neutral-400">
+                  <p className="text-sm text-neutral-500">
                     Presiona <kbd className="rounded border border-neutral-300 px-1.5 py-0.5 text-xs dark:border-neutral-600">Enter</kbd> para buscar en todo el sitio
                   </p>
                 </div>

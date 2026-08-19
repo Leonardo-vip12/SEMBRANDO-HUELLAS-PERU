@@ -29,7 +29,7 @@ export default function NotFoundPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            4<span className="text-secondary-400">0</span>4
+            4<span className="text-secondary-300">0</span>4
           </motion.p>
 
           <motion.h1
@@ -74,7 +74,7 @@ export default function NotFoundPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <div className="flex items-center justify-center gap-2 text-sm text-white/30">
+            <div className="flex items-center justify-center gap-2 text-sm text-white/80">
               <TreePine size={14} />
               <span>Sembrando Huellas Perú</span>
               <TreePine size={14} />

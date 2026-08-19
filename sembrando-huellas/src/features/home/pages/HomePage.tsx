@@ -83,7 +83,7 @@ function ScrollIndicator() {
         className="flex flex-col items-center gap-2"
       >
         <span className="text-xs font-medium tracking-widest text-white/80 uppercase">Descubre</span>
-        <ChevronDown className="h-5 w-5 text-white/60" />
+        <ChevronDown className="h-5 w-5 text-white/80" />
       </motion.div>
     </motion.div>
   )
@@ -136,7 +136,7 @@ function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.7}>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-white/70 md:text-xl">
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-white/90 md:text-xl">
             Somos una organización peruana dedicada a la conservación de la Amazonía,
             la reforestación participativa y la formación de una ciudadanía ambientalmente responsable.
           </p>
@@ -167,7 +167,7 @@ function AboutSection() {
   const values = organizationData.values || []
 
   return (
-    <Section id="nosotros" className="relative overflow-hidden bg-neutral-50">
+    <Section id="nosotros" className="relative overflow-hidden bg-neutral-50 nature-leaves-pattern">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal direction="left">
@@ -185,18 +185,18 @@ function AboutSection() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 rounded-2xl bg-white p-6 shadow-xl">
-                <p className="text-3xl font-bold text-primary-600">{organizationData.foundingYear}</p>
-                <p className="text-sm text-neutral-600">Años de impacto</p>
+                <p className="text-3xl font-extrabold text-primary-600">{organizationData.foundingYear}</p>
+                <p className="text-sm text-neutral-700">Años de impacto</p>
               </div>
             </div>
           </Reveal>
 
           <div>
             <Reveal direction="right">
-              <p className="mb-2 text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+              <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
                 Quiénes Somos
               </p>
-              <h2 className="mb-6 text-4xl font-bold text-dark-900 md:text-5xl">
+              <h2 className="mb-6 text-4xl font-extrabold text-dark-800 md:text-5xl">
                 Protegiendo la{' '}
                 <span className="text-primary-600">Amazonía</span> desde el corazón del Perú
               </h2>
@@ -215,8 +215,8 @@ function AboutSection() {
                         <Icon size={20} />
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-dark-800">{value.title}</h4>
-                        <p className="text-xs text-neutral-500">{value.description}</p>
+                        <h4 className="text-sm font-bold text-dark-700">{value.title}</h4>
+                        <p className="text-xs text-neutral-700">{value.description}</p>
                       </div>
                     </CardBase>
                   )
@@ -252,16 +252,17 @@ function MissionSection() {
   return (
     <Section id="mision" className="relative overflow-hidden bg-gradient-to-b from-primary-900 via-dark-900 to-dark-900">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-800/20 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 nature-deep-forest" />
 
       <Container className="relative z-10">
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-400 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-300 uppercase">
             Nuestra Misión
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-white md:text-5xl">
             Lo que nos impulsa
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/90">
             {organizationData.mission}
           </p>
         </Reveal>
@@ -274,11 +275,11 @@ function MissionSection() {
                 hover
                 className="group border-primary-800/30 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:shadow-2xl hover:shadow-primary-500/10"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-800/50 text-secondary-400 transition-all duration-500 group-hover:bg-primary-600 group-hover:text-white">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-800/50 text-secondary-300 transition-all duration-500 group-hover:bg-primary-600 group-hover:text-white">
                   <m.icon size={28} />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-white">{m.title}</h3>
-                <p className="text-sm leading-relaxed text-white/80">{m.description}</p>
+                <h3 className="mb-3 text-xl font-extrabold text-white">{m.title}</h3>
+                <p className="text-sm leading-relaxed text-white/90">{m.description}</p>
               </CardBase>
             </Reveal>
           ))}
@@ -293,14 +294,14 @@ function ImpactSection() {
 
   return (
     <Section id="impacto" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-50 via-white to-neutral-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-50/60 via-accent-50/40 to-primary-50/60 nature-canopy-gradient" />
 
       <Container className="relative z-10">
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Nuestro Impacto
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Resultados que{' '}
             <span className="text-primary-600">transforman</span>
           </h2>
@@ -314,15 +315,15 @@ function ImpactSection() {
             return (
               <Reveal key={i} direction="up" delay={i * 0.1}>
                 <CardBase variant="elevated" className="group text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition-all duration-300 group-hover:bg-primary-600 group-hover:text-white">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 text-primary-600 transition-all duration-300 group-hover:bg-primary-600 group-hover:text-white">
                     <Icon size={32} />
                   </div>
-                  <p className="mb-1 text-4xl font-bold text-dark-900">
+                  <p className="mb-1 text-4xl font-extrabold text-dark-800">
                     <AnimatedCounter value={m.value} />
                     {suffixPart}
                   </p>
-                  <p className="mb-1 text-sm font-semibold text-neutral-700">{m.label}</p>
-                  <p className="text-xs text-neutral-500">{m.description}</p>
+                  <p className="mb-1 text-sm font-bold text-neutral-600">{m.label}</p>
+                  <p className="text-xs text-neutral-600">{m.description}</p>
                 </CardBase>
               </Reveal>
             )
@@ -341,13 +342,13 @@ function ProgramsSection() {
   }
 
   return (
-    <Section id="programas" className="bg-neutral-50">
+    <Section id="programas" className="relative overflow-hidden bg-gradient-to-br from-neutral-50 via-accent-50/30 to-primary-50/40 nature-earth-tones">
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Programas
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Nuestras líneas de acción
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-neutral-600">
@@ -361,14 +362,14 @@ function ProgramsSection() {
             return (
               <Reveal key={p.id} direction="up" delay={i * 0.1}>
                 <CardBase variant="default" hover className="group h-full">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition-all duration-300 group-hover:bg-primary-600 group-hover:text-white">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-100 text-primary-600 transition-all duration-300 group-hover:bg-primary-600 group-hover:text-white">
                     <Icon size={28} />
                   </div>
-                  <h3 className="mb-3 text-xl font-bold text-dark-800">{p.title}</h3>
-                  <p className="mb-4 text-sm leading-relaxed text-neutral-600">{p.description}</p>
+                  <h3 className="mb-3 text-xl font-extrabold text-dark-700">{p.title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-neutral-700">{p.description}</p>
                   <div className="mb-4 flex flex-wrap gap-2">
                     {p.objectives.slice(0, 2).map((obj, j) => (
-                      <span key={j} className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-700">
+                      <span key={j} className="rounded-full bg-primary-100 px-3 py-1 text-xs font-bold text-primary-800">
                         {obj}
                       </span>
                     ))}
@@ -394,13 +395,14 @@ function ProjectsSection({ onNavigate }: { onNavigate: (path: string) => void })
   if (projects.length === 0) return null
 
   return (
-    <Section id="proyectos">
+    <Section id="proyectos" className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-accent-50/20 via-transparent to-primary-50/20 nature-leaves-pattern" />
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Proyectos Destacados
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Iniciativas que{' '}
             <span className="text-primary-600">generan cambio</span>
           </h2>
@@ -462,17 +464,18 @@ function SpeciesSection({ onNavigate }: { onNavigate: (path: string) => void }) 
   if (species.length === 0) return null
 
   return (
-    <Section id="biodiversidad" className="bg-dark-900">
+    <Section id="biodiversidad" className="relative overflow-hidden bg-dark-900">
+      <div className="pointer-events-none absolute inset-0 nature-biodiversity-bg" />
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-400 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-300 uppercase">
             Biodiversidad Amazónica
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-white md:text-5xl">
             Especies que{' '}
-            <span className="text-secondary-400">protegemos</span>
+            <span className="text-secondary-300">protegemos</span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/90">
             Conoce algunas de las especies emblemáticas que habitan en los bosques que restauramos.
           </p>
         </Reveal>
@@ -522,13 +525,13 @@ function GallerySection() {
   }
 
   return (
-    <Section id="galeria" className="bg-neutral-50">
+    <Section id="galeria" className="relative overflow-hidden bg-gradient-to-b from-primary-50/50 via-accent-50/30 to-primary-50/50 nature-earth-tones">
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Galería
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Momentos que{' '}
             <span className="text-primary-600">inspiran</span>
           </h2>
@@ -571,15 +574,16 @@ function TestimonialsSection() {
   return (
     <Section id="testimonios" className="relative overflow-hidden bg-dark-900">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-800/10 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 nature-deep-forest" />
 
       <Container className="relative z-10">
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-400 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-300 uppercase">
             Testimonios
           </p>
-          <h2 className="mb-12 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-12 text-center text-4xl font-extrabold text-white md:text-5xl">
             Voces que{' '}
-            <span className="text-secondary-400">inspiran</span>
+            <span className="text-secondary-300">inspiran</span>
           </h2>
         </Reveal>
 
@@ -599,8 +603,8 @@ function TestimonialsSection() {
         >
           {testimonials.map((t) => (
             <CardBase key={t.id} variant="default" className="relative h-full border-primary-800/20 bg-white/5 backdrop-blur-sm">
-              <Quote className="mb-4 h-8 w-8 text-secondary-400/40" />
-              <blockquote className="mb-6 text-sm leading-relaxed text-white/80">
+              <Quote className="mb-4 h-8 w-8 text-secondary-300/50" />
+              <blockquote className="mb-6 text-sm leading-relaxed text-white/90">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <div className="mt-auto flex items-center gap-3">
@@ -608,14 +612,14 @@ function TestimonialsSection() {
                   {t.avatar ? (
                     <img src={t.avatar} alt={t.name} className="h-full w-full object-cover" />
                   ) : (
-                    <span className="text-sm font-bold text-secondary-400">
+                    <span className="text-sm font-bold text-secondary-300">
                       {t.name.charAt(0)}
                     </span>
                   )}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-white/70">{t.role}</p>
+                  <p className="text-sm font-bold text-white">{t.name}</p>
+                  <p className="text-xs text-white/80">{t.role}</p>
                 </div>
               </div>
             </CardBase>
@@ -634,13 +638,14 @@ function PartnersSection() {
   const duplicated = [...partners, ...partners]
 
   return (
-    <Section id="aliados" className="overflow-hidden">
+    <Section id="aliados" className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/30 via-transparent to-primary-50/30 nature-leaves-pattern" />
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Aliados
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Organizaciones que{' '}
             <span className="text-primary-600">confían en nosotros</span>
           </h2>
@@ -667,7 +672,7 @@ function PartnersSection() {
                   alt={partner.name}
                   className="h-full w-full"
                   fallback={
-                    <div className="flex h-full w-full items-center justify-center text-xs font-medium text-neutral-400">
+                    <div className="flex h-full w-full items-center justify-center text-xs font-bold text-neutral-700">
                       {partner.name.charAt(0)}
                     </div>
                   }
@@ -686,17 +691,18 @@ function JoinSection() {
     <Section id="unete" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-800 via-dark-800 to-dark-900" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-secondary-500/10 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 nature-deep-forest" />
 
       <Container className="relative z-10">
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-400 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-300 uppercase">
             Únete
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-white md:text-5xl">
             Sé parte del{' '}
-            <span className="text-secondary-400">cambio</span>
+            <span className="text-secondary-300">cambio</span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/80">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-white/90">
             Hay muchas formas de contribuir a la protección de la Amazonía peruana.
             Elige la que más se alinee contigo.
           </p>
@@ -707,11 +713,11 @@ function JoinSection() {
             <CardBase variant="default" className="group relative overflow-hidden border-primary-700/30 bg-white/5 backdrop-blur-sm">
               <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-primary-500/10 blur-3xl" />
               <div className="relative z-10 p-8">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary-500/20 text-secondary-400">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary-500/20 text-secondary-300">
                   <Heart size={32} />
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-white">Voluntariado</h3>
-                <p className="mb-6 text-white/80">
+                <h3 className="mb-3 text-2xl font-extrabold text-white">Voluntariado</h3>
+                <p className="mb-6 text-white/90">
                   Únete a nuestras jornadas de reforestación, talleres educativos y expediciones
                   de monitoreo. Tu tiempo y entusiasmo pueden marcar la diferencia.
                 </p>
@@ -728,11 +734,11 @@ function JoinSection() {
             <CardBase variant="default" className="group relative overflow-hidden border-primary-700/30 bg-white/5 backdrop-blur-sm">
               <div className="pointer-events-none absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-gold-500/10 blur-3xl" />
               <div className="relative z-10 p-8">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/20 text-gold-400">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gold-500/20 text-gold-300">
                   <Leaf size={32} />
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-white">Donaciones</h3>
-                <p className="mb-6 text-white/80">
+                <h3 className="mb-3 text-2xl font-extrabold text-white">Donaciones</h3>
+                <p className="mb-6 text-white/90">
                   Tu contribución económica nos permite plantar más árboles, educar a más niños
                   y proteger más especies. Cada donación cuenta.
                 </p>
@@ -759,13 +765,13 @@ function NewsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
   if (articles.length === 0) return null
 
   return (
-    <Section id="noticias" className="bg-neutral-50">
+    <Section id="noticias" className="relative overflow-hidden bg-gradient-to-b from-accent-50/40 via-neutral-50 to-primary-50/30 nature-canopy-gradient">
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Noticias
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Últimas{' '}
             <span className="text-primary-600">novedades</span>
           </h2>
@@ -814,13 +820,14 @@ function FAQSection() {
   if (faqs.length === 0) return null
 
   return (
-    <Section id="faq">
+    <Section id="faq" className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/20 via-transparent to-accent-50/20 nature-earth-tones" />
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Preguntas Frecuentes
           </p>
-          <h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-12 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Resolvemos tus{' '}
             <span className="text-primary-600">dudas</span>
           </h2>
@@ -835,7 +842,7 @@ function FAQSection() {
                 expanded={openId === faq.id}
                 onToggle={() => setOpenId(openId === faq.id ? null : faq.id)}
               >
-                <p className="text-neutral-600">{faq.answer}</p>
+                <p className="text-neutral-700">{faq.answer}</p>
               </ExpandableCard>
             </Reveal>
           ))}
@@ -847,13 +854,13 @@ function FAQSection() {
 
 function ContactSection() {
   return (
-    <Section id="contacto" className="bg-neutral-50">
+    <Section id="contacto" className="relative overflow-hidden bg-gradient-to-br from-neutral-50 via-primary-50/30 to-accent-50/20 nature-leaves-pattern">
       <Container>
         <Reveal>
-          <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">
+          <p className="mb-2 text-center text-sm font-bold tracking-widest text-secondary-600 uppercase">
             Contacto
           </p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-dark-800 md:text-5xl">
             Hablemos
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-neutral-600">
@@ -874,8 +881,8 @@ function ContactSection() {
                     <MapPin size={22} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-dark-800">Dirección</p>
-                    <p className="text-sm text-neutral-600">{organizationData.address}</p>
+                    <p className="text-sm font-bold text-dark-700">Dirección</p>
+                    <p className="text-sm text-neutral-700">{organizationData.address}</p>
                   </div>
                 </div>
 
@@ -884,8 +891,8 @@ function ContactSection() {
                     <Mail size={22} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-dark-800">Correo</p>
-                    <p className="text-sm text-neutral-600">{organizationData.email}</p>
+                    <p className="text-sm font-bold text-dark-700">Correo</p>
+                    <p className="text-sm text-neutral-700">{organizationData.email}</p>
                   </div>
                 </div>
 
@@ -894,8 +901,8 @@ function ContactSection() {
                     <Phone size={22} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-dark-800">Teléfono</p>
-                    <p className="text-sm text-neutral-600">{organizationData.phone}</p>
+                    <p className="text-sm font-bold text-dark-700">Teléfono</p>
+                    <p className="text-sm text-neutral-700">{organizationData.phone}</p>
                   </div>
                 </div>
               </div>
@@ -904,7 +911,7 @@ function ContactSection() {
 
           <Reveal direction="right">
             <CardBase variant="default" className="h-full">
-              <h3 className="mb-6 text-xl font-bold text-dark-800">Envíanos un mensaje</h3>
+              <h3 className="mb-6 text-xl font-extrabold text-dark-700">Envíanos un mensaje</h3>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Input label="Nombre" placeholder="Tu nombre" required />
@@ -926,14 +933,15 @@ function ContactSection() {
 
 function NewsletterSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-primary-800 to-dark-800 py-16">
+    <section className="relative overflow-hidden bg-gradient-to-r from-primary-800 via-dark-800 to-dark-900 py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary-500/10 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 nature-deep-forest" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <h3 className="mb-3 text-3xl font-bold text-white">Mantente informado</h3>
-            <p className="mb-8 text-white/80">
+            <h3 className="mb-3 text-3xl font-extrabold text-white">Mantente informado</h3>
+            <p className="mb-8 text-white/90">
               Recibe nuestras noticias, eventos y formas de participar directamente en tu correo.
             </p>
           </Reveal>
@@ -950,7 +958,7 @@ function NewsletterSection() {
               Suscribirme
             </Button>
           </form>
-          <p className="mt-3 text-xs text-white/60">
+          <p className="mt-3 text-xs text-white/80">
             Sin spam. Puedes darte de baja en cualquier momento.
           </p>
         </div>

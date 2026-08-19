@@ -38,9 +38,9 @@ export default function ProjectsPage() {
               <Input placeholder="Buscar proyectos..." value={search} onChange={(e) => setSearch(e.target.value)} leftIcon={<Search size={18} />} />
             </div>
             <div className="flex gap-2">
-              <button onClick={() => setStatusFilter('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!statusFilter ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>Todos</button>
+              <button onClick={() => setStatusFilter('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!statusFilter ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>Todos</button>
               {['active', 'completed'].map(s => (
-                <button key={s} onClick={() => setStatusFilter(s)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${statusFilter === s ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>
+                <button key={s} onClick={() => setStatusFilter(s)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${statusFilter === s ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>
                   {s === 'active' ? 'Activos' : 'Completados'}
                 </button>
               ))}
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="py-20 text-center"><p className="text-lg text-neutral-500">No se encontraron proyectos con esos criterios.</p></div>
+            <div className="py-20 text-center"><p className="text-lg text-neutral-600">No se encontraron proyectos con esos criterios.</p></div>
           )}
         </Container>
       </Section>

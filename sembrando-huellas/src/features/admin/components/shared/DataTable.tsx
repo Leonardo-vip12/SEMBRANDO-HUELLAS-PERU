@@ -100,7 +100,7 @@ export default function DataTable<T extends Record<string, any>>({
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         {searchable && (
           <div className="relative max-w-xs">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
             <input
               type="text"
               value={search}
@@ -112,7 +112,7 @@ export default function DataTable<T extends Record<string, any>>({
         )}
         {selected.size > 0 && (
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-neutral-500">{selected.size} {t('admin.selected')}</span>
+            <span className="text-neutral-600">{selected.size} {t('admin.selected')}</span>
             <button className="rounded-lg px-3 py-1.5 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">
               <Trash2 size={14} className="inline" /> {t('admin.delete')}
             </button>
@@ -137,8 +137,8 @@ export default function DataTable<T extends Record<string, any>>({
                   <th
                     key={col.key}
                     className={cn(
-                      'px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-500',
-                      col.sortable && 'cursor-pointer select-none hover:text-neutral-700',
+                      'px-4 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-600',
+                      col.sortable && 'cursor-pointer select-none hover:text-neutral-600',
                       col.align === 'center' && 'text-center',
                       col.align === 'right' && 'text-right',
                     )}
@@ -157,7 +157,7 @@ export default function DataTable<T extends Record<string, any>>({
                     </span>
                   </th>
                 ))}
-                <th className="w-16 px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                <th className="w-16 px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-neutral-600">
                   {t('admin.actions')}
                 </th>
               </tr>
@@ -190,7 +190,7 @@ export default function DataTable<T extends Record<string, any>>({
                         <td
                           key={col.key}
                           className={cn(
-                            'px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300',
+                            'px-4 py-3 text-sm text-neutral-600 dark:text-neutral-200',
                             col.align === 'center' && 'text-center',
                             col.align === 'right' && 'text-right',
                           )}
@@ -202,24 +202,24 @@ export default function DataTable<T extends Record<string, any>>({
                         <div className="relative">
                           <button
                             onClick={() => setOpenMenu(openMenu === id ? null : id)}
-                            className="rounded-lg p-1.5 text-neutral-400 opacity-0 transition-opacity hover:bg-neutral-100 group-hover:opacity-100 dark:hover:bg-neutral-700"
+                            className="rounded-lg p-1.5 text-neutral-500 opacity-0 transition-opacity hover:bg-neutral-100 group-hover:opacity-100 dark:hover:bg-neutral-700"
                           >
                             <MoreHorizontal size={16} />
                           </button>
                           {openMenu === id && (
                             <div className="absolute right-0 top-full z-10 mt-1 w-40 rounded-xl border border-neutral-200 bg-white py-1 shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
                               {onPreview && (
-                                <button onClick={() => { onPreview(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-700 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-neutral-700">
+                                <button onClick={() => { onPreview(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-600 hover:bg-neutral-50 dark:text-neutral-200 dark:hover:bg-neutral-700">
                                   <Eye size={14} /> {t('admin.preview')}
                                 </button>
                               )}
                               {onEdit && (
-                                <button onClick={() => { onEdit(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-700 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-neutral-700">
+                                <button onClick={() => { onEdit(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-600 hover:bg-neutral-50 dark:text-neutral-200 dark:hover:bg-neutral-700">
                                   <Pencil size={14} /> {t('admin.edit')}
                                 </button>
                               )}
                               {onDuplicate && (
-                                <button onClick={() => { onDuplicate(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-700 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-neutral-700">
+                                <button onClick={() => { onDuplicate(item); setOpenMenu(null); }} className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-neutral-600 hover:bg-neutral-50 dark:text-neutral-200 dark:hover:bg-neutral-700">
                                   <Copy size={14} /> {t('admin.duplicate')}
                                 </button>
                               )}
@@ -244,20 +244,20 @@ export default function DataTable<T extends Record<string, any>>({
         {paginated.length === 0 && (
           <div className="flex flex-col items-center py-16 text-center">
             <Search size={32} className="mb-2 text-neutral-300" />
-            <p className="text-sm text-neutral-500">{t('admin.noResults')}</p>
+            <p className="text-sm text-neutral-600">{t('admin.noResults')}</p>
           </div>
         )}
       </div>
 
       <div className="mt-4 flex items-center justify-between">
-        <p className="text-sm text-neutral-500">
+        <p className="text-sm text-neutral-600">
           {filtered.length} {t('admin.records')} · {t('admin.page')} {page + 1} {t('admin.of')} {totalPages}
         </p>
         <div className="flex items-center gap-1">
           <button
             onClick={() => setPage(Math.max(0, page - 1))}
             disabled={page === 0}
-            className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
+            className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
           >
             <ChevronLeft size={16} />
           </button>
@@ -270,7 +270,7 @@ export default function DataTable<T extends Record<string, any>>({
                 onClick={() => setPage(p)}
                 className={cn(
                   'h-8 w-8 rounded-lg text-sm font-medium',
-                  page === p ? 'bg-primary-600 text-white' : 'text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                  page === p ? 'bg-primary-600 text-white' : 'text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800',
                 )}
               >
                 {p + 1}
@@ -280,7 +280,7 @@ export default function DataTable<T extends Record<string, any>>({
           <button
             onClick={() => setPage(Math.min(totalPages - 1, page + 1))}
             disabled={page >= totalPages - 1}
-            className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
+            className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
           >
             <ChevronRight size={16} />
           </button>

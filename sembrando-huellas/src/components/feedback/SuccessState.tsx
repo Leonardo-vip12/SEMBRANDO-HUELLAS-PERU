@@ -28,7 +28,7 @@ const SuccessState = forwardRef<HTMLDivElement, SuccessStateProps>(
           {title}
         </h3>
         {message && (
-          <p className="mb-6 max-w-sm text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="mb-6 max-w-sm text-sm text-neutral-500 dark:text-neutral-200">
             {message}
           </p>
         )}

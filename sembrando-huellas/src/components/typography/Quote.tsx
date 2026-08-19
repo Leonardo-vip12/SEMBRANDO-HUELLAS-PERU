@@ -15,14 +15,14 @@ export default function Quote({
   return (
     <figure
       className={cn(
-        'border-l-4 border-primary-500 pl-6 italic text-neutral-700 dark:text-neutral-300',
+        'border-l-4 border-primary-500 pl-6 italic text-neutral-600 dark:text-neutral-200',
         className,
       )}
       {...props}
     >
       <blockquote className="text-lg md:text-xl">{children}</blockquote>
       {(author || source) && (
-        <figcaption className="mt-3 text-sm not-italic text-neutral-500 dark:text-neutral-400">
+        <figcaption className="mt-3 text-sm not-italic text-neutral-600 dark:text-neutral-200">
           {author && <span className="font-medium">{author}</span>}
           {author && source && <span className="mx-1">&mdash;</span>}
           {source && <cite>{source}</cite>}

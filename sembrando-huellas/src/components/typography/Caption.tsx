@@ -10,7 +10,7 @@ export default function Caption({
   return (
     <span
       className={cn(
-        'text-sm text-neutral-500 dark:text-neutral-400',
+        'text-sm text-neutral-600 dark:text-neutral-200',
         className,
       )}
       {...props}

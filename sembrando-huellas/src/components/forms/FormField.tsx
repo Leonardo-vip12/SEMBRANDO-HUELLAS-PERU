@@ -24,7 +24,7 @@ const FormField = ({
       {label && (
         <label
           htmlFor={fieldId}
-          className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+          className="text-sm font-medium text-neutral-600 dark:text-neutral-200"
         >
           {label}
           {required && <span className="ml-1 text-red-500">*</span>}

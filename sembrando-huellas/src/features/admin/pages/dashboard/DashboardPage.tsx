@@ -19,7 +19,7 @@ export default function AdminDashboardPage() {
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{t('admin.dashboard')}</h1>
-        <p className="mt-1 text-sm text-neutral-500">{t('admin.welcomeMessage', 'Bienvenido al panel de administración de Sembrando Huellas Perú')}</p>
+        <p className="mt-1 text-sm text-neutral-600">{t('admin.welcomeMessage', 'Bienvenido al panel de administración de Sembrando Huellas Perú')}</p>
       </div>
 
       <motion.div variants={item} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -53,8 +53,8 @@ export default function AdminDashboardPage() {
                   {a.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="truncate text-sm text-neutral-700 dark:text-neutral-300">{a.text}</p>
-                  <p className="text-xs text-neutral-400">{a.time}</p>
+                  <p className="truncate text-sm text-neutral-600 dark:text-neutral-200">{a.text}</p>
+                  <p className="text-xs text-neutral-500">{a.time}</p>
                 </div>
               </div>
             ))}
@@ -74,7 +74,7 @@ export default function AdminDashboardPage() {
               <a
                 key={i}
                 href={action.href}
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-neutral-700 transition-colors hover:bg-primary-50 hover:text-primary-700 dark:text-neutral-300 dark:hover:bg-primary-900/20 dark:hover:text-primary-300"
+                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-neutral-600 transition-colors hover:bg-primary-50 hover:text-primary-700 dark:text-neutral-200 dark:hover:bg-primary-900/20 dark:hover:text-primary-300"
               >
                 <span className="text-primary-500">{action.icon}</span>
                 {action.label}
@@ -83,7 +83,7 @@ export default function AdminDashboardPage() {
           </div>
 
           <div className="mt-6">
-            <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-400">{t('admin.summary', 'Resumen')}</h4>
+            <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('admin.summary', 'Resumen')}</h4>
             <div className="space-y-3">
               {[
                 { label: t('admin.publishedContent', 'Contenido publicado'), value: '85%', color: 'bg-green-500' },
@@ -92,8 +92,8 @@ export default function AdminDashboardPage() {
               ].map((s) => (
                 <div key={s.label}>
                   <div className="mb-1 flex justify-between text-xs">
-                    <span className="text-neutral-500">{s.label}</span>
-                    <span className="font-medium text-neutral-700 dark:text-neutral-300">{s.value}</span>
+                    <span className="text-neutral-600">{s.label}</span>
+                    <span className="font-medium text-neutral-600 dark:text-neutral-200">{s.value}</span>
                   </div>
                   <div className="h-1.5 rounded-full bg-neutral-100 dark:bg-neutral-700">
                     <div className={`h-full rounded-full ${s.color}`} style={{ width: s.value }} />
@@ -116,7 +116,7 @@ export default function AdminDashboardPage() {
           ].map((bar) => (
             <div key={bar.label}>
               <div className="mb-1 flex justify-between text-sm">
-                <span className="text-neutral-600 dark:text-neutral-400">{bar.label}</span>
+                <span className="text-neutral-500 dark:text-neutral-200">{bar.label}</span>
                 <span className="font-medium text-neutral-900 dark:text-neutral-100">{bar.value}</span>
               </div>
               <div className="h-2 rounded-full bg-neutral-100 dark:bg-neutral-700">

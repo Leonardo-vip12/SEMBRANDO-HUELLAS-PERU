@@ -36,7 +36,7 @@ export default function MultimediaCenter() {
                 'flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                 filter === f.id
                   ? 'bg-primary-600 text-white'
-                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400',
+                  : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200',
               )}
             >
               {f.icon}
@@ -45,7 +45,7 @@ export default function MultimediaCenter() {
           ))}
         </div>
         <div className="relative">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
           <input
             type="text"
             value={searchQuery}
@@ -59,7 +59,7 @@ export default function MultimediaCenter() {
       {filtered.length === 0 ? (
         <div className="py-16 text-center">
           <Image size={40} className="mx-auto mb-3 text-neutral-300" />
-          <p className="text-neutral-500">No hay contenido multimedia disponible.</p>
+          <p className="text-neutral-600">No hay contenido multimedia disponible.</p>
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

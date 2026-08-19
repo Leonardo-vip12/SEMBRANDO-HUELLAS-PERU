@@ -58,9 +58,9 @@ export default function SiaTransparencyPage() {
             </div>
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Portal de Transparencia</h1>
           </div>
-          <p className="mt-1 text-sm text-neutral-500">Indicadores públicos, proyectos, impacto y datos abiertos para la ciudadanía</p>
+          <p className="mt-1 text-sm text-neutral-600">Indicadores públicos, proyectos, impacto y datos abiertos para la ciudadanía</p>
         </div>
-        <button onClick={loadAll} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800">
+        <button onClick={loadAll} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
           <RefreshCw size={14} className={loading ? 'animate-spin' : ''} /> Actualizar
         </button>
       </div>
@@ -91,7 +91,7 @@ export default function SiaTransparencyPage() {
                 <div key={ind.id || i} className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-700">
                   <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{ind.name || ind.label}</p>
                   <p className="mt-1 text-2xl font-bold text-sky-600 dark:text-sky-400">{ind.value ?? ind.currentValue ?? '-'}</p>
-                  <div className="mt-1 flex items-center gap-2 text-xs text-neutral-400">
+                  <div className="mt-1 flex items-center gap-2 text-xs text-neutral-500">
                     <TrendingUp size={12} />
                     <span>{ind.unit || ''} {ind.trend ? `${ind.trend > 0 ? '+' : ''}${ind.trend}%` : ''}</span>
                   </div>
@@ -99,7 +99,7 @@ export default function SiaTransparencyPage() {
               ))}
             </div>
           ) : (
-            <p className="text-sm text-neutral-400">No hay indicadores disponibles</p>
+            <p className="text-sm text-neutral-500">No hay indicadores disponibles</p>
           )}
         </motion.div>
 
@@ -111,13 +111,13 @@ export default function SiaTransparencyPage() {
                 <div key={p.id || i} className="flex items-center justify-between rounded-lg border border-neutral-200 p-3 dark:border-neutral-700">
                   <div>
                     <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{p.name || p.title}</p>
-                    <p className="text-xs text-neutral-400">{p.status || p.region} {p.budget ? `• ${p.budget}` : ''}</p>
+                    <p className="text-xs text-neutral-500">{p.status || p.region} {p.budget ? `• ${p.budget}` : ''}</p>
                   </div>
                   <span className={cn(
                     'rounded-full px-2 py-0.5 text-xs font-medium',
                     p.status === 'active' || p.status === 'completado' ? 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400'
                       : p.status === 'pending' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400'
-                      : 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400',
+                      : 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800 dark:text-neutral-200',
                   )}>
                     {p.status || 'N/A'}
                   </span>
@@ -125,7 +125,7 @@ export default function SiaTransparencyPage() {
               ))}
             </div>
           ) : (
-            <p className="text-sm text-neutral-400">No hay proyectos disponibles</p>
+            <p className="text-sm text-neutral-500">No hay proyectos disponibles</p>
           )}
         </motion.div>
       </div>
@@ -139,7 +139,7 @@ export default function SiaTransparencyPage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {Object.entries(impact).filter(([k]) => !['id', 'updatedAt'].includes(k)).map(([key, val]) => (
               <div key={key} className="rounded-lg border border-neutral-200 p-4 dark:border-neutral-700">
-                <p className="text-xs text-neutral-400 capitalize">{key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}</p>
+                <p className="text-xs text-neutral-500 capitalize">{key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}</p>
                 <p className="mt-1 text-xl font-bold text-neutral-900 dark:text-neutral-100">{String(val)}</p>
               </div>
             ))}
@@ -155,10 +155,10 @@ export default function SiaTransparencyPage() {
               {documents.map((doc: any, i: number) => (
                 <div key={doc.id || i} className="flex items-center justify-between rounded-lg border border-neutral-200 p-3 dark:border-neutral-700">
                   <div className="flex items-center gap-3">
-                    <FileText size={16} className="text-neutral-400" />
+                    <FileText size={16} className="text-neutral-500" />
                     <div>
                       <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{doc.title || doc.name}</p>
-                      <p className="text-xs text-neutral-400">{doc.type || doc.category} • {doc.size || ''}</p>
+                      <p className="text-xs text-neutral-500">{doc.type || doc.category} • {doc.size || ''}</p>
                     </div>
                   </div>
                   <a href={doc.url || '#'} target="_blank" rel="noopener noreferrer"
@@ -169,7 +169,7 @@ export default function SiaTransparencyPage() {
               ))}
             </div>
           ) : (
-            <p className="text-sm text-neutral-400">No hay documentos disponibles</p>
+            <p className="text-sm text-neutral-500">No hay documentos disponibles</p>
           )}
         </div>
 
@@ -179,7 +179,7 @@ export default function SiaTransparencyPage() {
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(openStats).filter(([k]) => !['id'].includes(k)).map(([key, val]) => (
                 <div key={key} className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-700">
-                  <p className="text-xs text-neutral-400 capitalize">{key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}</p>
+                  <p className="text-xs text-neutral-500 capitalize">{key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}</p>
                   <p className="mt-1 text-lg font-bold text-neutral-900 dark:text-neutral-100">{String(val)}</p>
                 </div>
               ))}
@@ -201,7 +201,7 @@ export default function SiaTransparencyPage() {
                   {formatIcon(d.format)}
                   <div>
                     <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{d.name || d.title}</p>
-                    <p className="text-xs text-neutral-400">{d.format?.toUpperCase()} • {d.size || ''}</p>
+                    <p className="text-xs text-neutral-500">{d.format?.toUpperCase()} • {d.size || ''}</p>
                   </div>
                 </div>
                 <button className="flex items-center gap-1 rounded-lg bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-700 hover:bg-amber-100 dark:bg-amber-900/20 dark:text-amber-300">
@@ -211,7 +211,7 @@ export default function SiaTransparencyPage() {
             ))}
           </div>
         ) : (
-          <p className="text-sm text-neutral-400">No hay datos descargables disponibles</p>
+          <p className="text-sm text-neutral-500">No hay datos descargables disponibles</p>
         )}
       </motion.div>
     </motion.div>

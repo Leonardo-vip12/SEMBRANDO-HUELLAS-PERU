@@ -36,24 +36,24 @@ export default function ProgramDetailPage() {
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <Reveal>
-                <h2 className="mb-6 text-3xl font-bold text-dark-900">Acerca del programa</h2>
-                <p className="mb-8 text-lg leading-relaxed text-neutral-600">{program.longDescription}</p>
+                <h2 className="mb-6 text-3xl font-bold text-dark-800">Acerca del programa</h2>
+                <p className="mb-8 text-lg leading-relaxed text-neutral-500">{program.longDescription}</p>
               </Reveal>
 
               <Reveal>
-                <h3 className="mb-4 text-xl font-bold text-dark-800 flex items-center gap-2"><Target size={22} className="text-primary-600" /> Objetivos</h3>
+                <h3 className="mb-4 text-xl font-bold text-dark-700 flex items-center gap-2"><Target size={22} className="text-primary-600" /> Objetivos</h3>
                 <ul className="mb-8 space-y-3">
                   {program.objectives.map((obj, i) => (
-                    <li key={i} className="flex items-start gap-3 text-neutral-600"><span className="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-primary-500" />{obj}</li>
+                    <li key={i} className="flex items-start gap-3 text-neutral-500"><span className="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-primary-500" />{obj}</li>
                   ))}
                 </ul>
               </Reveal>
 
               <Reveal>
-                <h3 className="mb-4 text-xl font-bold text-dark-800 flex items-center gap-2"><List size={22} className="text-primary-600" /> Actividades</h3>
+                <h3 className="mb-4 text-xl font-bold text-dark-700 flex items-center gap-2"><List size={22} className="text-primary-600" /> Actividades</h3>
                 <ul className="mb-8 space-y-3">
                   {program.activities.map((act, i) => (
-                    <li key={i} className="flex items-start gap-3 text-neutral-600"><span className="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-secondary-500" />{act}</li>
+                    <li key={i} className="flex items-start gap-3 text-neutral-500"><span className="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-secondary-500" />{act}</li>
                   ))}
                 </ul>
               </Reveal>
@@ -62,19 +62,19 @@ export default function ProgramDetailPage() {
             <div>
               <div className="space-y-4">
                 <CardBase variant="default">
-                  <h4 className="mb-3 text-lg font-bold text-dark-800 flex items-center gap-2"><Calendar size={18} className="text-primary-600" /> Información</h4>
+                  <h4 className="mb-3 text-lg font-bold text-dark-700 flex items-center gap-2"><Calendar size={18} className="text-primary-600" /> Información</h4>
                   <div className="space-y-3 text-sm">
-                    <div><span className="font-semibold text-dark-700">Duración:</span> <span className="text-neutral-600">{program.duration}</span></div>
-                    <div><span className="font-semibold text-dark-700">Horario:</span> <span className="text-neutral-600">{program.schedule}</span></div>
-                    <div><span className="font-semibold text-dark-700">Audiencia:</span> <span className="text-neutral-600">{program.targetAudience}</span></div>
-                    <div><span className="font-semibold text-dark-700">Estado:</span> <span className={`inline-block rounded-full px-3 py-0.5 text-xs font-medium ${program.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-neutral-100 text-neutral-600'}`}>{program.status === 'active' ? 'Activo' : program.status}</span></div>
+                    <div><span className="font-semibold text-dark-700">Duración:</span> <span className="text-neutral-500">{program.duration}</span></div>
+                    <div><span className="font-semibold text-dark-700">Horario:</span> <span className="text-neutral-500">{program.schedule}</span></div>
+                    <div><span className="font-semibold text-dark-700">Audiencia:</span> <span className="text-neutral-500">{program.targetAudience}</span></div>
+                    <div><span className="font-semibold text-dark-700">Estado:</span> <span className={`inline-block rounded-full px-3 py-0.5 text-xs font-medium ${program.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-neutral-100 text-neutral-500'}`}>{program.status === 'active' ? 'Activo' : program.status}</span></div>
                   </div>
                 </CardBase>
 
                 {program.requirements.length > 0 && (
                   <CardBase variant="default">
-                    <h4 className="mb-3 text-lg font-bold text-dark-800">Requisitos</h4>
-                    <ul className="space-y-2 text-sm text-neutral-600">
+                    <h4 className="mb-3 text-lg font-bold text-dark-700">Requisitos</h4>
+                    <ul className="space-y-2 text-sm text-neutral-500">
                       {program.requirements.map((req, i) => <li key={i} className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-400" />{req}</li>)}
                     </ul>
                   </CardBase>

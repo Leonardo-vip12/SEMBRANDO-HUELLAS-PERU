@@ -41,11 +41,11 @@ export default function ContactPage() {
                       <CardBase key={i} variant="flat" className="flex items-center gap-4">
                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600"><Icon size={22} /></div>
                         <div>
-                          <p className="text-sm font-semibold text-dark-800">{ch.title}</p>
+                          <p className="text-sm font-semibold text-dark-700">{ch.title}</p>
                           {ch.href ? (
-                            <a href={ch.href} className="text-sm text-neutral-600 hover:text-primary-600">{ch.value}</a>
+                            <a href={ch.href} className="text-sm text-neutral-500 hover:text-primary-600">{ch.value}</a>
                           ) : (
-                            <p className="text-sm text-neutral-600">{ch.value}</p>
+                            <p className="text-sm text-neutral-500">{ch.value}</p>
                           )}
                         </div>
                       </CardBase>
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
                 <div className="flex gap-3">
                   {Object.entries(organizationData.socialMedia || {}).filter(([_, url]) => url).map(([platform, url]) => (
-                    <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 text-neutral-500 transition-colors hover:bg-primary-100 hover:text-primary-600" aria-label={platform}>
+                    <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 text-neutral-600 transition-colors hover:bg-primary-100 hover:text-primary-600" aria-label={platform}>
                       <span className="text-xs font-bold uppercase">{platform.charAt(0)}</span>
                     </a>
                   ))}
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
             <Reveal direction="right">
               <CardBase variant="elevated" className="h-full">
-                <h2 className="mb-6 text-2xl font-bold text-dark-900">Envíanos un mensaje</h2>
+                <h2 className="mb-6 text-2xl font-bold text-dark-800">Envíanos un mensaje</h2>
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Input label="Nombre" placeholder="Tu nombre" required />

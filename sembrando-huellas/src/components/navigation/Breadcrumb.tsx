@@ -32,14 +32,14 @@ const Breadcrumb = forwardRef<HTMLElement, BreadcrumbProps>(
                 {index > 0 && (
                   <ChevronRight
                     size={14}
-                    className="text-neutral-400 dark:text-neutral-500"
+                    className="text-neutral-500 dark:text-neutral-200"
                     aria-hidden="true"
                   />
                 )}
                 {item.href && !isCurrent ? (
                   <Link
                     to={item.href}
-                    className="text-neutral-500 transition-colors hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+                    className="text-neutral-500 transition-colors hover:text-neutral-500 dark:text-neutral-200 dark:hover:text-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
                   >
                     {item.label}
                   </Link>
@@ -49,7 +49,7 @@ const Breadcrumb = forwardRef<HTMLElement, BreadcrumbProps>(
                     className={cn(
                       isCurrent
                         ? 'font-medium text-neutral-900 dark:text-neutral-100'
-                        : 'text-neutral-500 dark:text-neutral-400'
+                        : 'text-neutral-500 dark:text-neutral-200'
                     )}
                   >
                     {item.label}

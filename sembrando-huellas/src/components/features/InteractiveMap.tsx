@@ -86,7 +86,7 @@ export default function InteractiveMap() {
     <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900">
       <div className="absolute left-4 right-4 top-4 z-10 flex flex-wrap gap-2">
         <div className="flex items-center gap-1 rounded-lg bg-white/90 px-3 py-1.5 shadow-sm backdrop-blur dark:bg-neutral-800/90">
-          <Search size={14} className="text-neutral-400" />
+          <Search size={14} className="text-neutral-500" />
           <input
             type="text"
             value={searchQuery}
@@ -96,7 +96,7 @@ export default function InteractiveMap() {
           />
           {searchQuery && (
             <button onClick={() => setSearchQuery('')}>
-              <X size={14} className="text-neutral-400" />
+              <X size={14} className="text-neutral-500" />
             </button>
           )}
         </div>
@@ -109,14 +109,14 @@ export default function InteractiveMap() {
               'rounded-lg px-3 py-1.5 text-xs font-medium backdrop-blur transition-colors',
               filter === f
                 ? 'bg-primary-600 text-white'
-                : 'bg-white/90 text-neutral-600 hover:bg-white dark:bg-neutral-800/90 dark:text-neutral-400',
+                : 'bg-white/90 text-neutral-500 hover:bg-white dark:bg-neutral-800/90 dark:text-neutral-200',
             )}
           >
             {f === 'all' ? 'Todos' : f === 'project' ? 'Proyectos' : f === 'species' ? 'Especies' : 'Eventos'}
           </button>
         ))}
 
-        <span className="ml-auto rounded-lg bg-white/90 px-2 py-1 text-xs text-neutral-500 backdrop-blur dark:bg-neutral-800/90">
+        <span className="ml-auto rounded-lg bg-white/90 px-2 py-1 text-xs text-neutral-600 backdrop-blur dark:bg-neutral-800/90">
           {filtered.length} marcadores
         </span>
       </div>
@@ -161,7 +161,7 @@ export default function InteractiveMap() {
           })}
         </svg>
 
-        <div className="pointer-events-none absolute bottom-4 left-4 flex items-center gap-4 rounded-lg bg-white/80 px-3 py-2 text-xs text-neutral-500 backdrop-blur dark:bg-neutral-800/80">
+        <div className="pointer-events-none absolute bottom-4 left-4 flex items-center gap-4 rounded-lg bg-white/80 px-3 py-2 text-xs text-neutral-600 backdrop-blur dark:bg-neutral-800/80">
           <span className="flex items-center gap-1"><span className="inline-block h-2.5 w-2.5 rounded-full bg-green-500" /> Proyectos</span>
           <span className="flex items-center gap-1"><span className="inline-block h-2.5 w-2.5 rounded-full bg-amber-500" /> Especies</span>
           <span className="flex items-center gap-1"><span className="inline-block h-2.5 w-2.5 rounded-full bg-blue-500" /> Eventos</span>
@@ -178,12 +178,12 @@ export default function InteractiveMap() {
                 </span>
                 <h4 className="font-medium text-neutral-900 dark:text-neutral-100">{selected.name}</h4>
               </div>
-              <p className="mt-1 text-sm text-neutral-500">{selected.description}</p>
-              <p className="mt-1 text-xs text-neutral-400">{selected.region}</p>
+              <p className="mt-1 text-sm text-neutral-600">{selected.description}</p>
+              <p className="mt-1 text-xs text-neutral-500">{selected.region}</p>
             </div>
             <button
               onClick={() => setSelected(null)}
-              className="rounded p-1 text-neutral-400 hover:text-neutral-600"
+              className="rounded p-1 text-neutral-500 hover:text-neutral-500"
             >
               <X size={16} />
             </button>

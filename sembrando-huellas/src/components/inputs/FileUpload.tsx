@@ -87,7 +87,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+            className="text-sm font-medium text-neutral-500 dark:text-neutral-200"
           >
             {label}
           </label>
@@ -113,18 +113,18 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
         >
           <Upload
             size={28}
-            className={dragOver ? 'text-primary-500' : 'text-neutral-400'}
+            className={dragOver ? 'text-primary-500' : 'text-neutral-500'}
           />
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="text-sm text-neutral-500 dark:text-neutral-200">
             Arrastra y suelta archivos aquí o haz clic para seleccionar
           </p>
           {accept && (
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-200">
               Formatos permitidos: {accept.replace(/\./g, '').replace(/,/g, ', ')}
             </p>
           )}
           {maxSize && (
-            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+            <p className="text-xs text-neutral-500 dark:text-neutral-200">
               Tamaño máximo: {formatSize(maxSize)}
             </p>
           )}
@@ -152,18 +152,18 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                 className="flex items-center justify-between rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 dark:border-neutral-700 dark:bg-neutral-800/50"
               >
                 <div className="flex items-center gap-2 overflow-hidden">
-                  <File size={16} className="shrink-0 text-neutral-400" />
-                  <span className="truncate text-sm text-neutral-700 dark:text-neutral-300">
+                  <File size={16} className="shrink-0 text-neutral-500" />
+                  <span className="truncate text-sm text-neutral-500 dark:text-neutral-200">
                     {file.name}
                   </span>
-                  <span className="shrink-0 text-xs text-neutral-400">
+                  <span className="shrink-0 text-xs text-neutral-500">
                     {formatSize(file.size)}
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => removeFile(index)}
-                  className="ml-2 text-neutral-400 hover:text-red-500"
+                  className="ml-2 text-neutral-500 hover:text-red-500"
                   aria-label={`Eliminar ${file.name}`}
                 >
                   <X size={16} />

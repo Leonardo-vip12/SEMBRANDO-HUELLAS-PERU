@@ -8,7 +8,7 @@ interface BadgeTextProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 const variantClasses: Record<BadgeVariant, string> = {
   default:
-    'bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300',
+    'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-200',
   success:
     'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
   warning:

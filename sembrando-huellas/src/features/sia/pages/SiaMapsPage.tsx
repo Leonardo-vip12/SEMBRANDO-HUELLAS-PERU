@@ -31,7 +31,7 @@ const LAYER_COLORS: Record<string, string> = {
   climate: 'bg-purple-50 text-purple-600 dark:bg-purple-900/20 dark:text-purple-400',
   land_use: 'bg-pink-50 text-pink-600 dark:bg-pink-900/20 dark:text-pink-400',
   species: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400',
-  infrastructure: 'bg-neutral-50 text-neutral-600 dark:bg-neutral-900/20 dark:text-neutral-400',
+  infrastructure: 'bg-neutral-50 text-neutral-500 dark:bg-neutral-900/20 dark:text-neutral-200',
 };
 
 interface Layer {
@@ -123,7 +123,7 @@ export default function SiaMapsPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-20 text-center">
         <AlertTriangle size={48} className="mb-4 text-red-400" />
         <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Error al cargar mapas</h2>
-        <p className="mt-1 text-sm text-neutral-500">{error}</p>
+        <p className="mt-1 text-sm text-neutral-600">{error}</p>
         <button onClick={() => window.location.reload()} className="mt-4 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700">Reintentar</button>
       </motion.div>
     );
@@ -135,7 +135,7 @@ export default function SiaMapsPage() {
     <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
       <motion.div variants={itemVariants}>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Mapas Temáticos</h1>
-        <p className="mt-1 text-sm text-neutral-500">Visualización geoespacial de capas ambientales del sistema</p>
+        <p className="mt-1 text-sm text-neutral-600">Visualización geoespacial de capas ambientales del sistema</p>
       </motion.div>
 
       <div className="flex flex-wrap items-start gap-4">
@@ -156,7 +156,7 @@ export default function SiaMapsPage() {
                       'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-all',
                       selectedLayer === layer.id
                         ? 'border-primary-600 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400'
-                        : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700',
+                        : 'border-neutral-200 bg-white text-neutral-500 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700',
                     )}
                   >
                     <Icon size={16} />
@@ -179,9 +179,9 @@ export default function SiaMapsPage() {
               <div className="mb-4 flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{selectedLayerMeta.name}</h3>
-                  <p className="text-sm text-neutral-500">{selectedLayerMeta.description}</p>
+                  <p className="text-sm text-neutral-600">{selectedLayerMeta.description}</p>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-neutral-500">
+                <div className="flex items-center gap-2 text-sm text-neutral-600">
                   <MapPin size={14} />
                   {layerData ? `${layerData.length} registros` : 'Cargando...'}
                 </div>
@@ -190,13 +190,13 @@ export default function SiaMapsPage() {
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
                   {layerData.slice(0, 20).map((item: any, i: number) => (
                     <div key={i} className="rounded-lg border border-neutral-100 bg-neutral-50 p-3 text-sm dark:border-neutral-600 dark:bg-neutral-700/50">
-                      <p className="font-medium text-neutral-800 dark:text-neutral-200">{item.name || `Elemento ${i + 1}`}</p>
-                      {item.region && <p className="text-xs text-neutral-500">{item.region}</p>}
+                      <p className="font-medium text-neutral-600 dark:text-neutral-200">{item.name || `Elemento ${i + 1}`}</p>
+                      {item.region && <p className="text-xs text-neutral-600">{item.region}</p>}
                     </div>
                   ))}
                 </div>
               ) : layerData && layerData.length === 0 ? (
-                <div className="flex h-24 items-center justify-center text-sm text-neutral-400">No hay datos disponibles para esta capa</div>
+                <div className="flex h-24 items-center justify-center text-sm text-neutral-500">No hay datos disponibles para esta capa</div>
               ) : (
                 <Spinner />
               )}
@@ -227,14 +227,14 @@ export default function SiaMapsPage() {
             {searching && <Spinner />}
             {searchResults.length > 0 && (
               <div className="mt-3 space-y-2">
-                <p className="text-xs font-medium text-neutral-500">Resultados</p>
+                <p className="text-xs font-medium text-neutral-600">Resultados</p>
                 {searchResults.map((result) => (
                   <div key={result.id} className="rounded-lg border border-neutral-100 bg-neutral-50 p-2.5 text-sm dark:border-neutral-600 dark:bg-neutral-700/50">
-                    <div className="flex items-center gap-1.5 font-medium text-neutral-800 dark:text-neutral-200">
+                    <div className="flex items-center gap-1.5 font-medium text-neutral-600 dark:text-neutral-200">
                       <MapPin size={12} className="text-primary-600" />
                       {result.name}
                     </div>
-                    <p className="mt-0.5 text-xs text-neutral-500">
+                    <p className="mt-0.5 text-xs text-neutral-600">
                       {result.type} · {result.coordinates.lat.toFixed(4)}, {result.coordinates.lng.toFixed(4)}
                     </p>
                   </div>
@@ -242,7 +242,7 @@ export default function SiaMapsPage() {
               </div>
             )}
             {searchResults.length === 0 && !searching && searchQuery && (
-              <p className="mt-3 text-xs text-neutral-400">Sin resultados para "{searchQuery}"</p>
+              <p className="mt-3 text-xs text-neutral-500">Sin resultados para "{searchQuery}"</p>
             )}
           </div>
 
@@ -253,7 +253,7 @@ export default function SiaMapsPage() {
                 {legend.map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm">
                     <div className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />
-                    <span className="text-neutral-600 dark:text-neutral-400">{item.label}</span>
+                    <span className="text-neutral-500 dark:text-neutral-200">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -274,7 +274,7 @@ export default function SiaMapsPage() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {layers.map((layer) => {
               const Icon = LAYER_ICONS[layer.id] || Map;
-              const colorClass = LAYER_COLORS[layer.id] || 'bg-neutral-50 text-neutral-600 dark:bg-neutral-900/20';
+              const colorClass = LAYER_COLORS[layer.id] || 'bg-neutral-50 text-neutral-500 dark:bg-neutral-900/20';
               return (
                 <motion.button
                   key={layer.id}
@@ -292,7 +292,7 @@ export default function SiaMapsPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">{layer.name}</h3>
-                    <p className="mt-0.5 text-xs text-neutral-500">{layer.description}</p>
+                    <p className="mt-0.5 text-xs text-neutral-600">{layer.description}</p>
                     <span className="mt-1.5 inline-block rounded-full bg-primary-50 px-2 py-0.5 text-xs font-medium text-primary-600 dark:bg-primary-900/20 dark:text-primary-400">
                       {layer.count ?? 0} registros
                     </span>

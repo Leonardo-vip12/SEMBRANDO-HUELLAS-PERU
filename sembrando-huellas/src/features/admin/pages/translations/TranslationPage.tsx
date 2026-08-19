@@ -288,7 +288,7 @@ export default function TranslationPage() {
     return (
       <div className="flex flex-col items-center gap-3 py-16 text-center">
         <AlertTriangle size={40} className="text-red-400" />
-        <p className="text-neutral-500">{error}</p>
+        <p className="text-neutral-600">{error}</p>
         <Button variant="outline" size="sm" onClick={initLoad}>
           <RefreshCw size={14} /> {t('Reintentar')}
         </Button>
@@ -307,7 +307,7 @@ export default function TranslationPage() {
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-6">
       <motion.div variants={itemAnim}>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{t('Panel de Traducciones')}</h1>
-        <p className="mt-1 text-sm text-neutral-500">{t('Administra todos los textos de la plataforma')}</p>
+        <p className="mt-1 text-sm text-neutral-600">{t('Administra todos los textos de la plataforma')}</p>
       </motion.div>
 
       <motion.div variants={itemAnim} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -332,7 +332,7 @@ export default function TranslationPage() {
                 'flex items-center gap-2 border-b-2 px-4 py-3 text-sm font-medium transition-colors',
                 activeTab === tab.key
                   ? 'border-primary-500 text-primary-600 dark:text-primary-400'
-                  : 'border-transparent text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300',
+                  : 'border-transparent text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-300',
               )}
             >
               {tab.icon}
@@ -344,7 +344,7 @@ export default function TranslationPage() {
         {activeTab === 'idiomas' && (
           <motion.div variants={itemAnim} className="space-y-4">
             <div className="flex items-center justify-between">
-              <p className="text-sm text-neutral-500">{t('Gestiona los idiomas disponibles en la plataforma')}</p>
+              <p className="text-sm text-neutral-600">{t('Gestiona los idiomas disponibles en la plataforma')}</p>
               <Button
                 variant="primary"
                 size="sm"
@@ -360,7 +360,7 @@ export default function TranslationPage() {
             {languages.length === 0 ? (
               <div className="flex flex-col items-center py-16 text-center">
                 <Globe size={40} className="mb-2 text-neutral-300" />
-                <p className="text-sm text-neutral-500">{t('No hay idiomas registrados')}</p>
+                <p className="text-sm text-neutral-600">{t('No hay idiomas registrados')}</p>
               </div>
             ) : (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -379,7 +379,7 @@ export default function TranslationPage() {
                           </div>
                           <div>
                             <p className="font-medium text-neutral-900 dark:text-neutral-100">{lang.name}</p>
-                            <p className="text-xs text-neutral-400">{lang.code} {lang.nativeName ? `· ${lang.nativeName}` : ''}</p>
+                            <p className="text-xs text-neutral-500">{lang.code} {lang.nativeName ? `· ${lang.nativeName}` : ''}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-1.5">
@@ -422,7 +422,7 @@ export default function TranslationPage() {
           <motion.div variants={itemAnim} className="space-y-4">
             <div className="flex flex-wrap items-center gap-3">
               <div className="relative flex-1 min-w-[200px]">
-                <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+                <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
                 <input
                   type="text"
                   value={keySearch}
@@ -480,7 +480,7 @@ export default function TranslationPage() {
 
             {showMissing && missingKeys.length > 0 && (
               <CardBase variant="flat" padding="sm">
-                <p className="mb-2 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                <p className="mb-2 text-sm font-medium text-neutral-600 dark:text-neutral-200">
                   {t('Claves faltantes')}: {missingKeys.length}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -498,18 +498,18 @@ export default function TranslationPage() {
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800/50">
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Clave')}</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Namespace')}</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Valor')}</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Idioma')}</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Estado')}</th>
-                      <th className="w-24 px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-neutral-500">{t('Acciones')}</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Clave')}</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Namespace')}</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Valor')}</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Idioma')}</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Estado')}</th>
+                      <th className="w-24 px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-neutral-600">{t('Acciones')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
                     {keys.length === 0 ? (
                       <tr>
-                        <td colSpan={6} className="px-4 py-12 text-center text-sm text-neutral-500">
+                        <td colSpan={6} className="px-4 py-12 text-center text-sm text-neutral-600">
                           {t('No se encontraron claves')}
                         </td>
                       </tr>
@@ -523,9 +523,9 @@ export default function TranslationPage() {
                           className="group transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                         >
                           <td className="px-4 py-3 text-sm font-medium text-neutral-900 dark:text-neutral-100">{k.key}</td>
-                          <td className="px-4 py-3 text-sm text-neutral-500">{k.namespace || '-'}</td>
-                          <td className="max-w-[200px] truncate px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300">{k.value}</td>
-                          <td className="px-4 py-3 text-sm text-neutral-600 dark:text-neutral-400">{k.language || k.languageId}</td>
+                          <td className="px-4 py-3 text-sm text-neutral-600">{k.namespace || '-'}</td>
+                          <td className="max-w-[200px] truncate px-4 py-3 text-sm text-neutral-600 dark:text-neutral-200">{k.value}</td>
+                          <td className="px-4 py-3 text-sm text-neutral-500 dark:text-neutral-200">{k.language || k.languageId}</td>
                           <td className="px-4 py-3">
                             <StatusBadge status={k.status === 'complete' ? 'published' : k.status === 'missing' ? 'pending' : 'active'} />
                           </td>
@@ -537,13 +537,13 @@ export default function TranslationPage() {
                                   setEditKeyId(k.id);
                                   setKeyModal(true);
                                 }}
-                                className="rounded-lg p-1.5 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-700"
                               >
                                 <Pencil size={14} />
                               </button>
                               <button
                                 onClick={() => handleDeleteKey(k.id)}
-                                className="rounded-lg p-1.5 text-neutral-400 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/20"
+                                className="rounded-lg p-1.5 text-neutral-500 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/20"
                               >
                                 <Trash2 size={14} />
                               </button>
@@ -559,14 +559,14 @@ export default function TranslationPage() {
 
             {keysPagination.totalPages > 1 && (
               <div className="flex items-center justify-between">
-                <p className="text-sm text-neutral-500">
+                <p className="text-sm text-neutral-600">
                   {keysPagination.total} {t('registros')} · {t('Página')} {keysPagination.page} {t('de')} {keysPagination.totalPages}
                 </p>
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => setKeysPagination(p => ({ ...p, page: Math.max(1, p.page - 1) }))}
                     disabled={keysPagination.page <= 1}
-                    className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
+                    className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
                   >
                     <ChevronLeft size={16} />
                   </button>
@@ -579,7 +579,7 @@ export default function TranslationPage() {
                         onClick={() => setKeysPagination(prev => ({ ...prev, page: p }))}
                         className={cn(
                           'h-8 w-8 rounded-lg text-sm font-medium',
-                          keysPagination.page === p ? 'bg-primary-600 text-white' : 'text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                          keysPagination.page === p ? 'bg-primary-600 text-white' : 'text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800',
                         )}
                       >
                         {p}
@@ -589,7 +589,7 @@ export default function TranslationPage() {
                   <button
                     onClick={() => setKeysPagination(p => ({ ...p, page: Math.min(p.totalPages, p.page + 1) }))}
                     disabled={keysPagination.page >= keysPagination.totalPages}
-                    className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
+                    className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800"
                   >
                     <ChevronRight size={16} />
                   </button>
@@ -603,7 +603,7 @@ export default function TranslationPage() {
           <motion.div variants={itemAnim} className="space-y-4">
             <div className="flex flex-wrap items-end gap-3">
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Tipo de entidad')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Tipo de entidad')}</label>
                 <select
                   value={entityType}
                   onChange={e => setEntityType(e.target.value)}
@@ -613,7 +613,7 @@ export default function TranslationPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('ID de entidad')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('ID de entidad')}</label>
                 <input
                   type="text"
                   value={entityId}
@@ -638,7 +638,7 @@ export default function TranslationPage() {
                         const value = Array.isArray(translations) ? trans.value : trans[1];
                         return (
                           <div key={i} className="flex items-center gap-3">
-                            <span className="w-16 text-xs font-medium text-neutral-500 uppercase">{langCode}</span>
+                            <span className="w-16 text-xs font-medium text-neutral-600 uppercase">{langCode}</span>
                             <input
                               type="text"
                               defaultValue={value}
@@ -668,7 +668,7 @@ export default function TranslationPage() {
             {!loadingContent && Object.keys(contentTranslations).length === 0 && entityId && (
               <div className="flex flex-col items-center py-12 text-center">
                 <FileJson size={40} className="mb-2 text-neutral-300" />
-                <p className="text-sm text-neutral-500">{t('No hay traducciones para esta entidad')}</p>
+                <p className="text-sm text-neutral-600">{t('No hay traducciones para esta entidad')}</p>
               </div>
             )}
           </motion.div>
@@ -683,7 +683,7 @@ export default function TranslationPage() {
               </div>
               <div className="space-y-4">
                 <div>
-                  <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Formato')}</label>
+                  <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Formato')}</label>
                   <div className="flex gap-2">
                     {IMPORT_FORMATS.map(f => (
                       <button
@@ -693,7 +693,7 @@ export default function TranslationPage() {
                           'flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-colors',
                           importFormat === f.value
                             ? 'border-primary-500 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400'
-                            : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
+                            : 'border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
                         )}
                       >
                         {f.value === 'json' ? <FileJson size={14} /> : <FileSpreadsheet size={14} />}
@@ -703,7 +703,7 @@ export default function TranslationPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Idioma')}</label>
+                  <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Idioma')}</label>
                   <select
                     value={importLang}
                     onChange={e => setImportLang(e.target.value)}
@@ -714,12 +714,12 @@ export default function TranslationPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Archivo')}</label>
+                  <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Archivo')}</label>
                   <input
                     type="file"
                     accept={importFormat === 'json' ? '.json' : '.csv'}
                     onChange={e => setImportFile(e.target.files?.[0] || null)}
-                    className="w-full text-sm text-neutral-500 file:mr-3 file:rounded-lg file:border-0 file:bg-primary-50 file:px-3 file:py-2 file:text-xs file:font-medium file:text-primary-700 dark:file:bg-primary-900/20 dark:file:text-primary-400"
+                    className="w-full text-sm text-neutral-600 file:mr-3 file:rounded-lg file:border-0 file:bg-primary-50 file:px-3 file:py-2 file:text-xs file:font-medium file:text-primary-700 dark:file:bg-primary-900/20 dark:file:text-primary-400"
                   />
                 </div>
                 <Button
@@ -741,7 +741,7 @@ export default function TranslationPage() {
               </div>
               <div className="space-y-4">
                 <div>
-                  <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Idioma')}</label>
+                  <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Idioma')}</label>
                   <select
                     value={exportLang}
                     onChange={e => setExportLang(e.target.value)}
@@ -752,7 +752,7 @@ export default function TranslationPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Formato')}</label>
+                  <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Formato')}</label>
                   <div className="flex gap-2">
                     {IMPORT_FORMATS.map(f => (
                       <button
@@ -762,7 +762,7 @@ export default function TranslationPage() {
                           'flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-colors',
                           exportFormat === f.value
                             ? 'border-primary-500 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-400'
-                            : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
+                            : 'border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
                         )}
                       >
                         {f.value === 'json' ? <FileJson size={14} /> : <FileSpreadsheet size={14} />}
@@ -797,13 +797,13 @@ export default function TranslationPage() {
               <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
                 {langModal.edit ? t('Editar Idioma') : t('Añadir Idioma')}
               </h3>
-              <button onClick={() => setLangModal({ open: false })} className="rounded-lg p-1 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+              <button onClick={() => setLangModal({ open: false })} className="rounded-lg p-1 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-700">
                 <X size={18} />
               </button>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Código')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Código')}</label>
                 <input
                   type="text"
                   value={langForm.code}
@@ -813,7 +813,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Nombre')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Nombre')}</label>
                 <input
                   type="text"
                   value={langForm.name}
@@ -823,7 +823,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Nombre nativo')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Nombre nativo')}</label>
                 <input
                   type="text"
                   value={langForm.nativeName}
@@ -856,13 +856,13 @@ export default function TranslationPage() {
               <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
                 {editKeyId ? t('Editar Clave') : t('Añadir Clave')}
               </h3>
-              <button onClick={() => setKeyModal(false)} className="rounded-lg p-1 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+              <button onClick={() => setKeyModal(false)} className="rounded-lg p-1 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-700">
                 <X size={18} />
               </button>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Clave')} *</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Clave')} *</label>
                 <input
                   type="text"
                   value={keyForm.key}
@@ -872,7 +872,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Namespace')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Namespace')}</label>
                 <input
                   type="text"
                   value={keyForm.namespace}
@@ -882,7 +882,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Valor')} *</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Valor')} *</label>
                 <textarea
                   value={keyForm.value}
                   onChange={e => setKeyForm(f => ({ ...f, value: e.target.value }))}
@@ -892,7 +892,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Idioma')} *</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Idioma')} *</label>
                 <select
                   value={keyForm.languageId}
                   onChange={e => setKeyForm(f => ({ ...f, languageId: e.target.value }))}
@@ -903,7 +903,7 @@ export default function TranslationPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Grupo')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Grupo')}</label>
                 <input
                   type="text"
                   value={keyForm.group}
@@ -913,7 +913,7 @@ export default function TranslationPage() {
                 />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">{t('Tags (separados por coma)')}</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">{t('Tags (separados por coma)')}</label>
                 <input
                   type="text"
                   value={keyForm.tags}

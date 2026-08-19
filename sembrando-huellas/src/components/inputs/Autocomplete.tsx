@@ -131,7 +131,7 @@ const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+            className="text-sm font-medium text-neutral-500 dark:text-neutral-200"
           >
             {label}
           </label>
@@ -173,7 +173,7 @@ const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
             {...props}
           />
           {isLoading && (
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 dark:text-neutral-500">
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-500 dark:text-neutral-200">
               <Loader2 size={18} className="animate-spin" />
             </div>
           )}
@@ -199,7 +199,7 @@ const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
                 onMouseDown={() => handleSelect(opt)}
                 onMouseEnter={() => setHighlightedIndex(index)}
                 className={cn(
-                  'cursor-pointer px-4 py-2 text-sm text-neutral-700 dark:text-neutral-300',
+                  'cursor-pointer px-4 py-2 text-sm text-neutral-500 dark:text-neutral-200',
                   index === highlightedIndex &&
                     'bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300'
                 )}

@@ -121,7 +121,7 @@ export default function SiaDashboardPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-20 text-center">
         <AlertTriangle size={48} className="mb-4 text-red-400" />
         <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Error al cargar el dashboard</h2>
-        <p className="mt-1 text-sm text-neutral-500">{error}</p>
+        <p className="mt-1 text-sm text-neutral-600">{error}</p>
         <button onClick={() => fetchData()} className="mt-4 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700">Reintentar</button>
       </motion.div>
     );
@@ -131,12 +131,12 @@ export default function SiaDashboardPage() {
     <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
       <motion.div variants={itemVariants}>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Dashboard Ejecutivo SIA</h1>
-        <p className="mt-1 text-sm text-neutral-500">Panel de monitoreo integral del Sistema Inteligente de Información Ambiental</p>
+        <p className="mt-1 text-sm text-neutral-600">Panel de monitoreo integral del Sistema Inteligente de Información Ambiental</p>
       </motion.div>
 
       <motion.div variants={itemVariants} className="flex flex-wrap items-end gap-3 rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
         <div className="space-y-1">
-          <label className="text-xs font-medium text-neutral-500">Fecha inicio</label>
+          <label className="text-xs font-medium text-neutral-600">Fecha inicio</label>
           <input
             type="date"
             value={filters.startDate}
@@ -145,7 +145,7 @@ export default function SiaDashboardPage() {
           />
         </div>
         <div className="space-y-1">
-          <label className="text-xs font-medium text-neutral-500">Fecha fin</label>
+          <label className="text-xs font-medium text-neutral-600">Fecha fin</label>
           <input
             type="date"
             value={filters.endDate}
@@ -154,7 +154,7 @@ export default function SiaDashboardPage() {
           />
         </div>
         <div className="space-y-1">
-          <label className="text-xs font-medium text-neutral-500">Región</label>
+          <label className="text-xs font-medium text-neutral-600">Región</label>
           <select
             value={filters.region}
             onChange={(e) => setFilters((prev) => ({ ...prev, region: e.target.value }))}
@@ -169,7 +169,7 @@ export default function SiaDashboardPage() {
           </select>
         </div>
         <div className="space-y-1">
-          <label className="text-xs font-medium text-neutral-500">Institución</label>
+          <label className="text-xs font-medium text-neutral-600">Institución</label>
           <input
             type="text"
             value={filters.institution}
@@ -200,11 +200,11 @@ export default function SiaDashboardPage() {
 
       <motion.div variants={itemVariants} className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
         <h2 className="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">Evolución Temporal</h2>
-        <p className="mb-4 text-sm text-neutral-500">Comportamiento de métricas seleccionadas en el tiempo</p>
+        <p className="mb-4 text-sm text-neutral-600">Comportamiento de métricas seleccionadas en el tiempo</p>
         {loading ? (
           <Spinner />
         ) : timeSeries.length === 0 ? (
-          <div className="flex h-[300px] items-center justify-center text-sm text-neutral-400">Sin datos disponibles para el período seleccionado</div>
+          <div className="flex h-[300px] items-center justify-center text-sm text-neutral-500">Sin datos disponibles para el período seleccionado</div>
         ) : (
           <Suspense fallback={<Spinner />}>
             <TimeSeriesChart data={timeSeries} />
@@ -225,7 +225,7 @@ export default function SiaDashboardPage() {
               <div className={cn('flex h-10 w-10 items-center justify-center rounded-xl', action.color)}>
                 <action.icon size={18} />
               </div>
-              <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">{action.label}</span>
+              <span className="text-sm font-medium text-neutral-600 dark:text-neutral-200">{action.label}</span>
             </motion.a>
           ))}
         </div>

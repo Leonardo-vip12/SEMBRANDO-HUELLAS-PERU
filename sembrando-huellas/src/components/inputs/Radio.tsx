@@ -16,7 +16,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
         <label
           htmlFor={radioId}
           className={cn(
-            'flex cursor-pointer items-center gap-2.5 text-sm text-neutral-700 dark:text-neutral-300',
+            'flex cursor-pointer items-center gap-2.5 text-sm text-neutral-600 dark:text-neutral-200',
             props.disabled && 'cursor-not-allowed opacity-50'
           )}
         >

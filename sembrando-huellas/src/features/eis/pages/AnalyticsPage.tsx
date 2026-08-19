@@ -29,7 +29,7 @@ export default function AnalyticsPage() {
   if (loading) {
     return (
       <div className="flex h-64 items-center justify-center">
-        <div className="text-center text-neutral-400">
+        <div className="text-center text-neutral-500">
           <BarChart3 size={40} className="mx-auto mb-2 animate-pulse" />
           <p className="text-sm">Cargando analítica...</p>
         </div>
@@ -48,63 +48,63 @@ export default function AnalyticsPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Analítica IA</h1>
-          <p className="text-sm text-neutral-500">Panel de monitoreo del ecosistema de inteligencia ambiental</p>
+          <p className="text-sm text-neutral-600">Panel de monitoreo del ecosistema de inteligencia ambiental</p>
         </div>
       </div>
 
       <motion.div variants={itemAnim} className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Consultas IA</span>
+            <span className="text-xs text-neutral-500">Consultas IA</span>
             <MessageSquare size={18} className="text-blue-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalQueries || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Identificaciones</span>
+            <span className="text-xs text-neutral-500">Identificaciones</span>
             <Camera size={18} className="text-blue-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalIdentifications || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Documentos</span>
+            <span className="text-xs text-neutral-500">Documentos</span>
             <FileText size={18} className="text-purple-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalDocuments || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Actividades</span>
+            <span className="text-xs text-neutral-500">Actividades</span>
             <Calendar size={18} className="text-orange-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalActivities || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Observaciones</span>
+            <span className="text-xs text-neutral-500">Observaciones</span>
             <Bird size={18} className="text-green-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalObservations || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Certificados</span>
+            <span className="text-xs text-neutral-500">Certificados</span>
             <Award size={18} className="text-amber-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalCertificates || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Base Conocimiento</span>
+            <span className="text-xs text-neutral-500">Base Conocimiento</span>
             <Brain size={18} className="text-cyan-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(overview.totalKnowledgeEntries || 0).toLocaleString()}</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
           <div className="mb-2 flex items-center justify-between">
-            <span className="text-xs text-neutral-400">Usuarios Activos</span>
+            <span className="text-xs text-neutral-500">Usuarios Activos</span>
             <Users size={18} className="text-indigo-500" />
           </div>
           <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{(dashboard?.activeUsers?.total || 0).toLocaleString()}</p>
@@ -116,19 +116,19 @@ export default function AnalyticsPage() {
           <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">Métricas de IA</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
-              <div className="flex items-center gap-2 text-xs text-neutral-400"><DollarSign size={14} /> Costo Total</div>
+              <div className="flex items-center gap-2 text-xs text-neutral-500"><DollarSign size={14} /> Costo Total</div>
               <p className="text-xl font-bold text-neutral-900 dark:text-neutral-100">${(metrics.totalCost || 0).toFixed(4)}</p>
             </div>
             <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
-              <div className="flex items-center gap-2 text-xs text-neutral-400"><Activity size={14} /> Tokens Totales</div>
+              <div className="flex items-center gap-2 text-xs text-neutral-500"><Activity size={14} /> Tokens Totales</div>
               <p className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{(metrics.totalTokens || 0).toLocaleString()}</p>
             </div>
             <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
-              <div className="flex items-center gap-2 text-xs text-neutral-400"><Clock size={14} /> Latencia Promedio</div>
+              <div className="flex items-center gap-2 text-xs text-neutral-500"><Clock size={14} /> Latencia Promedio</div>
               <p className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{(metrics.averageLatency || 0).toFixed(0)}ms</p>
             </div>
             <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
-              <div className="flex items-center gap-2 text-xs text-neutral-400"><AlertTriangle size={14} /> Errores 24h</div>
+              <div className="flex items-center gap-2 text-xs text-neutral-500"><AlertTriangle size={14} /> Errores 24h</div>
               <p className="text-xl font-bold text-red-500">{metrics.errorsLast24h || 0}</p>
             </div>
           </div>
@@ -144,12 +144,12 @@ export default function AnalyticsPage() {
             <div className="space-y-2">
               {Object.entries(dashboard.queryStats.features || {}).sort(([, a], [, b]) => (b as number) - (a as number)).map(([feature, count]) => (
                 <div key={feature} className="flex items-center justify-between text-sm">
-                  <span className="text-neutral-600 capitalize dark:text-neutral-300">{feature}</span>
+                  <span className="text-neutral-500 capitalize dark:text-neutral-200">{feature}</span>
                   <div className="flex items-center gap-2">
                     <div className="h-2 w-32 overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-700">
                       <div className="h-full rounded-full bg-indigo-500" style={{ width: `${Math.min(100, ((count as number) / Math.max(...(Object.values(dashboard.queryStats.features) as number[])) * 100))}%` }} />
                     </div>
-                    <span className="text-xs text-neutral-400">{count as number}</span>
+                    <span className="text-xs text-neutral-500">{count as number}</span>
                   </div>
                 </div>
               ))}
@@ -163,12 +163,12 @@ export default function AnalyticsPage() {
             <div className="space-y-2">
               {Object.entries(dashboard.queryStats.providers || {}).sort(([, a], [, b]) => (b as number) - (a as number)).map(([provider, count]) => (
                 <div key={provider} className="flex items-center justify-between text-sm">
-                  <span className="capitalize text-neutral-600 dark:text-neutral-300">{provider}</span>
+                  <span className="capitalize text-neutral-500 dark:text-neutral-200">{provider}</span>
                   <div className="flex items-center gap-2">
                     <div className="h-2 w-32 overflow-hidden rounded-full bg-neutral-100 dark:bg-neutral-700">
                       <div className="h-full rounded-full bg-emerald-500" style={{ width: `${Math.min(100, ((count as number) / Math.max(...(Object.values(dashboard.queryStats.providers) as number[])) * 100))}%` }} />
                     </div>
-                    <span className="text-xs text-neutral-400">{count as number}</span>
+                    <span className="text-xs text-neutral-500">{count as number}</span>
                   </div>
                 </div>
               ))}
@@ -186,8 +186,8 @@ export default function AnalyticsPage() {
             <div className="space-y-2">
               {dashboard.speciesStats.map((s: any, i: number) => (
                 <div key={i} className="flex items-center justify-between text-sm">
-                  <span className="text-neutral-600 dark:text-neutral-300 italic">{s.scientificName || 'No identificado'}</span>
-                  <span className="text-xs text-neutral-400">{s._count?.id || s.count} identificaciones</span>
+                  <span className="text-neutral-500 dark:text-neutral-200 italic">{s.scientificName || 'No identificado'}</span>
+                  <span className="text-xs text-neutral-500">{s._count?.id || s.count} identificaciones</span>
                 </div>
               ))}
             </div>

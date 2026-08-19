@@ -28,7 +28,7 @@ export default function LanguageSelector() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm text-neutral-600 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
         aria-label="Seleccionar idioma"
       >
         <Globe size={16} />
@@ -44,7 +44,7 @@ export default function LanguageSelector() {
                 'flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors',
                 locale === lang.code
                   ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                  : 'text-neutral-600 hover:bg-neutral-50 dark:text-neutral-400 dark:hover:bg-neutral-700'
+                  : 'text-neutral-500 hover:bg-neutral-50 dark:text-neutral-400 dark:hover:bg-neutral-700'
               )}
             >
               <span className="text-base">{lang.code === 'es' ? '🇵🇪' : lang.code === 'en' ? '🇺🇸' : '🇧🇷'}</span>

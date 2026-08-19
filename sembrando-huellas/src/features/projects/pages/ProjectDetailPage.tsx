@@ -46,18 +46,18 @@ export default function ProjectDetailPage() {
               </Reveal>
 
               <Reveal>
-                <h2 className="mb-4 text-2xl font-bold text-dark-900">Descripción</h2>
-                <p className="leading-relaxed text-neutral-600">{project.longDescription}</p>
+                <h2 className="mb-4 text-2xl font-bold text-dark-800">Descripción</h2>
+                <p className="leading-relaxed text-neutral-500">{project.longDescription}</p>
               </Reveal>
 
               {project.goals && project.goals.length > 0 && (
                 <Reveal>
-                  <h2 className="mb-4 text-2xl font-bold text-dark-900 flex items-center gap-2"><Target size={24} className="text-primary-600" /> Objetivos</h2>
+                  <h2 className="mb-4 text-2xl font-bold text-dark-800 flex items-center gap-2"><Target size={24} className="text-primary-600" /> Objetivos</h2>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {project.goals.map((goal, i) => (
                       <div key={i} className="flex items-start gap-3 rounded-xl border border-neutral-200 bg-white p-4">
                         <CheckCircle size={20} className="mt-0.5 shrink-0 text-primary-500" />
-                        <span className="text-sm text-neutral-700">{goal}</span>
+                        <span className="text-sm text-neutral-600">{goal}</span>
                       </div>
                     ))}
                   </div>
@@ -66,12 +66,12 @@ export default function ProjectDetailPage() {
 
               {project.achievements && project.achievements.length > 0 && (
                 <Reveal>
-                  <h2 className="mb-4 text-2xl font-bold text-dark-900">Resultados</h2>
+                  <h2 className="mb-4 text-2xl font-bold text-dark-800">Resultados</h2>
                   <div className="grid gap-3 sm:grid-cols-2">
                     {project.achievements.map((ach, i) => (
                       <CardBase key={i} variant="flat" className="flex items-center gap-3">
                         <CheckCircle size={20} className="shrink-0 text-secondary-500" />
-                        <span className="text-sm text-neutral-700">{ach}</span>
+                        <span className="text-sm text-neutral-600">{ach}</span>
                       </CardBase>
                     ))}
                   </div>
@@ -81,19 +81,19 @@ export default function ProjectDetailPage() {
 
             <div className="space-y-4">
               <CardBase variant="default">
-                <h3 className="mb-4 text-lg font-bold text-dark-800">Información del proyecto</h3>
+                <h3 className="mb-4 text-lg font-bold text-dark-700">Información del proyecto</h3>
                 <div className="space-y-4 text-sm">
-                  <div className="flex items-start gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Ubicación</p><p className="text-neutral-600">{project.location}</p></div></div>
-                  <div className="flex items-start gap-3"><Calendar size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Inicio</p><p className="text-neutral-600">{format(new Date(project.startDate), "d 'de' MMMM, yyyy", { locale: es })}</p></div></div>
-                  {project.endDate && <div className="flex items-start gap-3"><Calendar size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Fin estimado</p><p className="text-neutral-600">{format(new Date(project.endDate), "d 'de' MMMM, yyyy", { locale: es })}</p></div></div>}
-                  <div className="flex items-start gap-3"><Users size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Categoría</p><p className="text-neutral-600">{project.category}</p></div></div>
+                  <div className="flex items-start gap-3"><MapPin size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Ubicación</p><p className="text-neutral-500">{project.location}</p></div></div>
+                  <div className="flex items-start gap-3"><Calendar size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Inicio</p><p className="text-neutral-500">{format(new Date(project.startDate), "d 'de' MMMM, yyyy", { locale: es })}</p></div></div>
+                  {project.endDate && <div className="flex items-start gap-3"><Calendar size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Fin estimado</p><p className="text-neutral-500">{format(new Date(project.endDate), "d 'de' MMMM, yyyy", { locale: es })}</p></div></div>}
+                  <div className="flex items-start gap-3"><Users size={16} className="mt-0.5 shrink-0 text-primary-600" /><div><p className="font-semibold text-dark-700">Categoría</p><p className="text-neutral-500">{project.category}</p></div></div>
                 </div>
               </CardBase>
 
               {projectPartners.length > 0 && (
                 <CardBase variant="default">
-                  <h3 className="mb-3 text-lg font-bold text-dark-800">Aliados</h3>
-                  <div className="space-y-2 text-sm text-neutral-600">
+                  <h3 className="mb-3 text-lg font-bold text-dark-700">Aliados</h3>
+                  <div className="space-y-2 text-sm text-neutral-500">
                     {projectPartners.map(p => <p key={p.id}>{p.name}</p>)}
                   </div>
                 </CardBase>

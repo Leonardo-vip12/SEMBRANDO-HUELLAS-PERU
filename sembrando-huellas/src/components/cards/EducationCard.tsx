@@ -31,10 +31,10 @@ export default function EducationCard({
       <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
         {program.title}
       </h3>
-      <p className="mb-4 line-clamp-3 text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="mb-4 line-clamp-3 text-sm text-neutral-500 dark:text-neutral-200">
         {program.description}
       </p>
-      <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+      <div className="flex items-center gap-4 text-xs text-neutral-600 dark:text-neutral-200">
         <span className="flex items-center gap-1">
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

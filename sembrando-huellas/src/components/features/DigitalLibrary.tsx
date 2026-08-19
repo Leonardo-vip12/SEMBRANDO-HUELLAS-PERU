@@ -41,7 +41,7 @@ export default function DigitalLibrary() {
     <div>
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="relative flex-1">
-          <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+          <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
           <input
             type="text"
             value={searchQuery}
@@ -52,11 +52,11 @@ export default function DigitalLibrary() {
         </div>
         <div className="flex gap-2">
           <div className="flex items-center gap-1 rounded-lg border border-neutral-200 px-3 py-2 dark:border-neutral-700">
-            <Filter size={14} className="text-neutral-400" />
+            <Filter size={14} className="text-neutral-500" />
             <select
               value={selectedFormat}
               onChange={(e) => setSelectedFormat(e.target.value)}
-              className="bg-transparent text-sm text-neutral-700 outline-none dark:text-neutral-300"
+              className="bg-transparent text-sm text-neutral-600 outline-none dark:text-neutral-200"
             >
               {formats.map((f) => (
                 <option key={f} value={f}>{f}</option>
@@ -75,7 +75,7 @@ export default function DigitalLibrary() {
               'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
               selectedCategory === cat
                 ? 'bg-primary-600 text-white'
-                : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400',
+                : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200',
             )}
           >
             {cat}
@@ -86,7 +86,7 @@ export default function DigitalLibrary() {
       {filtered.length === 0 ? (
         <div className="py-16 text-center">
           <Search size={40} className="mx-auto mb-3 text-neutral-300" />
-          <p className="text-neutral-500">No se encontraron recursos con los filtros seleccionados.</p>
+          <p className="text-neutral-600">No se encontraron recursos con los filtros seleccionados.</p>
         </div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -97,14 +97,14 @@ export default function DigitalLibrary() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                     {iconMap[resource.icon] ?? <FileText size={20} />}
                   </div>
-                  <span className="rounded-md bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500 dark:bg-neutral-700">
+                  <span className="rounded-md bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600 dark:bg-neutral-700">
                     {resource.format}
                   </span>
                 </div>
                 <h3 className="mb-1 font-medium text-neutral-900 dark:text-neutral-100">{resource.title}</h3>
-                <p className="mb-4 flex-1 text-sm text-neutral-500">{resource.description}</p>
+                <p className="mb-4 flex-1 text-sm text-neutral-600">{resource.description}</p>
                 <div className="flex items-center justify-between border-t border-neutral-100 pt-3 dark:border-neutral-700">
-                  <div className="flex items-center gap-2 text-xs text-neutral-400">
+                  <div className="flex items-center gap-2 text-xs text-neutral-500">
                     <Download size={12} />
                     <span>{resource.downloads} descargas</span>
                     <span className="text-neutral-300">|</span>

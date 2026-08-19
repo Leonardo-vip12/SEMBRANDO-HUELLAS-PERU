@@ -17,30 +17,30 @@ export default function AdminNavbar({ onMenuToggle }: AdminNavbarProps) {
   return (
     <header className="flex h-16 items-center justify-between border-b border-neutral-200 bg-white px-4 dark:border-neutral-800 dark:bg-neutral-900">
       <div className="flex items-center gap-3">
-        <button onClick={onMenuToggle} className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 lg:hidden dark:hover:bg-neutral-800">
+        <button onClick={onMenuToggle} className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 lg:hidden dark:hover:bg-neutral-800">
           <Menu size={20} />
         </button>
         <div className="relative hidden md:block">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
           <input
             type="text"
             placeholder="Buscar en el panel..."
             className="w-64 rounded-lg border border-neutral-200 bg-neutral-50 py-2 pl-9 pr-4 text-sm text-neutral-900 outline-none placeholder-neutral-400 focus:border-primary-300 focus:ring-2 focus:ring-primary-100 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
           />
-          <kbd className="absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border border-neutral-300 px-1.5 text-[10px] text-neutral-400 md:inline-block dark:border-neutral-600">
+          <kbd className="absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border border-neutral-300 px-1.5 text-[10px] text-neutral-500 md:inline-block dark:border-neutral-600">
             ⌘K
           </kbd>
         </div>
       </div>
 
       <div className="flex items-center gap-1">
-        <button onClick={toggleDark} className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+        <button onClick={toggleDark} className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800">
           {isDark ? <Sun size={18} /> : <Moon size={18} />}
         </button>
         <div className="relative">
           <button
             onClick={() => setNotifOpen(!notifOpen)}
-            className="relative rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+            className="relative rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800"
           >
             <Bell size={18} />
             <span className="absolute right-1.5 top-1.5 flex h-2 w-2 rounded-full bg-red-500" />
@@ -58,8 +58,8 @@ export default function AdminNavbar({ onMenuToggle }: AdminNavbarProps) {
                 ].map((n, i) => (
                   <div key={i} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-700/50">
                     <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{n.title}</p>
-                    <p className="text-xs text-neutral-500">{n.desc}</p>
-                    <p className="mt-0.5 text-[10px] text-neutral-400">Hace {n.time}</p>
+                    <p className="text-xs text-neutral-600">{n.desc}</p>
+                    <p className="mt-0.5 text-[10px] text-neutral-500">Hace {n.time}</p>
                   </div>
                 ))}
               </div>
@@ -74,7 +74,7 @@ export default function AdminNavbar({ onMenuToggle }: AdminNavbarProps) {
         <div className="ml-2 flex items-center gap-3 border-l border-neutral-200 pl-3 dark:border-neutral-700">
           <div className="text-right">
             <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">Admin</p>
-            <p className="text-xs text-neutral-400">Super Administrador</p>
+            <p className="text-xs text-neutral-500">Super Administrador</p>
           </div>
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-sm font-medium text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
             AD

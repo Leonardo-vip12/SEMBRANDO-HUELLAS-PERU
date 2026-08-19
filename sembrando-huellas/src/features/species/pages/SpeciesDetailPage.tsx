@@ -47,16 +47,16 @@ export default function SpeciesDetailPage() {
 
             <div>
               <Reveal direction="right">
-                <h2 className="mb-6 text-3xl font-bold text-dark-900">Acerca de la especie</h2>
-                <p className="mb-8 text-lg leading-relaxed text-neutral-600">{species.description}</p>
+                <h2 className="mb-6 text-3xl font-bold text-dark-800">Acerca de la especie</h2>
+                <p className="mb-8 text-lg leading-relaxed text-neutral-500">{species.description}</p>
               </Reveal>
 
               <Reveal direction="up" delay={0.2}>
                 <div className="grid grid-cols-2 gap-4">
                   {Object.entries(chars).map(([key, val]) => (
                     <CardBase key={key} variant="flat" padding="sm">
-                      <p className="text-xs font-medium uppercase tracking-wider text-neutral-400">{key}</p>
-                      <p className="text-sm font-semibold text-dark-800">{val as string}</p>
+                      <p className="text-xs font-medium uppercase tracking-wider text-neutral-500">{key}</p>
+                      <p className="text-sm font-semibold text-dark-700">{val as string}</p>
                     </CardBase>
                   ))}
                 </div>
@@ -70,11 +70,11 @@ export default function SpeciesDetailPage() {
         <Section className="bg-neutral-50">
           <Container>
             <Reveal>
-              <h2 className="mb-8 text-3xl font-bold text-dark-900 flex items-center gap-3"><AlertTriangle size={28} className="text-coral-500" /> Amenazas</h2>
+              <h2 className="mb-8 text-3xl font-bold text-dark-800 flex items-center gap-3"><AlertTriangle size={28} className="text-coral-500" /> Amenazas</h2>
               <div className="grid gap-4 md:grid-cols-3">
                 {species.threats.map((t, i) => (
                   <CardBase key={i} variant="default" className="border-l-4 border-l-coral-400">
-                    <p className="font-semibold text-dark-800">{t}</p>
+                    <p className="font-semibold text-dark-700">{t}</p>
                   </CardBase>
                 ))}
               </div>
@@ -87,11 +87,11 @@ export default function SpeciesDetailPage() {
         <Section>
           <Container>
             <Reveal>
-              <h2 className="mb-8 text-3xl font-bold text-dark-900 flex items-center gap-3"><Heart size={28} className="text-primary-600" /> Acciones de conservación</h2>
+              <h2 className="mb-8 text-3xl font-bold text-dark-800 flex items-center gap-3"><Heart size={28} className="text-primary-600" /> Acciones de conservación</h2>
               <div className="grid gap-4 md:grid-cols-3">
                 {species.conservationActions.map((a, i) => (
                   <CardBase key={i} variant="elevated" className="border-l-4 border-l-primary-500">
-                    <p className="font-semibold text-dark-800">{a}</p>
+                    <p className="font-semibold text-dark-700">{a}</p>
                   </CardBase>
                 ))}
               </div>

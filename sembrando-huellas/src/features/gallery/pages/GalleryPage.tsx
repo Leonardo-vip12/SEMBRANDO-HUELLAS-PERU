@@ -37,9 +37,9 @@ export default function GalleryPage() {
       <Section>
         <Container>
           <div className="mb-8 flex flex-wrap gap-2">
-            <button onClick={() => setCategory('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!category ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>{t('common.all')}</button>
+            <button onClick={() => setCategory('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!category ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>{t('common.all')}</button>
             {categories.map(c => (
-              <button key={c} onClick={() => setCategory(c)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${category === c ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>{c}</button>
+              <button key={c} onClick={() => setCategory(c)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${category === c ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>{c}</button>
             ))}
           </div>
 

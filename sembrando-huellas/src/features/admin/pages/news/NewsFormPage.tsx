@@ -37,7 +37,7 @@ export default function NewsFormPage() {
         <div className="md:col-span-2">
           <FormField label="Contenido">
             <div className="min-h-[300px] rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-800/50">
-              <p className="text-sm text-neutral-400">Editor de texto enriquecido (preparado para integración)</p>
+              <p className="text-sm text-neutral-500">Editor de texto enriquecido (preparado para integración)</p>
             </div>
           </FormField>
         </div>

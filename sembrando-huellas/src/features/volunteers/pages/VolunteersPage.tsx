@@ -53,7 +53,7 @@ export default function VolunteersPage() {
 
       <Section>
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Beneficios</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">¿Por qué ser <span className="text-primary-600">voluntario</span>?</h2></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Beneficios</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">¿Por qué ser <span className="text-primary-600">voluntario</span>?</h2></Reveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((b, i) => {
               const Icon = b.icon
@@ -61,8 +61,8 @@ export default function VolunteersPage() {
                 <Reveal key={i} direction="up" delay={i * 0.1}>
                   <CardBase variant="default" hover className="group h-full">
                     <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition-all group-hover:bg-primary-600 group-hover:text-white"><Icon size={28} /></div>
-                    <h3 className="mb-2 text-lg font-bold text-dark-800">{b.title}</h3>
-                    <p className="text-sm text-neutral-600">{b.description}</p>
+                    <h3 className="mb-2 text-lg font-bold text-dark-700">{b.title}</h3>
+                    <p className="text-sm text-neutral-500">{b.description}</p>
                   </CardBase>
                 </Reveal>
               )
@@ -90,14 +90,14 @@ export default function VolunteersPage() {
 
       <Section>
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Requisitos</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">¿Qué <span className="text-primary-600">necesitas</span>?</h2></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Requisitos</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">¿Qué <span className="text-primary-600">necesitas</span>?</h2></Reveal>
           <div className="mx-auto max-w-2xl">
             <ul className="space-y-4">
               {requirements.map((r, i) => (
                 <Reveal key={i} direction="up" delay={i * 0.05}>
                   <li className="flex items-start gap-3 rounded-xl border border-neutral-200 bg-white p-4">
                     <CheckCircle size={20} className="mt-0.5 shrink-0 text-primary-500" />
-                    <span className="text-neutral-700">{r}</span>
+                    <span className="text-neutral-600">{r}</span>
                   </li>
                 </Reveal>
               ))}
@@ -108,7 +108,7 @@ export default function VolunteersPage() {
 
       <Section className="bg-neutral-50">
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Inscripción</p><h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">Regístrate como <span className="text-primary-600">voluntario</span></h2><p className="mx-auto mb-8 max-w-2xl text-center text-lg text-neutral-600">Completa el formulario y nos pondremos en contacto contigo.</p></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Inscripción</p><h2 className="mb-4 text-center text-4xl font-bold text-dark-800 md:text-5xl">Regístrate como <span className="text-primary-600">voluntario</span></h2><p className="mx-auto mb-8 max-w-2xl text-center text-lg text-neutral-500">Completa el formulario y nos pondremos en contacto contigo.</p></Reveal>
 
           <div className="mx-auto max-w-2xl">
             <CardBase variant="elevated">
@@ -130,16 +130,16 @@ export default function VolunteersPage() {
       {stories.length > 0 && (
         <Section>
           <Container>
-            <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Historias</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Voluntarios que <span className="text-primary-600">inspiran</span></h2></Reveal>
+            <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Historias</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Voluntarios que <span className="text-primary-600">inspiran</span></h2></Reveal>
             <div className="grid gap-6 md:grid-cols-2">
               {stories.slice(0, 2).map((s, i) => (
                 <Reveal key={s.id} direction="up" delay={i * 0.1}>
                   <CardBase variant="default" className="h-full">
                     <Quote className="mb-4 h-8 w-8 text-primary-200" />
-                    <blockquote className="mb-6 text-sm leading-relaxed text-neutral-600">&ldquo;{s.quote}&rdquo;</blockquote>
+                    <blockquote className="mb-6 text-sm leading-relaxed text-neutral-500">&ldquo;{s.quote}&rdquo;</blockquote>
                     <div className="flex items-center gap-3">
                       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 font-bold text-primary-600">{s.name.charAt(0)}</div>
-                      <div><p className="text-sm font-semibold text-dark-800">{s.name}</p><p className="text-xs text-neutral-500">{s.role}</p></div>
+                      <div><p className="text-sm font-semibold text-dark-700">{s.name}</p><p className="text-xs text-neutral-600">{s.role}</p></div>
                     </div>
                   </CardBase>
                 </Reveal>
@@ -151,16 +151,16 @@ export default function VolunteersPage() {
 
       <Section className="bg-neutral-50">
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">FAQ</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Preguntas <span className="text-primary-600">frecuentes</span></h2></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">FAQ</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Preguntas <span className="text-primary-600">frecuentes</span></h2></Reveal>
           <div className="mx-auto max-w-3xl space-y-4">
             {volFaqs.length > 0 ? volFaqs.map((faq, i) => (
               <Reveal key={faq.id} direction="up" delay={i * 0.05}>
                 <ExpandableCard title={faq.question} preview="" expanded={openFaq === faq.id} onToggle={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}>
-                  <p className="text-neutral-600">{faq.answer}</p>
+                  <p className="text-neutral-500">{faq.answer}</p>
                 </ExpandableCard>
               </Reveal>
             )) : (
-              <p className="text-center text-neutral-500">Próximamente más información.</p>
+              <p className="text-center text-neutral-600">Próximamente más información.</p>
             )}
           </div>
         </Container>

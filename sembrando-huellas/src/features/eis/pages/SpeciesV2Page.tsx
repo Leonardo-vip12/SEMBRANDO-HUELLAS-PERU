@@ -42,7 +42,7 @@ export default function SpeciesV2Page() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Identificador Avanzado de Especies</h1>
-          <p className="text-sm text-neutral-500">Taxonomía completa, estado de conservación y datos ecológicos</p>
+          <p className="text-sm text-neutral-600">Taxonomía completa, estado de conservación y datos ecológicos</p>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export default function SpeciesV2Page() {
             ) : (
               <>
                 <Upload size={40} className="mb-2 text-neutral-300" />
-                <p className="text-sm text-neutral-400">Haz clic para subir una foto</p>
+                <p className="text-sm text-neutral-500">Haz clic para subir una foto</p>
                 <p className="text-xs text-neutral-300">JPG, PNG, WEBP</p>
               </>
             )}
@@ -81,14 +81,14 @@ export default function SpeciesV2Page() {
                     {Math.round((result.confidence || 0) * 100)}% confianza
                   </span>
                 </div>
-                <p className="mb-4 text-sm italic text-neutral-500">{result.scientificName}</p>
+                <p className="mb-4 text-sm italic text-neutral-600">{result.scientificName}</p>
                 <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Reino:</span> <span className="font-medium">{result.kingdom || '-'}</span></div>
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Filo:</span> <span className="font-medium">{result.phylum || '-'}</span></div>
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Clase:</span> <span className="font-medium">{result.class || '-'}</span></div>
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Orden:</span> <span className="font-medium">{result.order || '-'}</span></div>
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Familia:</span> <span className="font-medium">{result.family || '-'}</span></div>
-                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-400">Género:</span> <span className="font-medium">{result.genus || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Reino:</span> <span className="font-medium">{result.kingdom || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Filo:</span> <span className="font-medium">{result.phylum || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Clase:</span> <span className="font-medium">{result.class || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Orden:</span> <span className="font-medium">{result.order || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Familia:</span> <span className="font-medium">{result.family || '-'}</span></div>
+                  <div className="rounded-lg bg-neutral-50 p-2 dark:bg-neutral-700/50"><span className="text-neutral-500">Género:</span> <span className="font-medium">{result.genus || '-'}</span></div>
                 </div>
               </div>
 
@@ -104,13 +104,13 @@ export default function SpeciesV2Page() {
 
               <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
                 <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Descripción</h3>
-                <p className="text-sm text-neutral-600 dark:text-neutral-300">{result.description || 'No disponible'}</p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-200">{result.description || 'No disponible'}</p>
               </div>
 
               {result.curiosities && result.curiosities.length > 0 && (
                 <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
                   <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100"><BookOpen size={16} /> Curiosidades</h3>
-                  <ul className="list-inside list-disc space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                  <ul className="list-inside list-disc space-y-1 text-sm text-neutral-500 dark:text-neutral-200">
                     {result.curiosities.map((c: string, i: number) => <li key={i}>{c}</li>)}
                   </ul>
                 </div>
@@ -129,7 +129,7 @@ export default function SpeciesV2Page() {
                 <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
                   <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Referencias</h3>
                   {result.bibliography.map((b: any, i: number) => (
-                    <p key={i} className="text-xs text-neutral-500">{b.title}</p>
+                    <p key={i} className="text-xs text-neutral-600">{b.title}</p>
                   ))}
                 </div>
               )}

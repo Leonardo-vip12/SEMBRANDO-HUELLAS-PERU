@@ -45,7 +45,7 @@ export default function ShareButton({ title, text, url, className, size = 'md', 
         onClick={handleShare}
         className={cn(
           'inline-flex items-center gap-1.5 rounded-lg p-2 transition-all duration-200',
-          'text-neutral-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20',
+          'text-neutral-500 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20',
           className,
         )}
         aria-label="Compartir"
@@ -55,7 +55,7 @@ export default function ShareButton({ title, text, url, className, size = 'md', 
       </button>
       <button
         onClick={handleCopy}
-        className="rounded-lg p-2 text-neutral-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+        className="rounded-lg p-2 text-neutral-500 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20"
         aria-label="Copiar enlace"
       >
         {copied ? <Check size={iconSize} className="text-green-500" /> : <Copy size={iconSize} />}

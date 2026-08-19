@@ -28,7 +28,7 @@ export default function CrudForm({ title, onSave, onPreview, children, saving }:
     <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <button onClick={() => navigate(-1)} className="rounded-lg p-2 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+          <button onClick={() => navigate(-1)} className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800">
             <ArrowLeft size={20} />
           </button>
           <div>
@@ -64,7 +64,7 @@ export function FormSection({ title, description, children }: { title: string; d
     <div className="border-b border-neutral-100 pb-6 last:border-0 dark:border-neutral-700">
       <div className="mb-4">
         <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{title}</h3>
-        {description && <p className="mt-0.5 text-xs text-neutral-500">{description}</p>}
+        {description && <p className="mt-0.5 text-xs text-neutral-600">{description}</p>}
       </div>
       <div className="grid gap-4 md:grid-cols-2">{children}</div>
     </div>
@@ -80,7 +80,7 @@ export function FormField({ label, error, children, required, className }: {
 }) {
   return (
     <div className={cn('flex flex-col gap-1.5', className)}>
-      <label className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+      <label className="text-sm font-medium text-neutral-600 dark:text-neutral-200">
         {label}
         {required && <span className="ml-0.5 text-red-500">*</span>}
       </label>

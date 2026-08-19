@@ -52,7 +52,7 @@ export default function ArticleDetailPage() {
             </Reveal>
 
             <Reveal>
-              <div className="prose prose-lg max-w-none text-neutral-600">
+              <div className="prose prose-lg max-w-none text-neutral-500">
                 <p>{article.content}</p>
                 <p>Este es un contenido de ejemplo. Cuando la noticia real esté disponible, este texto será reemplazado por el contenido completo del artículo, incluyendo imágenes, citas y enlaces relacionados.</p>
                 <p>El contenido editable será administrado desde el Panel Administrativo del sitio.</p>
@@ -62,9 +62,9 @@ export default function ArticleDetailPage() {
             {article.tags && article.tags.length > 0 && (
               <Reveal>
                 <div className="mt-8 flex flex-wrap items-center gap-2">
-                  <Tag size={16} className="text-neutral-400" />
+                  <Tag size={16} className="text-neutral-500" />
                   {article.tags.map(tag => (
-                    <span key={tag} className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600">{tag}</span>
+                    <span key={tag} className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-500">{tag}</span>
                   ))}
                 </div>
               </Reveal>
@@ -72,9 +72,9 @@ export default function ArticleDetailPage() {
 
             <Reveal>
               <div className="mt-8 flex items-center gap-4 border-t border-neutral-200 pt-6">
-                <span className="text-sm font-medium text-neutral-500">Compartir:</span>
+                <span className="text-sm font-medium text-neutral-600">Compartir:</span>
                 {['Facebook', 'Twitter', 'WhatsApp'].map(s => (
-                  <button key={s} className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-500 transition-colors hover:bg-primary-100 hover:text-primary-600" aria-label={`Compartir en ${s}`}>
+                  <button key={s} className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors hover:bg-primary-100 hover:text-primary-600" aria-label={`Compartir en ${s}`}>
                     <Share2 size={16} />
                   </button>
                 ))}
@@ -87,7 +87,7 @@ export default function ArticleDetailPage() {
       {related.length > 0 && (
         <Section className="bg-neutral-50">
           <Container>
-            <Reveal><h2 className="mb-8 text-3xl font-bold text-dark-900">Noticias <span className="text-primary-600">relacionadas</span></h2></Reveal>
+            <Reveal><h2 className="mb-8 text-3xl font-bold text-dark-800">Noticias <span className="text-primary-600">relacionadas</span></h2></Reveal>
             <div className="grid gap-6 md:grid-cols-3">
               {related.map((r, i) => (
                 <Reveal key={r.id} direction="up" delay={i * 0.1}>

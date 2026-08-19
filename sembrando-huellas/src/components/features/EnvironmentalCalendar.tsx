@@ -63,7 +63,7 @@ export default function EnvironmentalCalendar() {
                 'rounded-full px-3 py-1 text-xs font-medium transition-colors',
                 typeFilter === t
                   ? 'bg-primary-600 text-white'
-                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400',
+                  : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200',
               )}
             >
               {t}
@@ -77,7 +77,7 @@ export default function EnvironmentalCalendar() {
               onClick={() => setView(v)}
               className={cn(
                 'rounded-md px-3 py-1 text-xs font-medium transition-colors',
-                view === v ? 'bg-primary-600 text-white' : 'text-neutral-500 hover:text-neutral-700',
+                view === v ? 'bg-primary-600 text-white' : 'text-neutral-600 hover:text-neutral-600',
               )}
             >
               {v === 'month' ? 'Mes' : v === 'week' ? 'Semana' : 'Lista'}
@@ -89,7 +89,7 @@ export default function EnvironmentalCalendar() {
       {view === 'list' ? (
         <div className="space-y-3">
           {filteredEvents.length === 0 ? (
-            <p className="py-8 text-center text-neutral-500">No hay eventos programados.</p>
+            <p className="py-8 text-center text-neutral-600">No hay eventos programados.</p>
           ) : (
             (filteredEvents as CalendarEvent[])
               .sort((a: CalendarEvent, b: CalendarEvent) => a.date.localeCompare(b.date))
@@ -108,8 +108,8 @@ export default function EnvironmentalCalendar() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium text-neutral-900 dark:text-neutral-100">{event.title}</h4>
-                    <p className="mt-0.5 text-sm text-neutral-500">{event.description}</p>
-                    <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-neutral-400">
+                    <p className="mt-0.5 text-sm text-neutral-600">{event.description}</p>
+                    <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-neutral-500">
                       <span className="flex items-center gap-1"><Clock size={12} /> {event.startTime} - {event.endTime}</span>
                       <span className="flex items-center gap-1"><MapPin size={12} /> {event.location}</span>
                       <span className="flex items-center gap-1"><Users size={12} /> {event.registeredCount}/{event.capacity}</span>
@@ -117,7 +117,7 @@ export default function EnvironmentalCalendar() {
                   </div>
                   <span className={cn(
                     'self-start rounded-full px-2 py-0.5 text-xs font-medium',
-                    event.status === 'upcoming' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-neutral-100 text-neutral-600 dark:bg-neutral-700',
+                    event.status === 'upcoming' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-neutral-100 text-neutral-500 dark:bg-neutral-700',
                   )}>
                     {event.status === 'upcoming' ? 'Próximo' : 'Finalizado'}
                   </span>
@@ -128,20 +128,20 @@ export default function EnvironmentalCalendar() {
       ) : (
         <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800">
           <div className="flex items-center justify-between border-b border-neutral-200 px-4 py-3 dark:border-neutral-700">
-            <button onClick={prevMonth} className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+            <button onClick={prevMonth} className="rounded-lg p-1.5 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700">
               <ChevronLeft size={18} />
             </button>
             <h3 className="font-medium text-neutral-900 dark:text-neutral-100">
               {MONTHS[month]} {year}
             </h3>
-            <button onClick={nextMonth} className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-700">
+            <button onClick={nextMonth} className="rounded-lg p-1.5 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700">
               <ChevronRight size={18} />
             </button>
           </div>
 
           <div className="grid grid-cols-7 gap-px bg-neutral-200 dark:bg-neutral-700">
             {DAYS.map((d) => (
-              <div key={d} className="bg-neutral-50 px-2 py-2 text-center text-xs font-medium text-neutral-500 dark:bg-neutral-800">
+              <div key={d} className="bg-neutral-50 px-2 py-2 text-center text-xs font-medium text-neutral-600 dark:bg-neutral-800">
                 {d}
               </div>
             ))}
@@ -163,7 +163,7 @@ export default function EnvironmentalCalendar() {
                 >
                   <span className={cn(
                     'inline-flex h-6 w-6 items-center justify-center rounded-full text-xs',
-                    isToday ? 'bg-primary-600 text-white' : 'text-neutral-700 dark:text-neutral-300',
+                    isToday ? 'bg-primary-600 text-white' : 'text-neutral-600 dark:text-neutral-200',
                   )}>
                     {day}
                   </span>
@@ -178,7 +178,7 @@ export default function EnvironmentalCalendar() {
                       </div>
                     ))}
                     {dayEvents.length > 2 && (
-                      <div className="text-[10px] text-neutral-400">+{dayEvents.length - 2} más</div>
+                      <div className="text-[10px] text-neutral-500">+{dayEvents.length - 2} más</div>
                     )}
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function EnvironmentalCalendar() {
               <div key={event.id} className="flex items-center justify-between rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
                 <div>
                   <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{event.title}</p>
-                  <p className="text-xs text-neutral-500">{event.location} · {event.startTime}</p>
+                  <p className="text-xs text-neutral-600">{event.location} · {event.startTime}</p>
                 </div>
                 <span className="rounded-full bg-primary-100 px-2 py-0.5 text-xs text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
                   {event.type}

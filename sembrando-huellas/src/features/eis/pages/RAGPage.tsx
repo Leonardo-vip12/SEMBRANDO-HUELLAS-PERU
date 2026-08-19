@@ -69,7 +69,7 @@ export default function RAGPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">RAG - Retrieval Augmented Generation</h1>
-          <p className="text-sm text-neutral-500">Búsqueda semántica e indexación de contenido para respuestas precisas</p>
+          <p className="text-sm text-neutral-600">Búsqueda semántica e indexación de contenido para respuestas precisas</p>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ export default function RAGPage() {
           { k: 'stats', l: 'Estadísticas', i: RefreshCw },
         ] as const).map(t => (
           <button key={t.k} onClick={() => { setTab(t.k as typeof tab); if (t.k === 'stats') loadStats(); }}
-            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${tab === t.k ? 'border-b-2 border-cyan-500 text-cyan-600' : 'text-neutral-500 hover:text-neutral-700'}`}>
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${tab === t.k ? 'border-b-2 border-cyan-500 text-cyan-600' : 'text-neutral-600 hover:text-neutral-600'}`}>
             <t.i size={16} /> {t.l}
           </button>
         ))}
@@ -109,16 +109,16 @@ export default function RAGPage() {
 
           {results.length > 0 && (
             <div className="space-y-3">
-              <p className="text-sm text-neutral-400">{results.length} resultado(s)</p>
+              <p className="text-sm text-neutral-500">{results.length} resultado(s)</p>
               {results.map((r: any, i: number) => (
                 <div key={i} className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
                   <div className="flex items-center justify-between">
                     <span className="rounded bg-cyan-100 px-2 py-0.5 text-xs font-medium text-cyan-700 dark:bg-cyan-900 dark:text-cyan-300">
                       {r.document?.collection || r.collection}
                     </span>
-                    <span className="text-xs text-neutral-400">{(r.score * 100).toFixed(0)}% similitud</span>
+                    <span className="text-xs text-neutral-500">{(r.score * 100).toFixed(0)}% similitud</span>
                   </div>
-                  <p className="mt-2 text-sm text-neutral-800 dark:text-neutral-200">
+                  <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-200">
                     {r.document?.content?.slice(0, 300) || r.content?.slice(0, 300) || 'Sin contenido'}
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function RAGPage() {
           )}
 
           {!loading && results.length === 0 && query && (
-            <p className="text-center text-sm text-neutral-400">No se encontraron resultados</p>
+            <p className="text-center text-sm text-neutral-500">No se encontraron resultados</p>
           )}
 
           {error && <p className="text-sm text-red-500">{error}</p>}
@@ -138,7 +138,7 @@ export default function RAGPage() {
         <div className="space-y-4">
           <div className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
             <h2 className="mb-4 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Indexar Todo el Contenido</h2>
-            <p className="mb-4 text-xs text-neutral-400">Indexa noticias, especies, programas, FAQs y recursos en el vector store para búsqueda semántica</p>
+            <p className="mb-4 text-xs text-neutral-500">Indexa noticias, especies, programas, FAQs y recursos en el vector store para búsqueda semántica</p>
             <button onClick={handleIndexAll} disabled={loading}
               className="flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-sm font-medium text-white hover:bg-cyan-600 disabled:opacity-50">
               {loading ? <Loader2 size={16} className="animate-spin" /> : <RefreshCw size={16} />}
@@ -154,7 +154,7 @@ export default function RAGPage() {
                   className="rounded-xl border border-neutral-200 bg-white p-4 text-left transition-all hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800">
                   <Icon size={20} className="mb-2 text-cyan-500" />
                   <h3 className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{c.label}</h3>
-                  <p className="text-xs text-neutral-400">Indexar solo esta colección</p>
+                  <p className="text-xs text-neutral-500">Indexar solo esta colección</p>
                 </button>
               );
             })}
@@ -177,7 +177,7 @@ export default function RAGPage() {
 
       {tab === 'stats' && (
         <div className="space-y-4">
-          {loading && <div className="text-center text-neutral-400"><Loader2 size={20} className="mx-auto animate-spin" /></div>}
+          {loading && <div className="text-center text-neutral-500"><Loader2 size={20} className="mx-auto animate-spin" /></div>}
           {stats && (
             <>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -186,11 +186,11 @@ export default function RAGPage() {
                     <Database size={16} className="text-cyan-500" /> Vector Store
                   </h3>
                   <div className="space-y-2 text-sm">
-                    <p className="flex justify-between text-neutral-600 dark:text-neutral-300">
+                    <p className="flex justify-between text-neutral-500 dark:text-neutral-200">
                       <span>Documentos indexados</span>
                       <span className="font-medium">{stats.vectorStore?.totalDocuments || 0}</span>
                     </p>
-                    <p className="flex justify-between text-neutral-600 dark:text-neutral-300">
+                    <p className="flex justify-between text-neutral-500 dark:text-neutral-200">
                       <span>Colecciones</span>
                       <span className="font-medium">{stats.vectorStore?.collections?.length || 0}</span>
                     </p>
@@ -206,21 +206,21 @@ export default function RAGPage() {
                     <BookOpen size={16} className="text-cyan-500" /> Knowledge Base
                   </h3>
                   <div className="space-y-2 text-sm">
-                    <p className="flex justify-between text-neutral-600 dark:text-neutral-300">
+                    <p className="flex justify-between text-neutral-500 dark:text-neutral-200">
                       <span>Total entradas</span>
                       <span className="font-medium">{stats.knowledgeBase?.total || 0}</span>
                     </p>
-                    <p className="flex justify-between text-neutral-600 dark:text-neutral-300">
+                    <p className="flex justify-between text-neutral-500 dark:text-neutral-200">
                       <span>Verificadas</span>
                       <span className="font-medium">{stats.knowledgeBase?.verified || 0}</span>
                     </p>
                   </div>
                   {stats.knowledgeBase?.categories && Object.keys(stats.knowledgeBase.categories).length > 0 && (
                     <div className="mt-4">
-                      <p className="mb-2 text-xs text-neutral-400">Categorías</p>
+                      <p className="mb-2 text-xs text-neutral-500">Categorías</p>
                       <div className="space-y-1">
                         {Object.entries(stats.knowledgeBase.categories).map(([cat, count]) => (
-                          <p key={cat} className="flex justify-between text-xs text-neutral-500">
+                          <p key={cat} className="flex justify-between text-xs text-neutral-600">
                             <span>{cat}</span>
                             <span>{count as number}</span>
                           </p>
@@ -232,7 +232,7 @@ export default function RAGPage() {
               </div>
             </>
           )}
-          {!loading && !stats && <p className="text-center text-sm text-neutral-400">Cargue la pestaña de estadísticas para ver los datos</p>}
+          {!loading && !stats && <p className="text-center text-sm text-neutral-500">Cargue la pestaña de estadísticas para ver los datos</p>}
           {error && <p className="text-sm text-red-500">{error}</p>}
         </div>
       )}

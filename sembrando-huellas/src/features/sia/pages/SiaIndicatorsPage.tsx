@@ -230,7 +230,7 @@ export default function SiaIndicatorsPage() {
                 <Input label="Nombre" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre del indicador" required />
                 <Input label="Slug" value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="identificador-unico" />
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Categoría</label>
+                  <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Categoría</label>
                   <select value={category} onChange={(e) => setCategory(e.target.value)} required className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                     <option value="">Seleccionar categoría</option>
                     {categories.map((c) => <option key={c} value={c}>{c}</option>)}
@@ -267,8 +267,8 @@ export default function SiaIndicatorsPage() {
             <div className="flex justify-center py-16"><Spinner /></div>
           ) : indicators.length === 0 ? (
             <div className="rounded-xl border border-dashed border-neutral-300 py-16 text-center dark:border-neutral-600">
-              <BarChart3 size={40} className="mx-auto mb-3 text-neutral-400" />
-              <p className="text-neutral-500">No hay indicadores registrados</p>
+              <BarChart3 size={40} className="mx-auto mb-3 text-neutral-500" />
+              <p className="text-neutral-600">No hay indicadores registrados</p>
             </div>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -286,14 +286,14 @@ export default function SiaIndicatorsPage() {
                 >
                   <div className="mb-3 flex items-start justify-between">
                     <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">{ind.name}</h3>
-                    <span className={cn('rounded-full px-2.5 py-0.5 text-xs font-medium', catColors[ind.category] || 'bg-neutral-100 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300')}>
+                    <span className={cn('rounded-full px-2.5 py-0.5 text-xs font-medium', catColors[ind.category] || 'bg-neutral-100 text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200')}>
                       {ind.category}
                     </span>
                   </div>
-                  <div className="mb-3 flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+                  <div className="mb-3 flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-200">
                     <span className="inline-flex items-center gap-1"><Target size={14} /> Meta: {ind.target ?? '-'}</span>
                     <span className="inline-flex items-center gap-1"><TrendingUp size={14} /> Actual: {ind.current ?? '-'}</span>
-                    {ind.unit && <span className="text-xs text-neutral-400">({ind.unit})</span>}
+                    {ind.unit && <span className="text-xs text-neutral-500">({ind.unit})</span>}
                   </div>
                   <div className="relative h-2 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-700">
                     <div
@@ -304,7 +304,7 @@ export default function SiaIndicatorsPage() {
                       style={{ width: `${progressPercent(ind)}%` }}
                     />
                   </div>
-                  <p className="mt-1 text-right text-xs text-neutral-400">{progressPercent(ind)}%</p>
+                  <p className="mt-1 text-right text-xs text-neutral-500">{progressPercent(ind)}%</p>
                 </motion.div>
               ))}
             </div>
@@ -319,7 +319,7 @@ export default function SiaIndicatorsPage() {
               <div className="mb-4 flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{selected.name}</h3>
-                  <p className="text-sm text-neutral-500">{selected.description}</p>
+                  <p className="text-sm text-neutral-600">{selected.description}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Button variant="ghost" size="sm" onClick={() => openEdit(selected)}><Edit3 size={16} /></Button>
@@ -340,14 +340,14 @@ export default function SiaIndicatorsPage() {
                   { label: 'Fuente', value: selected.source || '-' },
                 ].map((f) => (
                   <div key={f.label} className="rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
-                    <p className="text-xs text-neutral-500">{f.label}</p>
+                    <p className="text-xs text-neutral-600">{f.label}</p>
                     <p className="font-medium text-neutral-900 dark:text-neutral-100">{f.value}</p>
                   </div>
                 ))}
               </div>
 
               <form onSubmit={handleAddRecord} className="mb-6 rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-700/30">
-                <h4 className="mb-3 text-sm font-semibold text-neutral-700 dark:text-neutral-300">Agregar Registro</h4>
+                <h4 className="mb-3 text-sm font-semibold text-neutral-600 dark:text-neutral-200">Agregar Registro</h4>
                 <div className="grid gap-3 sm:grid-cols-4">
                   <Input type="number" step="any" placeholder="Valor" value={recValue} onChange={(e) => setRecValue(e.target.value)} required />
                   <Input type="date" value={recDate} onChange={(e) => setRecDate(e.target.value)} required />
@@ -359,27 +359,27 @@ export default function SiaIndicatorsPage() {
                 </div>
               </form>
 
-              <h4 className="mb-3 text-sm font-semibold text-neutral-700 dark:text-neutral-300">Historial de Registros</h4>
+              <h4 className="mb-3 text-sm font-semibold text-neutral-600 dark:text-neutral-200">Historial de Registros</h4>
               {records.length === 0 ? (
-                <p className="text-sm text-neutral-500">Sin registros aún</p>
+                <p className="text-sm text-neutral-600">Sin registros aún</p>
               ) : (
                 <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-700">
                   <table className="w-full text-left text-sm">
                     <thead className="bg-neutral-50 dark:bg-neutral-800">
                       <tr>
-                        <th className="px-4 py-2 font-semibold text-neutral-600 dark:text-neutral-400">Valor</th>
-                        <th className="px-4 py-2 font-semibold text-neutral-600 dark:text-neutral-400">Fecha</th>
-                        <th className="px-4 py-2 font-semibold text-neutral-600 dark:text-neutral-400">Región</th>
-                        <th className="px-4 py-2 font-semibold text-neutral-600 dark:text-neutral-400">Institución</th>
+                        <th className="px-4 py-2 font-semibold text-neutral-500 dark:text-neutral-200">Valor</th>
+                        <th className="px-4 py-2 font-semibold text-neutral-500 dark:text-neutral-200">Fecha</th>
+                        <th className="px-4 py-2 font-semibold text-neutral-500 dark:text-neutral-200">Región</th>
+                        <th className="px-4 py-2 font-semibold text-neutral-500 dark:text-neutral-200">Institución</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-neutral-200 dark:divide-neutral-700">
                       {records.map((rec: any) => (
                         <tr key={rec.id} className="bg-white dark:bg-neutral-900">
                           <td className="px-4 py-2 font-medium text-neutral-900 dark:text-neutral-100">{rec.value}</td>
-                          <td className="px-4 py-2 text-neutral-500">{rec.date ? new Date(rec.date).toLocaleDateString('es-PE') : '-'}</td>
-                          <td className="px-4 py-2 text-neutral-500">{rec.region || '-'}</td>
-                          <td className="px-4 py-2 text-neutral-500">{rec.institution || '-'}</td>
+                          <td className="px-4 py-2 text-neutral-600">{rec.date ? new Date(rec.date).toLocaleDateString('es-PE') : '-'}</td>
+                          <td className="px-4 py-2 text-neutral-600">{rec.region || '-'}</td>
+                          <td className="px-4 py-2 text-neutral-600">{rec.institution || '-'}</td>
                         </tr>
                       ))}
                     </tbody>

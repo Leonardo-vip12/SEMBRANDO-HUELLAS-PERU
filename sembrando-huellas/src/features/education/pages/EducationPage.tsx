@@ -51,7 +51,7 @@ export default function EducationPage() {
 
       <Section>
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Recursos</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Categorías de <span className="text-primary-600">recursos</span></h2></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Recursos</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Categorías de <span className="text-primary-600">recursos</span></h2></Reveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {resourceCategories.map((rc, i) => {
               const Icon = rc.icon
@@ -59,8 +59,8 @@ export default function EducationPage() {
                 <Reveal key={i} direction="up" delay={i * 0.1}>
                   <CardBase variant="default" hover className="group h-full">
                     <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl ${rc.color} transition-all`}><Icon size={28} /></div>
-                    <h3 className="mb-3 text-lg font-bold text-dark-800">{rc.title}</h3>
-                    <p className="text-sm text-neutral-600">{rc.description}</p>
+                    <h3 className="mb-3 text-lg font-bold text-dark-700">{rc.title}</h3>
+                    <p className="text-sm text-neutral-500">{rc.description}</p>
                   </CardBase>
                 </Reveal>
               )
@@ -71,7 +71,7 @@ export default function EducationPage() {
 
       <Section className="bg-neutral-50">
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Biblioteca</p><h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">Material <span className="text-primary-600">descargable</span></h2><p className="mx-auto mb-8 max-w-2xl text-center text-lg text-neutral-600">Recursos educativos gratuitos para descargar y compartir.</p></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Biblioteca</p><h2 className="mb-4 text-center text-4xl font-bold text-dark-800 md:text-5xl">Material <span className="text-primary-600">descargable</span></h2><p className="mx-auto mb-8 max-w-2xl text-center text-lg text-neutral-500">Recursos educativos gratuitos para descargar y compartir.</p></Reveal>
 
           <div className="mb-8 max-w-md">
             <Input placeholder="Buscar recursos..." value={search} onChange={(e) => setSearch(e.target.value)} leftIcon={<Search size={18} />} />
@@ -85,9 +85,9 @@ export default function EducationPage() {
                   <CardBase variant="flat" className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary-600"><Icon size={24} /></div>
                     <div className="flex-1">
-                      <h3 className="text-base font-semibold text-dark-800">{d.title}</h3>
-                      <p className="text-sm text-neutral-600">{d.description}</p>
-                      <div className="mt-1 flex gap-3 text-xs text-neutral-400"><span>{d.format}</span><span>{d.fileSize}</span><span>{d.downloads} descargas</span></div>
+                      <h3 className="text-base font-semibold text-dark-700">{d.title}</h3>
+                      <p className="text-sm text-neutral-500">{d.description}</p>
+                      <div className="mt-1 flex gap-3 text-xs text-neutral-500"><span>{d.format}</span><span>{d.fileSize}</span><span>{d.downloads} descargas</span></div>
                     </div>
                     <Button variant="outline" size="sm" leftIcon={<Download size={14} />}>Descargar</Button>
                   </CardBase>
@@ -117,16 +117,16 @@ export default function EducationPage() {
 
       <Section>
         <Container>
-          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">FAQ</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Preguntas <span className="text-primary-600">frecuentes</span></h2></Reveal>
+          <Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">FAQ</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Preguntas <span className="text-primary-600">frecuentes</span></h2></Reveal>
           <div className="mx-auto max-w-3xl space-y-4">
             {eduFaqs.length > 0 ? eduFaqs.map((faq, i) => (
               <Reveal key={faq.id} direction="up" delay={i * 0.05}>
                 <ExpandableCard title={faq.question} preview="" expanded={openFaq === faq.id} onToggle={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}>
-                  <p className="text-neutral-600">{faq.answer}</p>
+                  <p className="text-neutral-500">{faq.answer}</p>
                 </ExpandableCard>
               </Reveal>
             )) : (
-              <p className="text-center text-neutral-500">Próximamente más preguntas frecuentes sobre educación ambiental.</p>
+              <p className="text-center text-neutral-600">Próximamente más preguntas frecuentes sobre educación ambiental.</p>
             )}
           </div>
         </Container>

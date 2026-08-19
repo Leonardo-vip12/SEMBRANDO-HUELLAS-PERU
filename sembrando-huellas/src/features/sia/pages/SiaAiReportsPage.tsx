@@ -101,7 +101,7 @@ export default function SiaAiReportsPage() {
   function TrendArrow({ direction }: { direction: string }) {
     if (direction === 'up') return <ChevronUp size={20} className="text-green-500" />;
     if (direction === 'down') return <ChevronDown size={20} className="text-red-500" />;
-    return <Minus size={20} className="text-neutral-400" />;
+    return <Minus size={20} className="text-neutral-500" />;
   }
 
   return (
@@ -114,7 +114,7 @@ export default function SiaAiReportsPage() {
             </div>
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Informes con IA</h1>
           </div>
-          <p className="mt-1 text-sm text-neutral-500">Generación automatizada de informes, detección de tendencias y análisis asistido por inteligencia artificial</p>
+          <p className="mt-1 text-sm text-neutral-600">Generación automatizada de informes, detección de tendencias y análisis asistido por inteligencia artificial</p>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ export default function SiaAiReportsPage() {
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Tipo</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Tipo</label>
                 <select value={summaryType} onChange={e => setSummaryType(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                   <option value="">Seleccionar...</option>
@@ -142,7 +142,7 @@ export default function SiaAiReportsPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Región</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Región</label>
                 <select value={summaryRegion} onChange={e => setSummaryRegion(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                   <option value="">Todas</option>
@@ -150,18 +150,18 @@ export default function SiaAiReportsPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Fecha inicio</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Fecha inicio</label>
                 <input type="date" value={summaryStart} onChange={e => setSummaryStart(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Fecha fin</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Fecha fin</label>
                 <input type="date" value={summaryEnd} onChange={e => setSummaryEnd(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
             </div>
             <div>
-              <label className="mb-2 block text-xs font-medium text-neutral-500">Indicadores</label>
+              <label className="mb-2 block text-xs font-medium text-neutral-600">Indicadores</label>
               <div className="flex flex-wrap gap-2">
                 {SOURCE_TYPES.map(ind => (
                   <button key={ind} onClick={() => toggleIndicator(ind)}
@@ -169,7 +169,7 @@ export default function SiaAiReportsPage() {
                       'rounded-lg border px-3 py-1 text-xs font-medium transition-all',
                       summaryIndicators.includes(ind)
                         ? 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300'
-                        : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
+                        : 'border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
                     )}>
                     {ind}
                   </button>
@@ -182,7 +182,7 @@ export default function SiaAiReportsPage() {
             </button>
             {summaryResult && (
               <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900">
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 whitespace-pre-wrap">{summaryResult}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-200 whitespace-pre-wrap">{summaryResult}</p>
               </div>
             )}
           </div>
@@ -196,7 +196,7 @@ export default function SiaAiReportsPage() {
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Métrica</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Métrica</label>
                 <select value={trendMetric} onChange={e => setTrendMetric(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                   <option value="">Seleccionar...</option>
@@ -204,7 +204,7 @@ export default function SiaAiReportsPage() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Período</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Período</label>
                 <select value={trendPeriod} onChange={e => setTrendPeriod(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                   <option value="">Seleccionar...</option>
@@ -227,7 +227,7 @@ export default function SiaAiReportsPage() {
                       <TrendArrow direction={t.direction} />
                       <div>
                         <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{t.metric || t.label}</p>
-                        <p className="text-xs text-neutral-400">{t.description || t.change} {t.unit ? `(${t.unit})` : ''}</p>
+                        <p className="text-xs text-neutral-500">{t.description || t.change} {t.unit ? `(${t.unit})` : ''}</p>
                       </div>
                     </div>
                     <span className={cn(
@@ -252,7 +252,7 @@ export default function SiaAiReportsPage() {
           </div>
           <div className="space-y-4">
             <div>
-              <label className="mb-1 block text-xs font-medium text-neutral-500">Tipo</label>
+              <label className="mb-1 block text-xs font-medium text-neutral-600">Tipo</label>
               <select value={draftType} onChange={e => setDraftType(e.target.value)}
                 className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                 <option value="">Seleccionar...</option>
@@ -263,7 +263,7 @@ export default function SiaAiReportsPage() {
               </select>
             </div>
             <div>
-              <label className="mb-1 block text-xs font-medium text-neutral-500">Filtros (JSON)</label>
+              <label className="mb-1 block text-xs font-medium text-neutral-600">Filtros (JSON)</label>
               <textarea value={draftFilters} onChange={e => setDraftFilters(e.target.value)} rows={3} placeholder='{"region":"Amazonía","year":2025}'
                 className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm font-mono dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
             </div>
@@ -273,7 +273,7 @@ export default function SiaAiReportsPage() {
             </button>
             {draftResult && (
               <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900">
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 whitespace-pre-wrap">{draftResult}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-200 whitespace-pre-wrap">{draftResult}</p>
               </div>
             )}
           </div>
@@ -286,7 +286,7 @@ export default function SiaAiReportsPage() {
           </div>
           <div className="space-y-4">
             <div>
-              <label className="mb-1 block text-xs font-medium text-neutral-500">Tipo de gráfico</label>
+              <label className="mb-1 block text-xs font-medium text-neutral-600">Tipo de gráfico</label>
               <div className="flex flex-wrap gap-2">
                 {CHART_TYPES.map(ct => (
                   <button key={ct} onClick={() => setChartType(ct)}
@@ -294,7 +294,7 @@ export default function SiaAiReportsPage() {
                       'rounded-lg border px-3 py-1 text-xs font-medium transition-all',
                       chartType === ct
                         ? 'border-cyan-200 bg-cyan-50 text-cyan-700 dark:border-cyan-800 dark:bg-cyan-900/20 dark:text-cyan-300'
-                        : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
+                        : 'border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800',
                     )}>
                     {ct}
                   </button>
@@ -302,7 +302,7 @@ export default function SiaAiReportsPage() {
               </div>
             </div>
             <div>
-              <label className="mb-1 block text-xs font-medium text-neutral-500">Datos (JSON)</label>
+              <label className="mb-1 block text-xs font-medium text-neutral-600">Datos (JSON)</label>
               <textarea value={chartData} onChange={e => setChartData(e.target.value)} rows={4} placeholder='{"labels":["Ene","Feb"],"values":[10,20]}'
                 className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm font-mono dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
             </div>
@@ -312,7 +312,7 @@ export default function SiaAiReportsPage() {
             </button>
             {chartExplanation && (
               <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900">
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 whitespace-pre-wrap">{chartExplanation}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-200 whitespace-pre-wrap">{chartExplanation}</p>
               </div>
             )}
           </div>
@@ -326,7 +326,7 @@ export default function SiaAiReportsPage() {
         </div>
         <div className="space-y-4">
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-500">Datos (JSON)</label>
+            <label className="mb-1 block text-xs font-medium text-neutral-600">Datos (JSON)</label>
             <textarea value={actionData} onChange={e => setActionData(e.target.value)} rows={4} placeholder='{"indicators":[],"region":"Amazonía","period":"2024-2025"}'
               className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm font-mono dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
           </div>
@@ -336,7 +336,7 @@ export default function SiaAiReportsPage() {
           </button>
           {suggestions && (
             <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-900">
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 whitespace-pre-wrap">{suggestions}</p>
+              <p className="text-sm text-neutral-600 dark:text-neutral-200 whitespace-pre-wrap">{suggestions}</p>
             </div>
           )}
         </div>

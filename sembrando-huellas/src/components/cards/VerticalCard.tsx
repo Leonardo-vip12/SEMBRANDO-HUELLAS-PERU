@@ -37,7 +37,7 @@ const VerticalCard = forwardRef<HTMLDivElement, VerticalCardProps>(
             loading="lazy"
           />
           {badge && (
-            <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-neutral-800 shadow-sm backdrop-blur-sm dark:bg-neutral-900/90 dark:text-neutral-200">
+            <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-neutral-700 shadow-sm backdrop-blur-sm dark:bg-neutral-900/90 dark:text-neutral-200">
               {badge}
             </span>
           )}
@@ -46,7 +46,7 @@ const VerticalCard = forwardRef<HTMLDivElement, VerticalCardProps>(
           <h3 className="mb-2 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
             {title}
           </h3>
-          <p className="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="line-clamp-2 text-sm text-neutral-500 dark:text-neutral-200">
             {description}
           </p>
         </div>

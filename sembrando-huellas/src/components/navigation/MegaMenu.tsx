@@ -84,7 +84,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
               <div className="grid grid-cols-3 gap-6">
                 {columns.map((column) => (
                   <div key={column.title}>
-                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-200">
                       {column.title}
                     </h3>
                     <ul className="space-y-2">
@@ -97,7 +97,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                             role="menuitem"
                           >
                             {item.icon && (
-                              <span className="mt-0.5 shrink-0 text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
+                              <span className="mt-0.5 shrink-0 text-neutral-500 group-hover:text-neutral-500 dark:group-hover:text-neutral-300">
                                 {item.icon}
                               </span>
                             )}
@@ -106,7 +106,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                                 {item.label}
                               </p>
                               {item.description && (
-                                <p className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">
+                                <p className="mt-0.5 text-xs text-neutral-600 dark:text-neutral-200">
                                   {item.description}
                                 </p>
                               )}

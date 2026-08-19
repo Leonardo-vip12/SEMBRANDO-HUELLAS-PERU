@@ -63,7 +63,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
               onClick={() => setIsExpanded(true)}
               className={cn(
                 'rounded-lg p-2 transition-colors',
-                'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800',
+                'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500'
               )}
               aria-label="Open search"
@@ -73,7 +73,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
           ) : (
             <form onSubmit={handleSubmit} className="flex items-center">
               <div className="flex items-center rounded-lg border border-neutral-300 bg-white px-3 dark:border-neutral-600 dark:bg-neutral-800">
-                <Search size={16} className="text-neutral-400" />
+                <Search size={16} className="text-neutral-500" />
                 <input
                   ref={inputRef}
                   type="text"
@@ -87,7 +87,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
                   <button
                     type="button"
                     onClick={handleClear}
-                    className="ml-1 rounded p-0.5 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
+                    className="ml-1 rounded p-0.5 text-neutral-500 hover:text-neutral-500 dark:hover:text-neutral-300"
                     aria-label="Clear search"
                   >
                     <X size={14} />
@@ -97,7 +97,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
               <button
                 type="button"
                 onClick={handleCollapse}
-                className="ml-2 rounded-lg p-1.5 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                className="ml-2 rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 aria-label="Close search"
               >
                 <X size={16} />
@@ -110,7 +110,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
           onClick={() => setIsMobileOpen(true)}
           className={cn(
             'rounded-lg p-2 transition-colors md:hidden',
-            'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800',
+            'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500'
           )}
           aria-label="Open search"
@@ -122,7 +122,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
           <div className="fixed inset-0 z-50 flex items-start bg-white px-4 pt-4 dark:bg-neutral-900 md:hidden">
             <form onSubmit={handleSubmit} className="flex w-full items-center gap-2">
               <div className="flex flex-1 items-center rounded-lg border border-neutral-300 bg-neutral-50 px-3 dark:border-neutral-600 dark:bg-neutral-800">
-                <Search size={18} className="text-neutral-400" />
+                <Search size={18} className="text-neutral-500" />
                 <input
                   ref={ref}
                   type="text"
@@ -137,7 +137,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
                   <button
                     type="button"
                     onClick={handleClear}
-                    className="ml-1 rounded p-1 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
+                    className="ml-1 rounded p-1 text-neutral-500 hover:text-neutral-500 dark:hover:text-neutral-300"
                     aria-label="Clear search"
                   >
                     <X size={16} />
@@ -150,7 +150,7 @@ const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
                   setIsMobileOpen(false)
                   setValue('')
                 }}
-                className="rounded-lg p-2 text-sm font-medium text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                className="rounded-lg p-2 text-sm font-medium text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
                 aria-label="Close search"
               >
                 Cancel

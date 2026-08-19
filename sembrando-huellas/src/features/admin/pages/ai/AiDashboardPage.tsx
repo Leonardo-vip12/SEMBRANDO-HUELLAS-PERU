@@ -61,9 +61,9 @@ export default function AiDashboardPage() {
             </div>
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Panel de IA</h1>
           </div>
-          <p className="mt-1 text-sm text-neutral-500">Monitoreo y administración de los sistemas de inteligencia artificial</p>
+          <p className="mt-1 text-sm text-neutral-600">Monitoreo y administración de los sistemas de inteligencia artificial</p>
         </div>
-        <button onClick={loadData} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800">
+        <button onClick={loadData} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
           <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
           Actualizar
         </button>
@@ -80,7 +80,7 @@ export default function AiDashboardPage() {
 
       <div className="flex gap-2 border-b border-neutral-200 dark:border-neutral-700">
         {(['overview', 'logs', 'providers'] as const).map(t => (
-          <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 text-sm font-medium transition-colors ${tab === t ? 'border-b-2 border-primary-500 text-primary-600' : 'text-neutral-500 hover:text-neutral-700'}`}>
+          <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 text-sm font-medium transition-colors ${tab === t ? 'border-b-2 border-primary-500 text-primary-600' : 'text-neutral-600 hover:text-neutral-600'}`}>
             {t === 'overview' ? 'Resumen' : t === 'logs' ? 'Consultas' : 'Proveedores'}
           </button>
         ))}
@@ -93,7 +93,7 @@ export default function AiDashboardPage() {
               <div key={f.label} className="rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800">
                 <div className={`mb-2 ${f.color}`}>{f.icon}</div>
                 <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{f.label}</h3>
-                <p className="mt-1 text-xs text-neutral-400">{f.desc}</p>
+                <p className="mt-1 text-xs text-neutral-500">{f.desc}</p>
               </div>
             ))}
           </motion.div>
@@ -103,19 +103,19 @@ export default function AiDashboardPage() {
               <h3 className="mb-4 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Configuración Actual</h3>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
-                  <p className="text-xs text-neutral-400">Proveedor Activo</p>
+                  <p className="text-xs text-neutral-500">Proveedor Activo</p>
                   <p className="mt-1 text-sm font-medium text-neutral-900 dark:text-neutral-100 capitalize">{config.activeProvider || 'No configurado'}</p>
                 </div>
                 <div className="rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
-                  <p className="text-xs text-neutral-400">Temperatura</p>
+                  <p className="text-xs text-neutral-500">Temperatura</p>
                   <p className="mt-1 text-sm font-medium text-neutral-900 dark:text-neutral-100">{config.defaultTemperature || 0.7}</p>
                 </div>
                 <div className="rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
-                  <p className="text-xs text-neutral-400">Máx. Tokens</p>
+                  <p className="text-xs text-neutral-500">Máx. Tokens</p>
                   <p className="mt-1 text-sm font-medium text-neutral-900 dark:text-neutral-100">{config.maxTokens || 4096}</p>
                 </div>
                 <div className="rounded-lg bg-neutral-50 p-3 dark:bg-neutral-700/50">
-                  <p className="text-xs text-neutral-400">Límite Costo</p>
+                  <p className="text-xs text-neutral-500">Límite Costo</p>
                   <p className="mt-1 text-sm font-medium text-neutral-900 dark:text-neutral-100">${config.costLimit || 50}/día</p>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function AiDashboardPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="border-b border-neutral-200 dark:border-neutral-700">
-                <tr className="text-left text-xs text-neutral-400">
+                <tr className="text-left text-xs text-neutral-500">
                   <th className="px-4 py-3">Feature</th>
                   <th className="px-4 py-3">Proveedor</th>
                   <th className="px-4 py-3">Tokens</th>
@@ -141,7 +141,7 @@ export default function AiDashboardPage() {
               </thead>
               <tbody>
                 {logs.map((log: any) => (
-                  <tr key={log.id} className="border-b border-neutral-100 text-neutral-700 last:border-0 dark:border-neutral-700 dark:text-neutral-300">
+                  <tr key={log.id} className="border-b border-neutral-100 text-neutral-600 last:border-0 dark:border-neutral-700 dark:text-neutral-200">
                     <td className="px-4 py-3 font-medium">{log.feature}</td>
                     <td className="px-4 py-3 capitalize">{log.provider}</td>
                     <td className="px-4 py-3">{log.tokensUsed}</td>
@@ -152,11 +152,11 @@ export default function AiDashboardPage() {
                         {log.success ? 'Éxito' : 'Error'}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-xs text-neutral-400">{new Date(log.createdAt).toLocaleString()}</td>
+                    <td className="px-4 py-3 text-xs text-neutral-500">{new Date(log.createdAt).toLocaleString()}</td>
                   </tr>
                 ))}
                 {logs.length === 0 && (
-                  <tr><td colSpan={7} className="px-4 py-8 text-center text-neutral-400">No hay consultas registradas</td></tr>
+                  <tr><td colSpan={7} className="px-4 py-8 text-center text-neutral-500">No hay consultas registradas</td></tr>
                 )}
               </tbody>
             </table>
@@ -170,10 +170,10 @@ export default function AiDashboardPage() {
             <div key={p.type} className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Server size={20} className="text-neutral-400" />
+                  <Server size={20} className="text-neutral-500" />
                   <div>
                     <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 capitalize">{p.type}</h3>
-                    <p className="text-xs text-neutral-400">{p.model}</p>
+                    <p className="text-xs text-neutral-500">{p.model}</p>
                   </div>
                 </div>
                 <span className={`inline-flex rounded-full px-2 py-0.5 text-xs ${p.available ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -183,7 +183,7 @@ export default function AiDashboardPage() {
             </div>
           ))}
           {providers.length === 0 && (
-            <div className="col-span-2 rounded-xl border border-neutral-200 bg-white p-8 text-center text-neutral-400 dark:border-neutral-700 dark:bg-neutral-800">
+            <div className="col-span-2 rounded-xl border border-neutral-200 bg-white p-8 text-center text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800">
               No hay proveedores disponibles
             </div>
           )}

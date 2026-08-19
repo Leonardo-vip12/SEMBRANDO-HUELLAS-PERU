@@ -39,9 +39,9 @@ export default function NewsPage() {
               <Input placeholder="Buscar noticias..." value={search} onChange={(e) => setSearch(e.target.value)} leftIcon={<Search size={18} />} />
             </div>
             <div className="flex flex-wrap gap-2">
-              <button onClick={() => setCategory('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!category ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>Todas</button>
+              <button onClick={() => setCategory('')} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${!category ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>Todas</button>
               {categories.map(c => (
-                <button key={c} onClick={() => setCategory(c)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${category === c ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'}`}>{c}</button>
+                <button key={c} onClick={() => setCategory(c)} className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${category === c ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200'}`}>{c}</button>
               ))}
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function NewsPage() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="py-20 text-center"><p className="text-lg text-neutral-500">No se encontraron noticias.</p></div>
+            <div className="py-20 text-center"><p className="text-lg text-neutral-600">No se encontraron noticias.</p></div>
           )}
         </Container>
       </Section>

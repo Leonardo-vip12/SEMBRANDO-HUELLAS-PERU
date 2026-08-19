@@ -47,19 +47,19 @@ export default function NewsCard({
         />
       </div>
       <div className="space-y-3 pt-4">
-        <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400">
+        <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-200">
           <time dateTime={article.publishedAt}>{formattedDate}</time>
-          <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 font-medium text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300">
+          <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 font-bold text-neutral-600 dark:bg-neutral-700 dark:text-neutral-200">
             {article.category}
           </span>
         </div>
-        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
           {article.title}
         </h3>
-        <p className="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-200">
           {article.excerpt}
         </p>
-        <p className="text-xs text-neutral-400 dark:text-neutral-500">
+        <p className="text-xs text-neutral-600 dark:text-neutral-200">
           Por {article.author}
         </p>
       </div>

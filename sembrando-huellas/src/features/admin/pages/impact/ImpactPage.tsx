@@ -8,7 +8,7 @@ export default function ImpactPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Impacto</h1>
-        <p className="mt-1 text-sm text-neutral-500">Métricas e indicadores de impacto</p>
+        <p className="mt-1 text-sm text-neutral-600">Métricas e indicadores de impacto</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -22,8 +22,8 @@ export default function ImpactPage() {
         {data.metrics?.map((m: any, i: number) => (
           <div key={i} className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-neutral-800">
             <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{m.value}</p>
-            <p className="mt-0.5 text-sm font-medium text-neutral-700 dark:text-neutral-300">{m.label}</p>
-            <p className="mt-1 text-xs text-neutral-500">{m.description}</p>
+            <p className="mt-0.5 text-sm font-medium text-neutral-600 dark:text-neutral-200">{m.label}</p>
+            <p className="mt-1 text-xs text-neutral-600">{m.description}</p>
           </div>
         ))}
       </div>
@@ -38,7 +38,7 @@ export default function ImpactPage() {
               </div>
               <div>
                 <p className="font-medium text-neutral-900 dark:text-neutral-100">{t.title}</p>
-                <p className="text-sm text-neutral-500">{t.description}</p>
+                <p className="text-sm text-neutral-600">{t.description}</p>
               </div>
             </div>
           ))}

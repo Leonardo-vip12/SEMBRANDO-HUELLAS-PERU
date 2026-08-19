@@ -128,7 +128,7 @@ export default function SiaBiodiversityPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-20 text-center">
         <AlertTriangle size={48} className="mb-4 text-red-400" />
         <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Error al cargar el observatorio</h2>
-        <p className="mt-1 text-sm text-neutral-500">{error}</p>
+        <p className="mt-1 text-sm text-neutral-600">{error}</p>
         <button onClick={fetchAll} className="mt-4 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700">Reintentar</button>
       </motion.div>
     );
@@ -138,7 +138,7 @@ export default function SiaBiodiversityPage() {
     <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-6">
       <motion.div variants={itemVariants}>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Observatorio de Biodiversidad</h1>
-        <p className="mt-1 text-sm text-neutral-500">Monitoreo y análisis de la biodiversidad registrada en el sistema</p>
+        <p className="mt-1 text-sm text-neutral-600">Monitoreo y análisis de la biodiversidad registrada en el sistema</p>
       </motion.div>
 
       <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -159,9 +159,9 @@ export default function SiaBiodiversityPage() {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <motion.div variants={itemVariants} className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
           <h3 className="mb-1 text-base font-semibold text-neutral-900 dark:text-neutral-100">Distribución de Especies</h3>
-          <p className="mb-4 text-xs text-neutral-500">Cantidad de registros por especie</p>
+          <p className="mb-4 text-xs text-neutral-600">Cantidad de registros por especie</p>
           {loading ? <Spinner /> : speciesDistribution.length === 0 ? (
-            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-400">Sin datos</div>
+            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-500">Sin datos</div>
           ) : (
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
@@ -178,9 +178,9 @@ export default function SiaBiodiversityPage() {
 
         <motion.div variants={itemVariants} className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
           <h3 className="mb-1 text-base font-semibold text-neutral-900 dark:text-neutral-100">Observaciones en el Tiempo</h3>
-          <p className="mb-4 text-xs text-neutral-500">Evolución de observaciones registradas</p>
+          <p className="mb-4 text-xs text-neutral-600">Evolución de observaciones registradas</p>
           {loading ? <Spinner /> : observationsTimeline.length === 0 ? (
-            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-400">Sin datos</div>
+            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-500">Sin datos</div>
           ) : (
             <ResponsiveContainer width="100%" height={250}>
               <LineChart data={observationsTimeline}>
@@ -196,9 +196,9 @@ export default function SiaBiodiversityPage() {
 
         <motion.div variants={itemVariants} className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
           <h3 className="mb-1 text-base font-semibold text-neutral-900 dark:text-neutral-100">Estado de Conservación</h3>
-          <p className="mb-4 text-xs text-neutral-500">Distribución por categoría de amenaza</p>
+          <p className="mb-4 text-xs text-neutral-600">Distribución por categoría de amenaza</p>
           {loading ? <Spinner /> : conservationStatus.length === 0 ? (
-            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-400">Sin datos</div>
+            <div className="flex h-[250px] items-center justify-center text-sm text-neutral-500">Sin datos</div>
           ) : (
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={conservationStatus}>
@@ -217,7 +217,7 @@ export default function SiaBiodiversityPage() {
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Comparativa Temporal</h3>
-            <p className="text-xs text-neutral-500">Comparación entre dos períodos anuales</p>
+            <p className="text-xs text-neutral-600">Comparación entre dos períodos anuales</p>
           </div>
           <div className="flex items-center gap-2">
             <select
@@ -229,7 +229,7 @@ export default function SiaBiodiversityPage() {
                 <option key={y} value={y}>{y}</option>
               ))}
             </select>
-            <span className="text-sm text-neutral-400">vs</span>
+            <span className="text-sm text-neutral-500">vs</span>
             <select
               value={year2}
               onChange={(e) => setYear2(Number(e.target.value))}
@@ -249,7 +249,7 @@ export default function SiaBiodiversityPage() {
           </div>
         </div>
         {comparing ? <Spinner /> : temporalComparison.length === 0 ? (
-          <div className="flex h-[250px] items-center justify-center text-sm text-neutral-400">Selecciona dos años y presiona Comparar</div>
+          <div className="flex h-[250px] items-center justify-center text-sm text-neutral-500">Selecciona dos años y presiona Comparar</div>
         ) : (
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={temporalComparison}>
@@ -269,9 +269,9 @@ export default function SiaBiodiversityPage() {
         <div className="flex items-center justify-between border-b border-neutral-200 px-6 py-4 dark:border-neutral-700">
           <div>
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Registros Históricos</h3>
-            <p className="text-xs text-neutral-500">Últimas observaciones documentadas</p>
+            <p className="text-xs text-neutral-600">Últimas observaciones documentadas</p>
           </div>
-          <button onClick={handleMapData} className="flex items-center gap-1.5 rounded-lg border border-neutral-200 px-3 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700">
+          <button onClick={handleMapData} className="flex items-center gap-1.5 rounded-lg border border-neutral-200 px-3 py-1.5 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-700">
             <MapPin size={14} /> Ver en Mapa
           </button>
         </div>
@@ -279,7 +279,7 @@ export default function SiaBiodiversityPage() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-neutral-200 bg-neutral-50 text-left text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800/50">
+                <tr className="border-b border-neutral-200 bg-neutral-50 text-left text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:border-neutral-700 dark:bg-neutral-800/50">
                   <th className="px-6 py-3">Especie</th>
                   <th className="px-6 py-3">Fecha</th>
                   <th className="px-6 py-3">Región</th>
@@ -290,11 +290,11 @@ export default function SiaBiodiversityPage() {
               <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
                 {historicalRecords.length === 0 ? (
                   <tr>
-                    <td colSpan={5} className="px-6 py-12 text-center text-sm text-neutral-400">No se encontraron registros</td>
+                    <td colSpan={5} className="px-6 py-12 text-center text-sm text-neutral-500">No se encontraron registros</td>
                   </tr>
                 ) : (
                   historicalRecords.map((rec) => (
-                    <tr key={rec.id} className="text-sm text-neutral-700 transition-colors hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-neutral-800/50">
+                    <tr key={rec.id} className="text-sm text-neutral-600 transition-colors hover:bg-neutral-50 dark:text-neutral-200 dark:hover:bg-neutral-800/50">
                       <td className="px-6 py-3 font-medium">{rec.speciesName}</td>
                       <td className="px-6 py-3">{rec.date}</td>
                       <td className="px-6 py-3">{rec.region}</td>
@@ -317,12 +317,12 @@ export default function SiaBiodiversityPage() {
           </div>
         )}
         <div className="flex items-center justify-between border-t border-neutral-200 px-6 py-3 dark:border-neutral-700">
-          <p className="text-sm text-neutral-500">{totalRecords} registros · Página {page} de {totalPages}</p>
+          <p className="text-sm text-neutral-600">{totalRecords} registros · Página {page} de {totalPages}</p>
           <div className="flex items-center gap-1">
-            <button onClick={() => setPage(Math.max(1, page - 1))} disabled={page <= 1} className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800">
+            <button onClick={() => setPage(Math.max(1, page - 1))} disabled={page <= 1} className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800">
               <ChevronLeft size={16} />
             </button>
-            <button onClick={() => setPage(Math.min(totalPages, page + 1))} disabled={page >= totalPages} className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800">
+            <button onClick={() => setPage(Math.min(totalPages, page + 1))} disabled={page >= totalPages} className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 disabled:opacity-30 dark:hover:bg-neutral-800">
               <ChevronRight size={16} />
             </button>
           </div>

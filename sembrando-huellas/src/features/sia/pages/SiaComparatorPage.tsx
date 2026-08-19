@@ -64,15 +64,15 @@ export default function SiaComparatorPage() {
             </div>
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Comparador</h1>
           </div>
-          <p className="mt-1 text-sm text-neutral-500">Compare indicadores entre regiones, instituciones, campañas, proyectos o períodos</p>
+          <p className="mt-1 text-sm text-neutral-600">Compare indicadores entre regiones, instituciones, campañas, proyectos o períodos</p>
         </div>
         {result && (
           <div className="flex gap-2">
             <button onClick={() => setView(view === 'chart' ? 'table' : 'chart')}
-              className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800">
+              className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
               {view === 'chart' ? <Table2 size={14} /> : <BarChart3 size={14} />} {view === 'chart' ? 'Tabla' : 'Gráfico'}
             </button>
-            <button onClick={handleCompare} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800">
+            <button onClick={handleCompare} className="flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
               <RefreshCw size={14} className={loading ? 'animate-spin' : ''} /> Actualizar
             </button>
           </div>
@@ -87,7 +87,7 @@ export default function SiaComparatorPage() {
                 'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-all',
                 type === ct.key
                   ? 'border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-800 dark:bg-violet-900/20 dark:text-violet-300'
-                  : 'border-neutral-200 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800',
+                  : 'border-neutral-200 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800',
               )}>
               {ct.icon} {ct.label}
             </button>
@@ -98,12 +98,12 @@ export default function SiaComparatorPage() {
           {type === 'period' ? (
             <>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Fecha inicio</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Fecha inicio</label>
                 <input type="date" value={entity1} onChange={e => setEntity1(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Fecha fin</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Fecha fin</label>
                 <input type="date" value={entity2} onChange={e => setEntity2(e.target.value)}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
@@ -111,19 +111,19 @@ export default function SiaComparatorPage() {
           ) : (
             <>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Entidad 1</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Entidad 1</label>
                 <input type="text" value={entity1} onChange={e => setEntity1(e.target.value)} placeholder={`Nombre de ${type}`}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
               <div>
-                <label className="mb-1 block text-xs font-medium text-neutral-500">Entidad 2</label>
+                <label className="mb-1 block text-xs font-medium text-neutral-600">Entidad 2</label>
                 <input type="text" value={entity2} onChange={e => setEntity2(e.target.value)} placeholder={`Nombre de ${type}`}
                   className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100" />
               </div>
             </>
           )}
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-500">Indicador</label>
+            <label className="mb-1 block text-xs font-medium text-neutral-600">Indicador</label>
             <select value={indicator} onChange={e => setIndicator(e.target.value)}
               className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
               <option value="">Seleccionar...</option>
@@ -154,8 +154,8 @@ export default function SiaComparatorPage() {
               <ResponsiveContainer width="100%" height={350}>
                 <BarChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" className="stroke-neutral-200 dark:stroke-neutral-700" />
-                  <XAxis dataKey="name" className="text-xs text-neutral-500" />
-                  <YAxis className="text-xs text-neutral-500" />
+                  <XAxis dataKey="name" className="text-xs text-neutral-600" />
+                  <YAxis className="text-xs text-neutral-600" />
                   <Tooltip contentStyle={{ borderRadius: '12px', border: '1px solid #e5e7eb' }} />
                   <Legend />
                   <Bar dataKey="valor1" fill="#7c3aed" name={result.entity1Label || 'Entidad 1'} radius={[6, 6, 0, 0]} />
@@ -171,11 +171,11 @@ export default function SiaComparatorPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-neutral-200 dark:border-neutral-700">
-                    <th className="pb-3 text-left font-medium text-neutral-500">Indicador</th>
-                    <th className="pb-3 text-right font-medium text-neutral-500">{result.entity1Label || 'Entidad 1'}</th>
-                    <th className="pb-3 text-right font-medium text-neutral-500">{result.entity2Label || 'Entidad 2'}</th>
-                    <th className="pb-3 text-right font-medium text-neutral-500">Diferencia</th>
-                    <th className="pb-3 text-right font-medium text-neutral-500">%</th>
+                    <th className="pb-3 text-left font-medium text-neutral-600">Indicador</th>
+                    <th className="pb-3 text-right font-medium text-neutral-600">{result.entity1Label || 'Entidad 1'}</th>
+                    <th className="pb-3 text-right font-medium text-neutral-600">{result.entity2Label || 'Entidad 2'}</th>
+                    <th className="pb-3 text-right font-medium text-neutral-600">Diferencia</th>
+                    <th className="pb-3 text-right font-medium text-neutral-600">%</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -187,8 +187,8 @@ export default function SiaComparatorPage() {
                     return (
                       <tr key={i} className="border-b border-neutral-100 dark:border-neutral-800">
                         <td className="py-3 text-neutral-900 dark:text-neutral-100">{d.name || d.label || d.indicator}</td>
-                        <td className="py-3 text-right text-neutral-700 dark:text-neutral-300">{v1}</td>
-                        <td className="py-3 text-right text-neutral-700 dark:text-neutral-300">{v2}</td>
+                        <td className="py-3 text-right text-neutral-600 dark:text-neutral-200">{v1}</td>
+                        <td className="py-3 text-right text-neutral-600 dark:text-neutral-200">{v2}</td>
                         <td className={cn('py-3 text-right font-medium', diff >= 0 ? 'text-green-600' : 'text-red-600')}>
                           {diff >= 0 ? '+' : ''}{diff.toFixed(2)}
                         </td>
@@ -206,7 +206,7 @@ export default function SiaComparatorPage() {
       )}
 
       {!result && !loading && (
-        <motion.div variants={item} className="flex flex-col items-center justify-center py-16 text-neutral-400">
+        <motion.div variants={item} className="flex flex-col items-center justify-center py-16 text-neutral-500">
           <ArrowLeftRight size={48} className="mb-4 opacity-30" />
           <p className="text-sm">Seleccione los parámetros de comparación y presione "Comparar"</p>
         </motion.div>

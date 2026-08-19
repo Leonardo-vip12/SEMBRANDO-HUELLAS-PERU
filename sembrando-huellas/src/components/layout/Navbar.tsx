@@ -28,6 +28,7 @@ export default function Navbar({ className, ...props }: NavbarProps) {
     <>
       <GlobalSearch />
       <nav className={cn('fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md dark:bg-neutral-900/90', className)} {...props}>
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary-400/30 to-transparent" />
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link to="/" className="text-xl font-bold text-primary-600 dark:text-primary-400">
             {siteConfig.name}
@@ -42,14 +43,14 @@ export default function Navbar({ className, ...props }: NavbarProps) {
                   'rounded-lg px-3 py-1.5 text-sm font-medium transition-colors',
                   pathname === item.href
                     ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                    : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100'
+                    : 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-neutral-100'
                 )}
               >
                 {t(item.label)}
               </Link>
             ))}
             <div className="group relative">
-              <button className="rounded-lg px-3 py-1.5 text-sm font-medium text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800">
+              <button className="rounded-lg px-3 py-1.5 text-sm font-medium text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800">
                 {t('nav.more')}
               </button>
               <div className="invisible absolute right-0 top-full mt-1 w-48 rounded-xl border border-neutral-200 bg-white p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-800">
@@ -59,21 +60,21 @@ export default function Navbar({ className, ...props }: NavbarProps) {
                       'block rounded-lg px-3 py-2 text-sm transition-colors',
                       pathname === item.href
                         ? 'text-primary-600 dark:text-primary-400'
-                        : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-700'
+                        : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-700'
                     )}
                   >
                     {item.label}
                   </Link>
                 ))}
                 <div className="my-1 border-t border-neutral-100 dark:border-neutral-700" />
-                <p className="px-3 py-1 text-xs font-medium text-neutral-400">{t('nav.features')}</p>
+                <p className="px-3 py-1 text-xs font-bold text-neutral-500">{t('nav.features')}</p>
                 {featureNavConfig.map((item) => (
                   <Link key={item.href} to={item.href}
                     className={cn(
                       'block rounded-lg px-3 py-2 text-sm transition-colors',
                       pathname === item.href
                         ? 'text-primary-600 dark:text-primary-400'
-                        : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-700'
+                        : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-700'
                     )}
                   >
                     {t(item.label)}
@@ -131,14 +132,14 @@ export default function Navbar({ className, ...props }: NavbarProps) {
                       'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                       pathname === item.href
                         ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                        : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
+                        : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800'
                     )}
                   >
                     {t(item.label)}
                   </Link>
                 ))}
                 <div className="my-2 border-t border-neutral-100 dark:border-neutral-700" />
-                <p className="px-3 text-xs font-medium text-neutral-400">{t('nav.features')}</p>
+                <p className="px-3 text-xs font-bold text-neutral-500">{t('nav.features')}</p>
                 {featureNavConfig.map((item) => (
                   <Link
                     key={item.href}
@@ -148,7 +149,7 @@ export default function Navbar({ className, ...props }: NavbarProps) {
                       'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                       pathname === item.href
                         ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                        : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800'
+                        : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800'
                     )}
                   >
                     {t(item.label)}

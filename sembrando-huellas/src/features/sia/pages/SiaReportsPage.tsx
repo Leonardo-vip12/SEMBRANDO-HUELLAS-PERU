@@ -138,7 +138,7 @@ export default function SiaReportsPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <Input label="Título" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Título del reporte" required />
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Tipo</label>
+                  <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Tipo</label>
                   <select value={type} onChange={(e) => setType(e.target.value)} required className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                     <option value="">Seleccionar tipo</option>
                     {REPORT_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
@@ -148,10 +148,10 @@ export default function SiaReportsPage() {
                   <Textarea label="Descripción" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descripción opcional" rows={3} />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Formato</label>
+                  <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Formato</label>
                   <div className="flex gap-2">
                     {FORMATS.map((f) => (
-                      <button type="button" key={f} onClick={() => setFormat(f)} className={cn('flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-colors', format === f ? 'border-primary-500 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300' : 'border-neutral-300 text-neutral-600 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-400')}>
+                      <button type="button" key={f} onClick={() => setFormat(f)} className={cn('flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-colors', format === f ? 'border-primary-500 bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300' : 'border-neutral-300 text-neutral-500 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200')}>
                         {formatIcons[f]} {f}
                       </button>
                     ))}
@@ -175,8 +175,8 @@ export default function SiaReportsPage() {
             <div className="flex justify-center py-16"><Spinner /></div>
           ) : reports.length === 0 ? (
             <div className="rounded-xl border border-dashed border-neutral-300 py-16 text-center dark:border-neutral-600">
-              <FileText size={40} className="mx-auto mb-3 text-neutral-400" />
-              <p className="text-neutral-500">No hay reportes generados aún</p>
+              <FileText size={40} className="mx-auto mb-3 text-neutral-500" />
+              <p className="text-neutral-600">No hay reportes generados aún</p>
             </div>
           ) : (
             <>
@@ -184,11 +184,11 @@ export default function SiaReportsPage() {
                 <table className="w-full text-left text-sm">
                   <thead className="bg-neutral-50 dark:bg-neutral-800">
                     <tr>
-                      <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Título</th>
-                      <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Tipo</th>
-                      <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Formato</th>
-                      <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Generado</th>
-                      <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Acciones</th>
+                      <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Título</th>
+                      <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Tipo</th>
+                      <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Formato</th>
+                      <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Generado</th>
+                      <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Acciones</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-neutral-200 dark:divide-neutral-700">
@@ -199,9 +199,9 @@ export default function SiaReportsPage() {
                           <span className={cn('inline-block rounded-full px-2.5 py-0.5 text-xs font-medium', typeColors[r.type] || typeColors.INSTITUCIONAL)}>{r.type}</span>
                         </td>
                         <td className="px-4 py-3">
-                          <span className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400">{formatIcons[r.format] || <FileText size={16} />} {r.format}</span>
+                          <span className="inline-flex items-center gap-1 text-neutral-500 dark:text-neutral-200">{formatIcons[r.format] || <FileText size={16} />} {r.format}</span>
                         </td>
-                        <td className="px-4 py-3 text-neutral-500">{formatDate(r.createdAt || r.generatedAt)}</td>
+                        <td className="px-4 py-3 text-neutral-600">{formatDate(r.createdAt || r.generatedAt)}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">
                             <Button variant="ghost" size="sm" onClick={() => window.open(r.url || `/sia/reports/${r.id}/download`, '_blank')}><Download size={16} /></Button>
@@ -218,7 +218,7 @@ export default function SiaReportsPage() {
                 <div className="mt-6 flex items-center justify-center gap-2">
                   <Button variant="ghost" size="sm" disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))}>Anterior</Button>
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                    <button key={p} onClick={() => setPage(p)} className={cn('flex h-8 w-8 items-center justify-center rounded-lg text-sm font-medium transition-colors', p === page ? 'bg-primary-600 text-white' : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-700')}>{p}</button>
+                    <button key={p} onClick={() => setPage(p)} className={cn('flex h-8 w-8 items-center justify-center rounded-lg text-sm font-medium transition-colors', p === page ? 'bg-primary-600 text-white' : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-700')}>{p}</button>
                   ))}
                   <Button variant="ghost" size="sm" disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))}>Siguiente</Button>
                 </div>

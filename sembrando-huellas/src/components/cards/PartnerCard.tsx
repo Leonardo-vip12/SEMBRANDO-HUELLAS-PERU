@@ -36,7 +36,7 @@ export default function PartnerCard({
       <span className="mb-2 inline-block rounded-full bg-primary-50 px-3 py-0.5 text-xs font-medium text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
         {partner.type}
       </span>
-      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="mb-4 text-sm text-neutral-500 dark:text-neutral-200">
         {partner.description}
       </p>
       <a

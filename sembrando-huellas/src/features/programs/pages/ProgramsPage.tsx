@@ -52,11 +52,11 @@ export default function ProgramsPage() {
                     <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 transition-all group-hover:bg-primary-600 group-hover:text-white">
                       <Icon size={28} />
                     </div>
-                    <h3 className="mb-3 text-xl font-bold text-dark-800">{p.title}</h3>
-                    <p className="mb-4 flex-1 text-sm leading-relaxed text-neutral-600">{p.description}</p>
+                    <h3 className="mb-3 text-xl font-bold text-dark-700">{p.title}</h3>
+                    <p className="mb-4 flex-1 text-sm leading-relaxed text-neutral-500">{p.description}</p>
                     <div className="mb-4 flex flex-wrap gap-2">
                       <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-700">{p.targetAudience?.split(',').slice(0, 2).join(', ')}</span>
-                      <span className={`rounded-full px-3 py-1 text-xs font-medium ${p.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-neutral-100 text-neutral-600'}`}>
+                      <span className={`rounded-full px-3 py-1 text-xs font-medium ${p.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-neutral-100 text-neutral-500'}`}>
                         {p.status === 'active' ? 'Activo' : p.status}
                       </span>
                     </div>
@@ -71,7 +71,7 @@ export default function ProgramsPage() {
 
           {filtered.length === 0 && (
             <div className="py-20 text-center">
-              <p className="text-lg text-neutral-500">No se encontraron programas con ese criterio de búsqueda.</p>
+              <p className="text-lg text-neutral-600">No se encontraron programas con ese criterio de búsqueda.</p>
             </div>
           )}
         </Container>

@@ -63,7 +63,7 @@ export default function CertificatesPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Certificados</h1>
-          <p className="text-sm text-neutral-500">Generación y verificación de certificados personalizados</p>
+          <p className="text-sm text-neutral-600">Generación y verificación de certificados personalizados</p>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function CertificatesPage() {
           { k: 'list', l: 'Listado', i: ExternalLink },
         ] as const).map(t => (
           <button key={t.k} onClick={() => { setMode(t.k as typeof mode); if (t.k === 'list') loadCertificates(); }}
-            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${mode === t.k ? 'border-b-2 border-amber-500 text-amber-600' : 'text-neutral-500 hover:text-neutral-700'}`}>
+            className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors ${mode === t.k ? 'border-b-2 border-amber-500 text-amber-600' : 'text-neutral-600 hover:text-neutral-600'}`}>
             <t.i size={16} /> {t.l}
           </button>
         ))}
@@ -86,29 +86,29 @@ export default function CertificatesPage() {
             <h2 className="mb-4 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Generar Certificado</h2>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div><label className="mb-1 block text-xs text-neutral-400">Destinatario</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Destinatario</label>
                   <input value={form.recipientName} onChange={e => setForm({ ...form, recipientName: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" /></div>
-                <div><label className="mb-1 block text-xs text-neutral-400">Email</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Email</label>
                   <input type="email" value={form.recipientEmail} onChange={e => setForm({ ...form, recipientEmail: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" /></div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div><label className="mb-1 block text-xs text-neutral-400">Tipo</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Tipo</label>
                   <select value={form.certificateType} onChange={e => setForm({ ...form, certificateType: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100">
                     {CERT_TYPES.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </select>
                 </div>
-                <div><label className="mb-1 block text-xs text-neutral-400">Programa</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Programa</label>
                   <input value={form.programName} onChange={e => setForm({ ...form, programName: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" placeholder="Nombre del programa" /></div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div><label className="mb-1 block text-xs text-neutral-400">Horas</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Horas</label>
                   <input value={form.hours} onChange={e => setForm({ ...form, hours: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" placeholder="Ej: 40" /></div>
-                <div><label className="mb-1 block text-xs text-neutral-400">Fecha</label>
+                <div><label className="mb-1 block text-xs text-neutral-500">Fecha</label>
                   <input type="date" value={form.eventDate} onChange={e => setForm({ ...form, eventDate: e.target.value })}
                     className="w-full rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100" /></div>
               </div>
@@ -125,7 +125,7 @@ export default function CertificatesPage() {
               <div className="flex items-center gap-2 text-green-700 dark:text-green-300">
                 <CheckCircle size={20} /> <span className="font-medium">Certificado generado exitosamente</span>
               </div>
-              <div className="mt-4 space-y-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <div className="mt-4 space-y-2 text-sm text-neutral-500 dark:text-neutral-200">
                 <p><strong>Código:</strong> {result.verificationCode}</p>
                 <p><strong>URL:</strong> <a href={result.verificationUrl} target="_blank" rel="noopener noreferrer" className="text-amber-600 underline">{result.verificationUrl}</a></p>
               </div>
@@ -169,9 +169,9 @@ export default function CertificatesPage() {
                   {verifyResult.valid ? 'Certificado Válido' : 'Certificado No Válido'}
                 </span>
               </div>
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">{verifyResult.message}</p>
+              <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-200">{verifyResult.message}</p>
               {verifyResult.certificate && (
-                <div className="mt-4 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
+                <div className="mt-4 space-y-1 text-sm text-neutral-500 dark:text-neutral-200">
                   <p><strong>Destinatario:</strong> {verifyResult.certificate.recipientName}</p>
                   <p><strong>Tipo:</strong> {verifyResult.certificate.certificateType}</p>
                   <p><strong>Programa:</strong> {verifyResult.certificate.programName}</p>
@@ -191,35 +191,35 @@ export default function CertificatesPage() {
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center dark:border-neutral-700 dark:bg-neutral-800">
                 <p className="text-3xl font-bold text-amber-500">{stats.total || 0}</p>
-                <p className="text-xs text-neutral-400">Total Emitidos</p>
+                <p className="text-xs text-neutral-500">Total Emitidos</p>
               </div>
               <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center dark:border-neutral-700 dark:bg-neutral-800">
                 <p className="text-3xl font-bold text-green-500">{stats.active || 0}</p>
-                <p className="text-xs text-neutral-400">Activos</p>
+                <p className="text-xs text-neutral-500">Activos</p>
               </div>
               <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center dark:border-neutral-700 dark:bg-neutral-800">
                 <p className="text-3xl font-bold text-red-500">{stats.revoked || 0}</p>
-                <p className="text-xs text-neutral-400">Revocados</p>
+                <p className="text-xs text-neutral-500">Revocados</p>
               </div>
             </div>
           )}
 
-          {loading && <div className="text-center text-neutral-400"><Loader2 size={20} className="mx-auto animate-spin" /></div>}
+          {loading && <div className="text-center text-neutral-500"><Loader2 size={20} className="mx-auto animate-spin" /></div>}
           {certificates.map((c: any) => (
             <div key={c.id} className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-700 dark:bg-neutral-800">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{c.recipientName}</p>
-                  <p className="text-xs text-neutral-400">{c.certificateType} • {c.programName} • {c.verificationCode}</p>
+                  <p className="text-xs text-neutral-500">{c.certificateType} • {c.programName} • {c.verificationCode}</p>
                 </div>
                 <span className={`rounded-full px-2 py-0.5 text-xs ${c.revokedAt ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
                   {c.revokedAt ? 'Revocado' : 'Activo'}
                 </span>
               </div>
-              <p className="mt-1 text-xs text-neutral-400">Emitido: {new Date(c.issuedAt).toLocaleDateString()}</p>
+              <p className="mt-1 text-xs text-neutral-500">Emitido: {new Date(c.issuedAt).toLocaleDateString()}</p>
             </div>
           ))}
-          {!loading && certificates.length === 0 && <p className="text-center text-sm text-neutral-400">No hay certificados emitidos</p>}
+          {!loading && certificates.length === 0 && <p className="text-center text-sm text-neutral-500">No hay certificados emitidos</p>}
         </div>
       )}
     </div>

@@ -139,7 +139,7 @@ export default function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps)
         )}
         <button
           onClick={onToggle}
-          className="rounded-lg p-1.5 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
           aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
           {collapsed ? <PanelRightOpen size={16} /> : <PanelRightClose size={16} />}
@@ -150,7 +150,7 @@ export default function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps)
         {navSections.map((section) => (
           <div key={section.label} className="mb-4">
             {!collapsed && (
-              <p className="mb-1 px-2 text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+              <p className="mb-1 px-2 text-[10px] font-semibold uppercase tracking-widest text-neutral-500">
                 {section.label}
               </p>
             )}
@@ -164,7 +164,7 @@ export default function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps)
                     'group relative flex items-center gap-3 rounded-lg px-2 py-2 text-sm font-medium transition-all',
                     isActive
                       ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                      : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100',
+                      : 'text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-neutral-100',
                     collapsed && 'justify-center px-0',
                   )}
                   title={collapsed ? item.label : undefined}
@@ -192,13 +192,13 @@ export default function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps)
 
       <div className={cn('border-t border-neutral-200 p-3 dark:border-neutral-800', collapsed && 'flex justify-center')}>
         <div className={cn('flex items-center gap-3', collapsed && 'flex-col')}>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-200 text-xs font-medium text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-200 text-xs font-medium text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200">
             AD
           </div>
           {!collapsed && (
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium text-neutral-900 dark:text-neutral-100">Admin</p>
-              <p className="truncate text-xs text-neutral-400">Super Admin</p>
+              <p className="truncate text-xs text-neutral-500">Super Admin</p>
             </div>
           )}
         </div>

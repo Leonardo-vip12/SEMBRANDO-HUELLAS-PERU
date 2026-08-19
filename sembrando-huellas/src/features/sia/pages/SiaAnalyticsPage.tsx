@@ -102,7 +102,7 @@ export default function SiaAnalyticsPage() {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-20 text-center">
         <AlertTriangle size={48} className="mb-4 text-red-400" />
         <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Error al cargar análisis</h2>
-        <p className="mt-1 text-sm text-neutral-500">{error}</p>
+        <p className="mt-1 text-sm text-neutral-600">{error}</p>
         <button onClick={() => fetchAll(metric, period)} className="mt-4 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-700">Reintentar</button>
       </motion.div>
     );
@@ -113,11 +113,11 @@ export default function SiaAnalyticsPage() {
       <motion.div variants={itemVariants} className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Análisis Estadístico</h1>
-          <p className="mt-1 text-sm text-neutral-500">Visualización y análisis de datos ambientales del sistema</p>
+          <p className="mt-1 text-sm text-neutral-600">Visualización y análisis de datos ambientales del sistema</p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <div className="space-y-1">
-            <label className="text-xs font-medium text-neutral-500">Métrica</label>
+            <label className="text-xs font-medium text-neutral-600">Métrica</label>
             <select
               value={metric}
               onChange={(e) => handleMetricChange(e.target.value)}
@@ -129,7 +129,7 @@ export default function SiaAnalyticsPage() {
             </select>
           </div>
           <div className="space-y-1">
-            <label className="text-xs font-medium text-neutral-500">Período</label>
+            <label className="text-xs font-medium text-neutral-600">Período</label>
             <select
               value={period}
               onChange={(e) => handlePeriodChange(e.target.value)}
@@ -149,9 +149,9 @@ export default function SiaAnalyticsPage() {
             <TrendingUp size={16} className="text-primary-600" />
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Evolución Temporal</h3>
           </div>
-          <p className="mb-4 text-xs text-neutral-500">Tendencia de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()} en el tiempo</p>
+          <p className="mb-4 text-xs text-neutral-600">Tendencia de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()} en el tiempo</p>
           {loading ? <Spinner /> : lineData.length === 0 ? (
-            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-400">Sin datos disponibles</div>
+            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-500">Sin datos disponibles</div>
           ) : (
             <ResponsiveContainer width="100%" height={280}>
               <LineChart data={lineData}>
@@ -170,9 +170,9 @@ export default function SiaAnalyticsPage() {
             <BarChart3 size={16} className="text-blue-500" />
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Distribución por Región</h3>
           </div>
-          <p className="mb-4 text-xs text-neutral-500">Comparativa regional de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()}</p>
+          <p className="mb-4 text-xs text-neutral-600">Comparativa regional de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()}</p>
           {loading ? <Spinner /> : barData.length === 0 ? (
-            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-400">Sin datos disponibles</div>
+            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-500">Sin datos disponibles</div>
           ) : (
             <ResponsiveContainer width="100%" height={280}>
               <BarChart data={barData}>
@@ -191,9 +191,9 @@ export default function SiaAnalyticsPage() {
             <PieChartIcon size={16} className="text-amber-500" />
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Composición</h3>
           </div>
-          <p className="mb-4 text-xs text-neutral-500">Distribución porcentual de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()}</p>
+          <p className="mb-4 text-xs text-neutral-600">Distribución porcentual de {METRICS.find((m) => m.value === metric)?.label.toLowerCase()}</p>
           {loading ? <Spinner /> : pieData.length === 0 ? (
-            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-400">Sin datos disponibles</div>
+            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-500">Sin datos disponibles</div>
           ) : (
             <ResponsiveContainer width="100%" height={280}>
               <PieChart>
@@ -214,9 +214,9 @@ export default function SiaAnalyticsPage() {
             <RadarIcon size={16} className="text-purple-500" />
             <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Dimensiones Integrales</h3>
           </div>
-          <p className="mb-4 text-xs text-neutral-500">Evaluación multi-dimensional del desempeño ambiental</p>
+          <p className="mb-4 text-xs text-neutral-600">Evaluación multi-dimensional del desempeño ambiental</p>
           {loading ? <Spinner /> : radarData.length === 0 ? (
-            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-400">Sin datos disponibles</div>
+            <div className="flex h-[280px] items-center justify-center text-sm text-neutral-500">Sin datos disponibles</div>
           ) : (
             <ResponsiveContainer width="100%" height={280}>
               <RadarChart data={radarData}>
@@ -232,15 +232,15 @@ export default function SiaAnalyticsPage() {
 
       <motion.div variants={itemVariants} className="rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-700 dark:bg-neutral-800">
         <h3 className="mb-1 text-lg font-semibold text-neutral-900 dark:text-neutral-100">Indicadores Acumulados</h3>
-        <p className="mb-4 text-sm text-neutral-500">Resumen de métricas consolidadas del sistema</p>
+        <p className="mb-4 text-sm text-neutral-600">Resumen de métricas consolidadas del sistema</p>
         {loading ? <Spinner /> : accumulated.length === 0 ? (
-          <div className="flex h-24 items-center justify-center text-sm text-neutral-400">Sin indicadores disponibles</div>
+          <div className="flex h-24 items-center justify-center text-sm text-neutral-500">Sin indicadores disponibles</div>
         ) : (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {accumulated.map((indicator, i) => (
               <div key={i} className="rounded-lg border border-neutral-100 bg-neutral-50 p-4 text-center dark:border-neutral-600 dark:bg-neutral-700/50">
                 <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{indicator.value.toLocaleString()}</p>
-                <p className="mt-0.5 text-xs text-neutral-500">{indicator.label}</p>
+                <p className="mt-0.5 text-xs text-neutral-600">{indicator.label}</p>
                 {indicator.change !== undefined && (
                   <span className={cn(
                     'mt-1 inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-xs font-medium',

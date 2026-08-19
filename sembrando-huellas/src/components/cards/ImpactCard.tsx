@@ -36,10 +36,10 @@ export default function ImpactCard({
       <p className="mb-1 text-3xl font-bold text-neutral-900 dark:text-neutral-100">
         {displayValue}
       </p>
-      <p className="mb-1 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+      <p className="mb-1 text-sm font-semibold text-neutral-600 dark:text-neutral-200">
         {metric.label}
       </p>
-      <p className="text-xs text-neutral-500 dark:text-neutral-400">
+      <p className="text-xs text-neutral-600 dark:text-neutral-200">
         {metric.description}
       </p>
     </CardBase>

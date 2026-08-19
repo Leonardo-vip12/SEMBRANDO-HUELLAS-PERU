@@ -28,7 +28,7 @@ function TimelineSection() {
       <Container>
         <Reveal>
           <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Nuestra Evolución</p>
-          <h2 className="mb-16 text-center text-4xl font-bold text-dark-900 md:text-5xl">Cómo <span className="text-primary-600">hemos crecido</span></h2>
+          <h2 className="mb-16 text-center text-4xl font-bold text-dark-800 md:text-5xl">Cómo <span className="text-primary-600">hemos crecido</span></h2>
         </Reveal>
 
         <div className="relative">
@@ -40,8 +40,8 @@ function TimelineSection() {
                 <Reveal direction={i % 2 === 0 ? 'left' : 'right'}>
                   <CardBase variant="default" className="inline-block">
                     <p className="mb-1 text-2xl font-bold text-primary-600">{item.year}</p>
-                    <h3 className="mb-2 text-lg font-bold text-dark-800">{item.title}</h3>
-                    <p className="text-sm text-neutral-600">{item.description}</p>
+                    <h3 className="mb-2 text-lg font-bold text-dark-700">{item.title}</h3>
+                    <p className="text-sm text-neutral-500">{item.description}</p>
                   </CardBase>
                 </Reveal>
               </div>
@@ -67,8 +67,8 @@ function TeamSection() {
       <Container>
         <Reveal>
           <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Equipo</p>
-          <h2 className="mb-4 text-center text-4xl font-bold text-dark-900 md:text-5xl">Las personas detrás del <span className="text-primary-600">cambio</span></h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-neutral-600">
+          <h2 className="mb-4 text-center text-4xl font-bold text-dark-800 md:text-5xl">Las personas detrás del <span className="text-primary-600">cambio</span></h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-neutral-500">
             Conoce al equipo multidisciplinario que hace posible cada proyecto de conservación en la Amazonía peruana.
           </p>
         </Reveal>
@@ -84,9 +84,9 @@ function TeamSection() {
                     <span className="text-3xl font-bold text-primary-600">{member.firstName.charAt(0)}{member.lastName.charAt(0)}</span>
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-dark-800">{member.firstName} {member.lastName}</h3>
+                <h3 className="text-lg font-bold text-dark-700">{member.firstName} {member.lastName}</h3>
                 <p className="mb-3 text-sm font-medium text-primary-600">{member.role}</p>
-                <p className="text-sm text-neutral-600">{member.bio}</p>
+                <p className="text-sm text-neutral-500">{member.bio}</p>
               </CardBase>
             </Reveal>
           ))}
@@ -159,9 +159,9 @@ export default function AboutPage() {
             <div>
               <Reveal direction="right">
                 <p className="mb-2 text-sm font-semibold tracking-widest text-secondary-600 uppercase">Nuestra Historia</p>
-                <h2 className="mb-6 text-3xl font-bold text-dark-900 md:text-4xl">Un sueño que <span className="text-primary-600">crece</span> desde 2018</h2>
-                <p className="mb-6 text-lg leading-relaxed text-neutral-600">{organizationData.foundingStory}</p>
-                <p className="text-lg leading-relaxed text-neutral-600">{organizationData.description}</p>
+                <h2 className="mb-6 text-3xl font-bold text-dark-800 md:text-4xl">Un sueño que <span className="text-primary-600">crece</span> desde 2018</h2>
+                <p className="mb-6 text-lg leading-relaxed text-neutral-500">{organizationData.foundingStory}</p>
+                <p className="text-lg leading-relaxed text-neutral-500">{organizationData.description}</p>
               </Reveal>
             </div>
           </div>
@@ -174,15 +174,15 @@ export default function AboutPage() {
             <Reveal direction="left">
               <CardBase variant="elevated" className="h-full">
                 <Target size={32} className="mb-4 text-primary-600" />
-                <h3 className="mb-4 text-2xl font-bold text-dark-800">Misión</h3>
-                <p className="leading-relaxed text-neutral-600">{organizationData.mission}</p>
+                <h3 className="mb-4 text-2xl font-bold text-dark-700">Misión</h3>
+                <p className="leading-relaxed text-neutral-500">{organizationData.mission}</p>
               </CardBase>
             </Reveal>
             <Reveal direction="right">
               <CardBase variant="elevated" className="h-full">
                 <Globe size={32} className="mb-4 text-primary-600" />
-                <h3 className="mb-4 text-2xl font-bold text-dark-800">Visión</h3>
-                <p className="leading-relaxed text-neutral-600">{organizationData.vision}</p>
+                <h3 className="mb-4 text-2xl font-bold text-dark-700">Visión</h3>
+                <p className="leading-relaxed text-neutral-500">{organizationData.vision}</p>
               </CardBase>
             </Reveal>
           </div>
@@ -199,17 +199,17 @@ export default function AboutPage() {
             <div className="mx-auto max-w-4xl">
               <Reveal>
                 <p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Testimonios</p>
-                <h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Lo que dicen de <span className="text-primary-600">nosotros</span></h2>
+                <h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Lo que dicen de <span className="text-primary-600">nosotros</span></h2>
               </Reveal>
               <div className="grid gap-6 md:grid-cols-2">
                 {testimonials.slice(0, 2).map((t, i) => (
                   <Reveal key={t.id} direction="up" delay={i * 0.1}>
                     <CardBase variant="default">
                       <Quote className="mb-4 h-8 w-8 text-primary-200" />
-                      <blockquote className="mb-6 text-sm leading-relaxed text-neutral-600">&ldquo;{t.quote}&rdquo;</blockquote>
+                      <blockquote className="mb-6 text-sm leading-relaxed text-neutral-500">&ldquo;{t.quote}&rdquo;</blockquote>
                       <div className="flex items-center gap-3">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600 font-bold">{t.name.charAt(0)}</div>
-                        <div><p className="text-sm font-semibold text-dark-800">{t.name}</p><p className="text-xs text-neutral-500">{t.role}</p></div>
+                        <div><p className="text-sm font-semibold text-dark-700">{t.name}</p><p className="text-xs text-neutral-600">{t.role}</p></div>
                       </div>
                     </CardBase>
                   </Reveal>
@@ -222,7 +222,7 @@ export default function AboutPage() {
 
       {partners.length > 0 && (
         <Section className="overflow-hidden">
-          <Container><Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Aliados</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-900 md:text-5xl">Organizaciones que <span className="text-primary-600">confían en nosotros</span></h2></Reveal></Container>
+          <Container><Reveal><p className="mb-2 text-center text-sm font-semibold tracking-widest text-secondary-600 uppercase">Aliados</p><h2 className="mb-12 text-center text-4xl font-bold text-dark-800 md:text-5xl">Organizaciones que <span className="text-primary-600">confían en nosotros</span></h2></Reveal></Container>
           <div className="relative">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent" />
@@ -230,7 +230,7 @@ export default function AboutPage() {
               {duplicated.map((partner, i) => (
                 <div key={`${partner.id}-${i}`} className="flex w-40 shrink-0 items-center justify-center">
                   <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl bg-neutral-100 p-4 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                    <span className="text-xs font-medium text-neutral-400">{partner.name.charAt(0)}</span>
+                    <span className="text-xs font-medium text-neutral-500">{partner.name.charAt(0)}</span>
                   </div>
                 </div>
               ))}

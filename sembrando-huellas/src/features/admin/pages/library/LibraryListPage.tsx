@@ -13,7 +13,7 @@ const columns = [
     sortable: true,
     render: (item: any) => (
       <span className="flex items-center gap-1">
-        <Download size={12} className="text-neutral-400" /> {item.downloads}
+        <Download size={12} className="text-neutral-500" /> {item.downloads}
       </span>
     ),
   },

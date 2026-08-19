@@ -20,7 +20,7 @@ const modules = [
   { label: 'Analítica Geoespacial', href: '/admin/sia/geoespacial', icon: <Globe size={22} />, desc: 'Clustering, buffers, PostGIS', color: 'text-teal-500' },
   { label: 'Informes con IA', href: '/admin/sia/informes-ia', icon: <Brain size={22} />, desc: 'Resúmenes y tendencias IA', color: 'text-pink-500' },
   { label: 'Transparencia', href: '/admin/sia/transparencia', icon: <Eye size={22} />, desc: 'Portal público de indicadores', color: 'text-sky-500' },
-  { label: 'Monitoreo', href: '/admin/sia/monitoreo', icon: <Monitor size={22} />, desc: 'Estado del sistema y servicios', color: 'text-neutral-500' },
+  { label: 'Monitoreo', href: '/admin/sia/monitoreo', icon: <Monitor size={22} />, desc: 'Estado del sistema y servicios', color: 'text-neutral-600' },
 ];
 
 export default function SiaLandingPage() {
@@ -35,7 +35,7 @@ export default function SiaLandingPage() {
             <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
               Sistema Inteligente de Información Ambiental
             </h1>
-            <p className="text-sm text-neutral-500">
+            <p className="text-sm text-neutral-600">
               Centro de monitoreo, análisis y visualización de información ambiental
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function SiaLandingPage() {
             <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-primary-600 dark:group-hover:text-primary-400">
               {m.label}
             </h3>
-            <p className="mt-1 text-xs text-neutral-400">{m.desc}</p>
+            <p className="mt-1 text-xs text-neutral-500">{m.desc}</p>
           </a>
         ))}
       </div>

@@ -45,7 +45,7 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
                 'flex flex-1 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
                 isActive
                   ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
-                  : 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800',
+                  : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800',
                 isCollapsed && 'justify-center px-2'
               )}
               title={isCollapsed ? item.label : undefined}
@@ -58,7 +58,7 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(
             {hasChildren && !isCollapsed && (
               <button
                 onClick={() => toggleSection(item.label)}
-                className="rounded-lg p-2 text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                className="rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 aria-label={sectionOpen ? `Collapse ${item.label}` : `Expand ${item.label}`}
                 aria-expanded={sectionOpen}
               >

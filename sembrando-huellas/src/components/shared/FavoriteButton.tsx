@@ -28,7 +28,7 @@ export default function FavoriteButton({ item, className, size = 'md', showLabel
         'hover:scale-110 active:scale-95',
         favorited
           ? 'text-red-500'
-          : 'text-neutral-400 hover:text-red-400 dark:text-neutral-500',
+          : 'text-neutral-500 hover:text-red-400 dark:text-neutral-200',
         className,
       )}
       aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}

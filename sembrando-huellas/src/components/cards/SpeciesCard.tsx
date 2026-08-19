@@ -49,10 +49,10 @@ export default function SpeciesCard({
         />
       </div>
       <div className="space-y-2 pt-4">
-        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
           {species.name}
         </h3>
-        <p className="text-sm italic text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm italic text-neutral-500 dark:text-neutral-200">
           {species.scientificName}
         </p>
         <div className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export default function SpeciesCard({
             {species.conservationStatus}
           </span>
         </div>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400">
+        <p className="text-xs text-neutral-500 dark:text-neutral-200">
           {species.habitat}
         </p>
       </div>

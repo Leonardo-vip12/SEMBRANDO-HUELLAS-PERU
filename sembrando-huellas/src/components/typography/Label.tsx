@@ -12,7 +12,7 @@ export default function Label({
     <label
       htmlFor={htmlFor}
       className={cn(
-        'text-sm font-medium text-neutral-700 dark:text-neutral-300',
+        'text-sm font-medium text-neutral-600 dark:text-neutral-200',
         className,
       )}
       {...props}

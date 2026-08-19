@@ -23,7 +23,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   glass:
     'bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 dark:bg-black/20 dark:border-white/10',
   icon:
-    'p-2 rounded-full focus:ring-primary-500 text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800',
+    'p-2 rounded-full focus:ring-primary-500 text-neutral-600 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800',
   floating:
     'rounded-full shadow-lg bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 dark:bg-primary-500 dark:hover:bg-primary-600',
   link: 'text-primary-600 hover:underline focus:ring-primary-500 dark:text-primary-400',

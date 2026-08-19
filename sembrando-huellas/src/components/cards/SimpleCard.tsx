@@ -24,7 +24,7 @@ const SimpleCard = forwardRef<HTMLDivElement, SimpleCardProps>(
           </h3>
         )}
         {description && (
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-sm text-neutral-500 dark:text-neutral-200">
             {description}
           </p>
         )}

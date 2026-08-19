@@ -19,7 +19,7 @@ const statusStyles: Record<string, string> = {
   active: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
   completed: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
   pending: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
-  'on-hold': 'bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400',
+  'on-hold': 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800 dark:text-neutral-200',
 }
 
 export default function ProjectCard({
@@ -50,7 +50,7 @@ export default function ProjectCard({
       </div>
       <div className="space-y-3 pt-4">
         <div className="flex items-center justify-between">
-          <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
+          <span className="rounded-full bg-primary-100 px-3 py-1 text-xs font-bold text-primary-800 dark:bg-primary-900/30 dark:text-primary-300">
             {project.category}
           </span>
           <span
@@ -62,10 +62,10 @@ export default function ProjectCard({
             {project.status}
           </span>
         </div>
-        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
           {project.title}
         </h3>
-        <p className="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-200">
           {project.description}
         </p>
       </div>

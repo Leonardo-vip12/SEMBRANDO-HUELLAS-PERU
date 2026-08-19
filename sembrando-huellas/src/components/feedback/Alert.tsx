@@ -59,7 +59,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
           {onClose && (
             <button
               onClick={onClose}
-              className="shrink-0 rounded p-1 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              className="shrink-0 rounded p-1 text-neutral-500 hover:text-neutral-500 dark:hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               aria-label="Dismiss alert"
             >
               <X size={16} />

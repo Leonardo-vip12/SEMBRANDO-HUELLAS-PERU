@@ -48,7 +48,7 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+            className="text-sm font-medium text-neutral-500 dark:text-neutral-200"
           >
             {label}
             {required && <span className="ml-1 text-red-500">*</span>}
@@ -79,7 +79,7 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
               '[color-scheme:light] dark:[color-scheme:dark]'
             )}
           />
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 dark:text-neutral-500">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-500 dark:text-neutral-200">
             <Calendar size={18} />
           </div>
         </div>

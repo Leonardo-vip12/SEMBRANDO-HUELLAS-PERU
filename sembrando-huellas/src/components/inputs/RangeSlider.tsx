@@ -45,7 +45,7 @@ const RangeSlider = ({
   return (
     <div className={cn('flex flex-col gap-2', className)}>
       {label && (
-        <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+        <span className="text-sm font-medium text-neutral-600 dark:text-neutral-200">
           {label}
         </span>
       )}
@@ -91,7 +91,7 @@ const RangeSlider = ({
           )}
         />
       </div>
-      <div className="flex justify-between text-xs text-neutral-500 dark:text-neutral-400">
+      <div className="flex justify-between text-xs text-neutral-600 dark:text-neutral-200">
         <span>{formatValue(minVal)}</span>
         <span>{formatValue(maxVal)}</span>
       </div>

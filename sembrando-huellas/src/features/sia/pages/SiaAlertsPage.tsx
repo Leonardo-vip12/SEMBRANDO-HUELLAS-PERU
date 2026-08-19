@@ -253,12 +253,12 @@ export default function SiaAlertsPage() {
             <StatsCard label="Total Reglas" value={stats.total ?? stats.totalRules ?? rules.length} icon={<Activity size={20} />} color="text-primary-600" />
             <StatsCard label="Activas" value={stats.active ?? stats.ACTIVE ?? rules.filter((r) => r.status === 'ACTIVE').length} icon={<Bell size={20} />} color="text-green-600" />
             <StatsCard label="Disparadas" value={stats.triggered ?? stats.TRIGGERED ?? 0} icon={<AlertTriangle size={20} />} color="text-orange-600" />
-            <StatsCard label="Pausadas" value={stats.paused ?? stats.PAUSED ?? rules.filter((r) => r.status === 'PAUSED').length} icon={<BellOff size={20} />} color="text-neutral-600" />
+            <StatsCard label="Pausadas" value={stats.paused ?? stats.PAUSED ?? rules.filter((r) => r.status === 'PAUSED').length} icon={<BellOff size={20} />} color="text-neutral-500" />
           </div>
 
           <div className="mb-6 flex gap-1 rounded-lg bg-neutral-100 p-1 dark:bg-neutral-800">
             {(['rules', 'logs'] as const).map((t) => (
-              <button key={t} onClick={() => setTab(t)} className={cn('flex-1 rounded-md px-4 py-2 text-sm font-medium transition-colors', tab === t ? 'bg-white text-neutral-900 shadow-sm dark:bg-neutral-700 dark:text-neutral-100' : 'text-neutral-500 hover:text-neutral-700 dark:text-neutral-400')}>
+              <button key={t} onClick={() => setTab(t)} className={cn('flex-1 rounded-md px-4 py-2 text-sm font-medium transition-colors', tab === t ? 'bg-white text-neutral-900 shadow-sm dark:bg-neutral-700 dark:text-neutral-100' : 'text-neutral-600 hover:text-neutral-600 dark:text-neutral-200')}>
                 {t === 'rules' ? 'Reglas' : 'Registros'}
               </button>
             ))}
@@ -288,26 +288,26 @@ export default function SiaAlertsPage() {
                       <Textarea label="Descripción" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Descripción opcional" rows={2} />
                     </div>
                     <div>
-                      <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Condición</label>
+                      <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Condición</label>
                       <select value={condition} onChange={(e) => setCondition(e.target.value)} className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                         {CONDITIONS.map((c) => <option key={c} value={c}>{CONDITION_LABELS[c]} ({c})</option>)}
                       </select>
                     </div>
                     <Input label="Umbral" type="number" step="any" value={threshold} onChange={(e) => setThreshold(e.target.value)} placeholder="0" required />
                     <div>
-                      <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Severidad</label>
+                      <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Severidad</label>
                       <select value={severity} onChange={(e) => setSeverity(e.target.value)} className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                         {SEVERITIES.map((s) => <option key={s} value={s}>{s}</option>)}
                       </select>
                     </div>
                     <div>
-                      <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Canal</label>
+                      <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Canal</label>
                       <select value={channel} onChange={(e) => setChannel(e.target.value)} className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                         {CHANNELS.map((ch) => <option key={ch} value={ch}>{ch}</option>)}
                       </select>
                     </div>
                     <div>
-                      <label className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">Indicador</label>
+                      <label className="mb-1 block text-sm font-medium text-neutral-600 dark:text-neutral-200">Indicador</label>
                       <select value={indicatorId} onChange={(e) => setIndicatorId(e.target.value)} className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-100">
                         <option value="">Sin indicador</option>
                         {indicators.map((ind) => <option key={ind.id} value={ind.id}>{ind.name}</option>)}
@@ -325,8 +325,8 @@ export default function SiaAlertsPage() {
                 <div className="flex justify-center py-16"><Spinner /></div>
               ) : rules.length === 0 ? (
                 <div className="rounded-xl border border-dashed border-neutral-300 py-16 text-center dark:border-neutral-600">
-                  <Bell size={40} className="mx-auto mb-3 text-neutral-400" />
-                  <p className="text-neutral-500">No hay reglas configuradas</p>
+                  <Bell size={40} className="mx-auto mb-3 text-neutral-500" />
+                  <p className="text-neutral-600">No hay reglas configuradas</p>
                 </div>
               ) : (
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -339,9 +339,9 @@ export default function SiaAlertsPage() {
                       <div className="mb-3 flex items-start justify-between">
                         <div>
                           <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">{rule.name}</h3>
-                          {rule.description && <p className="mt-0.5 text-sm text-neutral-500">{rule.description}</p>}
+                          {rule.description && <p className="mt-0.5 text-sm text-neutral-600">{rule.description}</p>}
                         </div>
-                        <span className={cn('inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium', rule.status === 'ACTIVE' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' : 'bg-neutral-100 text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300')}>
+                        <span className={cn('inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium', rule.status === 'ACTIVE' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' : 'bg-neutral-100 text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200')}>
                           {rule.status === 'ACTIVE' ? <Bell size={12} /> : <BellOff size={12} />}
                           {rule.status === 'ACTIVE' ? 'Activa' : 'Pausada'}
                         </span>
@@ -350,12 +350,12 @@ export default function SiaAlertsPage() {
                         <span className={cn('inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium', SEVERITY_COLORS[rule.severity] || SEVERITY_COLORS.MEDIUM)}>
                           {SEVERITY_ICONS[rule.severity]} {rule.severity}
                         </span>
-                        <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600 dark:bg-neutral-700 dark:text-neutral-300">
+                        <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200">
                           {CONDITION_LABELS[rule.condition] || rule.condition} {rule.threshold}
                         </span>
-                        <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-500 dark:bg-neutral-700">{rule.channel}</span>
+                        <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-700">{rule.channel}</span>
                       </div>
-                      {rule.indicator && <p className="mb-3 text-xs text-neutral-400">Indicador: {rule.indicator.name || rule.indicator}</p>}
+                      {rule.indicator && <p className="mb-3 text-xs text-neutral-500">Indicador: {rule.indicator.name || rule.indicator}</p>}
                       <div className="flex items-center gap-2 border-t border-neutral-100 pt-3 dark:border-neutral-700">
                         <Button variant="ghost" size="sm" onClick={() => handleToggleStatus(rule)}>
                           {rule.status === 'ACTIVE' ? <BellOff size={14} /> : <Bell size={14} />}
@@ -373,10 +373,10 @@ export default function SiaAlertsPage() {
           {tab === 'logs' && (
             <>
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400">Severidad:</span>
-                <button onClick={() => { setSeverityFilter(''); setLogPage(1) }} className={cn('rounded-full px-3 py-1.5 text-xs font-medium transition-colors', !severityFilter ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-300')}>Todas</button>
+                <span className="text-sm font-medium text-neutral-500 dark:text-neutral-200">Severidad:</span>
+                <button onClick={() => { setSeverityFilter(''); setLogPage(1) }} className={cn('rounded-full px-3 py-1.5 text-xs font-medium transition-colors', !severityFilter ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-200')}>Todas</button>
                 {SEVERITIES.map((s) => (
-                  <button key={s} onClick={() => { setSeverityFilter(s); setLogPage(1) }} className={cn('inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium transition-colors', severityFilter === s ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-300')}>
+                  <button key={s} onClick={() => { setSeverityFilter(s); setLogPage(1) }} className={cn('inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium transition-colors', severityFilter === s ? 'bg-primary-600 text-white' : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-700 dark:text-neutral-200')}>
                     {SEVERITY_ICONS[s]} {s}
                   </button>
                 ))}
@@ -386,8 +386,8 @@ export default function SiaAlertsPage() {
                 <div className="flex justify-center py-16"><Spinner /></div>
               ) : logs.length === 0 ? (
                 <div className="rounded-xl border border-dashed border-neutral-300 py-16 text-center dark:border-neutral-600">
-                  <AlertTriangle size={40} className="mx-auto mb-3 text-neutral-400" />
-                  <p className="text-neutral-500">No hay registros de alertas</p>
+                  <AlertTriangle size={40} className="mx-auto mb-3 text-neutral-500" />
+                  <p className="text-neutral-600">No hay registros de alertas</p>
                 </div>
               ) : (
                 <>
@@ -395,11 +395,11 @@ export default function SiaAlertsPage() {
                     <table className="w-full text-left text-sm">
                       <thead className="bg-neutral-50 dark:bg-neutral-800">
                         <tr>
-                          <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Severidad</th>
-                          <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Mensaje</th>
-                          <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Fecha</th>
-                          <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Estado</th>
-                          <th className="px-4 py-3 font-semibold text-neutral-600 dark:text-neutral-400">Acción</th>
+                          <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Severidad</th>
+                          <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Mensaje</th>
+                          <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Fecha</th>
+                          <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Estado</th>
+                          <th className="px-4 py-3 font-semibold text-neutral-500 dark:text-neutral-200">Acción</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-neutral-200 dark:divide-neutral-700">
@@ -411,10 +411,10 @@ export default function SiaAlertsPage() {
                               </span>
                             </td>
                             <td className="px-4 py-3 text-neutral-900 dark:text-neutral-100">{log.message || log.description}</td>
-                            <td className="px-4 py-3 text-neutral-500">{formatDate(log.createdAt || log.date)}</td>
+                            <td className="px-4 py-3 text-neutral-600">{formatDate(log.createdAt || log.date)}</td>
                             <td className="px-4 py-3">
                               {log.read ? (
-                                <span className="text-xs text-neutral-400">Leído</span>
+                                <span className="text-xs text-neutral-500">Leído</span>
                               ) : (
                                 <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">No leído</span>
                               )}
@@ -434,7 +434,7 @@ export default function SiaAlertsPage() {
                     <div className="mt-6 flex items-center justify-center gap-2">
                       <Button variant="ghost" size="sm" disabled={logPage <= 1} onClick={() => setLogPage((p) => Math.max(1, p - 1))}>Anterior</Button>
                       {Array.from({ length: logTotalPages }, (_, i) => i + 1).map((p) => (
-                        <button key={p} onClick={() => setLogPage(p)} className={cn('flex h-8 w-8 items-center justify-center rounded-lg text-sm font-medium transition-colors', p === logPage ? 'bg-primary-600 text-white' : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-700')}>{p}</button>
+                        <button key={p} onClick={() => setLogPage(p)} className={cn('flex h-8 w-8 items-center justify-center rounded-lg text-sm font-medium transition-colors', p === logPage ? 'bg-primary-600 text-white' : 'text-neutral-500 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-700')}>{p}</button>
                       ))}
                       <Button variant="ghost" size="sm" disabled={logPage >= logTotalPages} onClick={() => setLogPage((p) => Math.min(logTotalPages, p + 1))}>Siguiente</Button>
                     </div>

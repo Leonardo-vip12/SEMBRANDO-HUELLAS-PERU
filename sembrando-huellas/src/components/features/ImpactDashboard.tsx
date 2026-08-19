@@ -50,7 +50,7 @@ export default function ImpactDashboard() {
               </div>
               <div>
                 <p className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{stat.value}</p>
-                <p className="text-sm text-neutral-500">{stat.label}</p>
+                <p className="text-sm text-neutral-600">{stat.label}</p>
               </div>
             </div>
           </CardBase>
@@ -67,7 +67,7 @@ export default function ImpactDashboard() {
             {yearlyData.map((bar) => (
               <div key={bar.label}>
                 <div className="mb-1 flex justify-between text-sm">
-                  <span className="text-neutral-600 dark:text-neutral-400">{bar.label}</span>
+                  <span className="text-neutral-500 dark:text-neutral-200">{bar.label}</span>
                   <span className="font-medium text-neutral-900 dark:text-neutral-100">{bar.value.toLocaleString()}</span>
                 </div>
                 <div className="h-3 rounded-full bg-neutral-100 dark:bg-neutral-700">
@@ -90,7 +90,7 @@ export default function ImpactDashboard() {
             {categoryData.map((bar) => (
               <div key={bar.label}>
                 <div className="mb-1 flex justify-between text-sm">
-                  <span className="text-neutral-600 dark:text-neutral-400">{bar.label}</span>
+                  <span className="text-neutral-500 dark:text-neutral-200">{bar.label}</span>
                   <span className="font-medium text-neutral-900 dark:text-neutral-100">{bar.value}%</span>
                 </div>
                 <div className="h-4 rounded-full bg-neutral-100 dark:bg-neutral-700">
@@ -118,7 +118,7 @@ export default function ImpactDashboard() {
           ].map((item) => (
             <div key={item.label} className="rounded-xl bg-neutral-50 p-4 text-center dark:bg-neutral-800">
               <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">{item.value}</p>
-              <p className="mt-1 text-xs text-neutral-500">{item.label}</p>
+              <p className="mt-1 text-xs text-neutral-600">{item.label}</p>
             </div>
           ))}
         </div>

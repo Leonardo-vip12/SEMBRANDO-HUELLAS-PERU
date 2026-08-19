@@ -140,7 +140,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
                   {showCloseButton && (
                     <button
                       onClick={onClose}
-                      className="rounded-lg p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                      className="rounded-lg p-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                       aria-label="Close modal"
                     >
                       <X size={20} />

@@ -33,7 +33,7 @@ export default function FeatureCard({
       <h3 className="mb-2 text-center text-lg font-semibold text-neutral-900 dark:text-neutral-100">
         {title}
       </h3>
-      <p className="text-center text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="text-center text-sm text-neutral-500 dark:text-neutral-200">
         {description}
       </p>
     </CardBase>

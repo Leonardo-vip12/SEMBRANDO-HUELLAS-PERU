@@ -15,7 +15,7 @@ const FormSection = ({ title, description, children, className }: FormSectionPro
           {title}
         </legend>
         {description && (
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          <p className="text-sm text-neutral-600 dark:text-neutral-200">
             {description}
           </p>
         )}

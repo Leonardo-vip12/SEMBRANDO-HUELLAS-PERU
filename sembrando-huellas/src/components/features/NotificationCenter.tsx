@@ -64,7 +64,7 @@ export default function NotificationCenter() {
                 </div>
                 <button
                   onClick={() => dismissNotification(notif.id)}
-                  className="shrink-0 rounded p-0.5 text-neutral-400 hover:text-neutral-600"
+                  className="shrink-0 rounded p-0.5 text-neutral-500 hover:text-neutral-500"
                 >
                   <X size={14} />
                 </button>

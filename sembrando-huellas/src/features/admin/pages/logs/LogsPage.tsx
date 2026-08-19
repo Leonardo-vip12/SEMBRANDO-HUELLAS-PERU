@@ -41,7 +41,7 @@ export default function LogsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Registro de Auditoría</h1>
-        <p className="mt-1 text-sm text-neutral-500">Historial de acciones realizadas en el sistema</p>
+        <p className="mt-1 text-sm text-neutral-600">Historial de acciones realizadas en el sistema</p>
       </div>
       <DataTable columns={columns} data={mockLogs} keyExtractor={(item) => item.id} pageSize={15} />
     </div>

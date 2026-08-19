@@ -50,7 +50,7 @@ export default function RecommenderPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Recomendador Inteligente</h1>
-          <p className="text-sm text-neutral-500">Descubre contenido relevante según tus intereses</p>
+          <p className="text-sm text-neutral-600">Descubre contenido relevante según tus intereses</p>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ export default function RecommenderPage() {
           const Icon = c.icon;
           return (
             <button key={c.value} onClick={() => handleCategory(c.value)} disabled={loading}
-              className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium transition-colors ${activeCategory === c.value ? 'bg-violet-500 text-white' : 'border border-neutral-200 bg-white text-neutral-600 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300'}`}>
+              className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium transition-colors ${activeCategory === c.value ? 'bg-violet-500 text-white' : 'border border-neutral-200 bg-white text-neutral-500 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200'}`}>
               <Icon size={14} /> {c.label}
             </button>
           );
@@ -95,13 +95,13 @@ export default function RecommenderPage() {
                   {r.type || r.collection}
                 </span>
                 {r.score && (
-                  <span className="text-xs text-neutral-400">{(r.score * 100).toFixed(0)}%</span>
+                  <span className="text-xs text-neutral-500">{(r.score * 100).toFixed(0)}%</span>
                 )}
               </div>
               <h3 className="mb-1 text-sm font-semibold text-neutral-900 dark:text-neutral-100">{r.title}</h3>
-              <p className="text-xs text-neutral-500 line-clamp-2">{r.description}</p>
+              <p className="text-xs text-neutral-600 line-clamp-2">{r.description}</p>
               {r.reason && (
-                <p className="mt-2 text-xs italic text-neutral-400">→ {r.reason}</p>
+                <p className="mt-2 text-xs italic text-neutral-500">→ {r.reason}</p>
               )}
             </div>
           ))}
@@ -111,7 +111,7 @@ export default function RecommenderPage() {
       {!loading && results.length === 0 && !error && (
         <div className="py-16 text-center">
           <Sparkles size={48} className="mx-auto mb-4 text-neutral-300" />
-          <p className="text-sm text-neutral-400">Busca un tema o selecciona una categoría para obtener recomendaciones personalizadas</p>
+          <p className="text-sm text-neutral-500">Busca un tema o selecciona una categoría para obtener recomendaciones personalizadas</p>
         </div>
       )}
     </motion.div>

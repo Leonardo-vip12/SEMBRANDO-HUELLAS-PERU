@@ -30,7 +30,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
           <button
             type="button"
             onClick={() => setVisible((v) => !v)}
-            className="pointer-events-auto cursor-pointer text-neutral-400 hover:text-neutral-600 dark:text-neutral-500 dark:hover:text-neutral-300"
+            className="pointer-events-auto cursor-pointer text-neutral-500 hover:text-neutral-500 dark:text-neutral-200 dark:hover:text-neutral-300"
             aria-label={visible ? 'Ocultar contraseña' : 'Mostrar contraseña'}
             tabIndex={-1}
           >

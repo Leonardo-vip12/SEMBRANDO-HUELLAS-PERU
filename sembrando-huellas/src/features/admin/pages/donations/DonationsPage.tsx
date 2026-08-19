@@ -25,7 +25,7 @@ export default function DonationsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">Donaciones</h1>
-        <p className="mt-1 text-sm text-neutral-500">Administra las donaciones recibidas</p>
+        <p className="mt-1 text-sm text-neutral-600">Administra las donaciones recibidas</p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatsCard label="Total Recaudado" value="S/ 128,500" icon={<DollarSign size={22} />} trend={{ value: 15, positive: true }} />
