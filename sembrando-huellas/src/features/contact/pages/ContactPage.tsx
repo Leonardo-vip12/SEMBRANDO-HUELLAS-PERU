@@ -1,3 +1,4 @@
+import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, Phone, Clock, Send } from 'lucide-react'
 import { SEO, BreadcrumbSchema } from '@/components/seo'
 import { Container, Section, PageTransition } from '@/components/ui'
@@ -17,6 +18,17 @@ const contactChannels = [
 ]
 
 export default function ContactPage() {
+  const [emailOpened, setEmailOpened] = useState(false)
+
+  function composeEmail(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const data = new FormData(event.currentTarget)
+    const subject = String(data.get('subject') || 'Consulta desde la web')
+    const body = `${data.get('message')}\n\n${data.get('name')} <${data.get('email')}>`
+    window.location.href = `mailto:${organizationData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setEmailOpened(true)
+  }
+
   return (
     <PageTransition>
       <BreadcrumbSchema items={[{ name: 'Inicio', url: '/' }, { name: 'Contacto', url: '/contacto' }]} />
@@ -65,16 +77,24 @@ export default function ContactPage() {
 
             <Reveal direction="right">
               <CardBase variant="elevated" className="h-full">
-                <h2 className="mb-6 text-2xl font-bold text-dark-900">Envíanos un mensaje</h2>
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <h2 className="mb-3 text-2xl font-bold text-dark-900">Envíanos un mensaje</h2>
+                <p className="mb-6 text-sm text-neutral-600">Abriremos tu aplicación de correo con el mensaje preparado. Tendrás que enviarlo desde allí.</p>
+                <form className="space-y-4" onSubmit={composeEmail}>
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <Input label="Nombre" placeholder="Tu nombre" required />
-                    <Input label="Correo" type="email" placeholder="tu@correo.com" required />
+                    <Input name="name" autoComplete="name" label="Nombre" placeholder="Tu nombre" required />
+                    <Input name="email" autoComplete="email" label="Correo" type="email" placeholder="tu@correo.com" required />
                   </div>
-                  <Input label="Asunto" placeholder="¿Sobre qué quieres hablarnos?" />
-                  <Textarea label="Mensaje" placeholder="Cuéntanos más..." rows={5} required />
-                  <Button type="submit" variant="primary" size="lg" fullWidth rightIcon={<Send size={16} />}>Enviar mensaje</Button>
+                  <Input name="subject" label="Asunto" placeholder="¿Sobre qué quieres hablarnos?" />
+                  <Textarea name="message" label="Mensaje" placeholder="Cuéntanos más..." rows={5} required />
+                  <Button type="submit" variant="primary" size="lg" fullWidth rightIcon={<Send size={16} />}>Preparar correo</Button>
                 </form>
+                {emailOpened && (
+                  <p role="status" className="mt-4 text-sm text-neutral-600">
+                    El mensaje aún no se ha enviado. Si no se abrió tu aplicación de correo, escribe a{' '}
+                    <a href={`mailto:${organizationData.email}`} className="font-medium text-primary-600 underline">{organizationData.email}</a>.
+                    {' '}Tus datos siguen aquí para que puedas copiarlos.
+                  </p>
+                )}
               </CardBase>
             </Reveal>
           </div>
